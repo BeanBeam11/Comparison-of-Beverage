@@ -11,8 +11,8 @@ import { StoreContext } from "../store"
 const { Header, Content, Footer } = Layout;
 
 function Product({ match }) {
-   const { state: { allProducts }, dispatch } = useContext(StoreContext);   
-   useEffect(() => setProductDetail(dispatch, match.params.productId, 0, allProducts),[])
+   const { dispatch } = useContext(StoreContext);   
+   useEffect(() => setProductDetail(dispatch, match.params.productId, 0),[])
 
    return (
       <Layout className="container main-layout">

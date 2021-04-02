@@ -8,7 +8,7 @@ import { setProductDetail } from "../actions";
 const { Option } = Select;
 
 function ProductDetail() {
-   const { state: { productDetail: { product, qty}, allProducts }, dispatch } = useContext(StoreContext);
+   const { state: { productDetail: { product, qty} }, dispatch } = useContext(StoreContext);
 
    return (
       <Row gutter={[32, 32]}>
@@ -45,7 +45,7 @@ function ProductDetail() {
                         defaultValue={qty}
                         value={qty}
                         className="select-style"
-                        onChange={val => setProductDetail(dispatch, product.id, val, allProducts)}
+                        onChange={val => setProductDetail(dispatch, product.id, val)}
                      >
                         {[...Array(product.countInStock).keys()].map((x) => (
                            <Option key={x + 1} value={x + 1}>
