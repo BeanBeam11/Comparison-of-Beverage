@@ -12,9 +12,7 @@ function Home() {
   const { state: { page: { title, products } } } = useContext(StoreContext);
   return (
     <Layout className="container main-layout">
-      <Layout className="bg-gray">
-        <NavBar />
-      </Layout>
+      
       <Layout className="bg-gray">
         <Header className="layout-header">
           <AppHeader title={title} />
