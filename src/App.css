@@ -421,7 +421,10 @@ span.ham-menu-bar3--touch {
   transition: all .25s linear;
   transform: rotate(-45deg);
 }
-
+/*Comparison*/
+.comparison-select{
+  margin-left:32.1875rem;
+}
 /* Product Item */
 .product {
   border-radius: 1%;
