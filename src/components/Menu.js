@@ -4,7 +4,7 @@ const {Option} =Select;
 function handleChange(value) {
     console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
   }
-  export default function Comparison(){
+  export default function Menu(){
     return(
         <Select
         className="comparison-select"

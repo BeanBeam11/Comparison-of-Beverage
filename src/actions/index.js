@@ -4,6 +4,7 @@ import {
   ADD_CART_ITEM,
   REMOVE_CART_ITEM,
   SET_PRODUCT_DETAIL,
+  SET_MENU
 } from "../utils/constants";
 
 import products from "../json/products.json";
@@ -61,3 +62,9 @@ export const activeNavItemSet = (dispatch, activeNavItem) => {
     payload: activeNavItem,
   });
 };
+export const menuContentSet = (dispatch,menuproducts) => {
+  dispatch({
+    type:SET_MENU,
+    payload:{menuproducts}
+  })
+}

@@ -1,12 +1,14 @@
 import { createContext } from "react";
 import useReducerWithThunk from "use-reducer-thunk";
 import products from "../json/products.json";
+import menuproducts from "../json/menuproducts.json";
 import {
   SET_PAGE_CONTENT,
   SET_NAVBAR_ACTIVEITEM,
   ADD_CART_ITEM,
   REMOVE_CART_ITEM,
   SET_PRODUCT_DETAIL,
+  SET_MENU
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -27,6 +29,11 @@ const initialState = {
     product: {},
     qty: 1,
   },
+  menuproducts:{
+    id: "1",
+    menuproducts
+
+  }
 };
 
 function reducer(state, action) {

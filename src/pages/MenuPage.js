@@ -5,9 +5,9 @@ import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
 import ProductList from "../components/ProductList";
 import { StoreContext } from "../store"
-
+import Menu from "../components/Menu";
 const { Header, Content, Footer } = Layout;
-function Menu() {
+function MenuPage() {
  
   return (
     <Layout className="container main-layout">
@@ -16,7 +16,9 @@ function Menu() {
         <Header className="layout-header">
           <AppHeader />
         </Header>
-        
+        <Content className="layout-content">
+         <Menu/>
+        </Content>
         <Footer className="layout-footer">
           <AppFooter />
         </Footer>
@@ -25,4 +27,4 @@ function Menu() {
   );
 }
 
-export default Menu;
+export default MenuPage;
