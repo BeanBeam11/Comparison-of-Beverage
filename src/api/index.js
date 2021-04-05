@@ -5,24 +5,13 @@ import furniture from "../json/furniture.json";
 import homeAccessories from "../json/home-accessories";
 import lighting from "../json/lighting.json";
 import tableware from "../json/tableware.json";
-
+import kebuke from "../json/kebuke.json";
+import fiftylan from "../json/50lan"; 
 export const getJSON = (url) => {
   switch (url) {
-    case "/":
-      return products;
-    case "/textile":
-      return textile;
-    case "/tableware":
-      return tableware;
-    case "/lighting":
-      return lighting;
-    case "/cookware":
-      return cookware;
-    case "/furniture":
-      return furniture;
-    case "/home-accessories":
-      return homeAccessories;
-    default:
-      return products;
+    case "/kebuke":
+      return kebuke;
+    case "/fiftylan":
+      return fiftylan;
   }
 };
