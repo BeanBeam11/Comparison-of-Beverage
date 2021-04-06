@@ -426,7 +426,7 @@ span.ham-menu-bar3--touch {
 /*Menu*/
 .menu{
   width:42.5rem ;
-  height:57rem;
+  height:43.0625rem;
   
   
   border: solid gray 1px;
@@ -440,63 +440,16 @@ span.ham-menu-bar3--touch {
   margin-top:2.8125rem;
   margin-left:32.1875rem;
 }
-.menu-title{
-  display: flex;
-  flex-direction: row;
-  height:3.125rem;
-  width:100%;
-  margin:0;
-  padding:0;
-  background-color:#C4C4C4;
-  border-bottom: solid black 1px;
-}
-.menu-title-name{
-  width:auto;
-  height:1.75rem;
-  font-size:1.5rem;
-  margin-top:0.6875rem;
-  margin-bottom:0.6875rem;
-  margin-left: 7.4375rem;
-}
-.menu-title-price{
-  width:auto;
-  height:1.75rem;
-  font-size:1.5rem;
-  margin-top:0.6875rem;
-  margin-bottom:0.6875rem;
-  margin-left:10.6875rem;
-}
-.menu-title-compare{
-  width:auto;
-  height:1.75rem;
-  font-size:1.5rem;
-  margin-top:0.6875rem;
-  margin-bottom:0.6875rem;
-  margin-left:8.375rem;
-}
+
 .menu-content{
   display: flex;
   flex-direction: row;
   width:auto;
   height:1.75rem;
-  margin-top:2rem;
 }
-.menu-content-name{
-  width:auto;
-  height:1.75rem;
-  color:#000;
-  font-size:1.5rem;
-  margin-left:5.9375rem;
-}
-.menu-content-price{
-  width:auto;
-  height:1.75rem;
-  color:#000;
-  font-size:1.5rem;
-  margin-left:8.5rem;
-}
-.menu-addbt{
-  margin-left:9.25rem;
+
+.menu-compare-bt{
+  margin-left:35.3125rem;
 }
 /* Product Item */
 .product {

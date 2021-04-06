@@ -2,7 +2,7 @@ import { useContext,useState} from "react";
 import {StoreContext} from "../store";
 import MenuItem from "./MenuItem";
 import {menuContentSet} from "../actions";
-import {Select} from 'antd';
+import {Select,Button} from 'antd';
 import { getJSON } from "../api";
 const {Option} =Select;
 function handleChange(value) {
@@ -32,17 +32,11 @@ const onClickMenu=(value)=>{
             <Option value="Ching-Shin">清心福全</Option>
           </Select>
     <div className="menu">
-      <div className="menu-title">
-        <p className="menu-title-name">品項</p>
-        <p className="menu-title-price">價格</p>
-        <p className="menu-title-compare">加入比較</p>
-      </div>
-         
-            
             <MenuItem menu={menus}/>
-
-        
-        </div>
+      </div>
+        <Button className="menu-compare-bt" shape="round"  >
+          開始比較
+        </Button>
     </>
        
      
