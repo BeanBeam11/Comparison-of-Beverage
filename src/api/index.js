@@ -7,11 +7,14 @@ import lighting from "../json/lighting.json";
 import tableware from "../json/tableware.json";
 import kebuke from "../json/kebuke.json";
 import fiftylan from "../json/50lan"; 
+import milkshop from "../json/milkshop.json";
 export const getJSON = (url) => {
   switch (url) {
     case "/kebuke":
       return kebuke;
     case "/fiftylan":
       return fiftylan;
+    case "/milkshop":
+      return milkshop;
   }
 };
