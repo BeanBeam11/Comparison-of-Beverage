@@ -8,7 +8,7 @@ import {
 } from "../utils/constants";
 
 import products from "../json/products.json";
-
+import menus from "../json/kebuke.json";
 export const addCartItem = (dispatch, product, qty) => {
   const item = {
     id: product.id,
@@ -62,9 +62,9 @@ export const activeNavItemSet = (dispatch, activeNavItem) => {
     payload: activeNavItem,
   });
 };
-export const menuContentSet = (dispatch,menuproducts) => {
+export const menuContentSet = (dispatch,menus) => {
   dispatch({
     type:SET_MENU,
-    payload:{menuproducts}
+    payload:{menus}
   })
 }

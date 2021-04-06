@@ -2,86 +2,80 @@
     {
       "id": "1",
       "name":"熟成紅茶",
-      "midprice":"25",
-      "largeprice":"30"
+      "price":"25 / 30"
     },
     {
       "id": "2",
       "name":"麗春紅茶",
-      "midprice":"25",
-      "largeprice":"30"
+      "price":"25 / 30"
     },
     {
       "id": "3",
       "name":"太妃紅茶",
-      "midprice":"30",
-      "largeprice":"35"
+      "price":"30 / 35"
     },
     {
       "id": "4",
       "name":"胭脂紅茶",
-      "midprice":"35",
-      "largeprice":"40"
+      "price":"35 / 40"
+
     },
     {
       "id": "5",
       "name":"雪藏紅茶",
-      "midprice":"45",
-      "largeprice":"55"
+      "price":"45 / 55"
+      
     },
     {
       "id": "6",
       "name":"春芽綠茶",
-      "midprice":"25",
-      "largeprice":"30"
+      "price":"25 / 30"
     },
     {
       "id": "7",
       "name":"春梅冰茶",
-      "midprice":"35",
-      "largeprice":"45"
+      "price":"35 / 45"
     },
     {
       "id": "8",
       "name":"熟成冷露",
-      "midprice":"25",
-      "largeprice":"30"
+      "price":"25 / 30"
     },
     {
       "id": "9",
       "name":"雪花冷露",
-      "midprice":"25",
-      "largeprice":"30"
+      "price":"25 / 30"
+
     },
     {
       "id": "10",
       "name":"春芽冷露",
-      "midprice":"25",
-      "largeprice":"30"
+      "price":"25 / 30"
+
     },
     {
       "id": "11",
       "name":"冷露歐雷",
-      "midprice":"40",
-      "largeprice":"50"
+      "price":"40 / 50"
+
     },
     {
       "id": "12",
       "name":"熟成歐雷",
-      "midprice":"40",
-      "largeprice":"50"
+      "price":"40  /  50"
+
     },
     {
       "id": "13",
       "name":"白玉歐雷",
-      "midprice":"50",
-      "largeprice":"60"
+      "price":"50 / 60"
+
     },
     {
       "id": "14",
       "name":"熟成檸果",
-      "midprice":"",
-      "largeprice":"50"
+      "price":"- - /  50"
+
     }
   ]
   

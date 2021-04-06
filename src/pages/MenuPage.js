@@ -3,12 +3,11 @@ import { Layout } from 'antd';
 import NavBar from "../components/NavBar";
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
-import ProductList from "../components/ProductList";
 import { StoreContext } from "../store"
-import Menu from "../components/Menu";
+import MenuList from "../components/MenuList";
 const { Header, Content, Footer } = Layout;
 function MenuPage() {
- 
+  const { state: { menuList: { menus } } } = useContext(StoreContext);
   return (
     <Layout className="container main-layout">
       
@@ -17,7 +16,7 @@ function MenuPage() {
           <AppHeader />
         </Header>
         <Content className="layout-content">
-         <Menu/>
+         <MenuList menus={menus}/>
         </Content>
         <Footer className="layout-footer">
           <AppFooter />

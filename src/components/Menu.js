@@ -1,24 +1,57 @@
 import {Select} from 'antd'
-import Compare from '../pages/Compare';
+import { useContext } from "react";
+import MenuItem from './MenuItem';
+import { Table } from 'antd';
+import { StoreContext } from "../store"
+import { menuList } from "../actions";
+import { getJSON } from "../api";
 const {Option} =Select;
 function handleChange(value) {
-    console.log(value); // { value: "lucy", key: "lucy", label: "Lucy (101)" }
+  
   }
-  export default function Menu(){
+const columns = [
+  { title: '品項', dataIndex: 'name', key: 'name' },
+  { title: '價格', dataIndex: 'age', key: 'age' },
+  {
+    title: '加入比較',
+    dataIndex: '',
+    key: 'x',
+    render: () => <a>Delete</a>,
+  },
+  ];
+
+  export default function Menu(menu){
+    
     return(
-        <Select
-        className="comparison-select"
-        labelInValue
-        defaultValue={{ value: 'kebuke' }}
-        style={{ width: 250 }}
-        onChange={handleChange}
-      >
-        <Option value="kebuke">可不可熟成紅茶</Option>
-        <Option value="50Lan">五十嵐</Option>
-        <Option value="macu">麻古茶坊</Option>
-        <Option value="milkshop">迷克夏</Option>
-        <Option value="Ching-Shin">清心福全</Option>
-      </Select>
+      <>
+          <Select
+            className="comparison-select"
+            labelInValue
+            defaultValue={{ value: 'kebuke' }}
+            style={{ width: 250 }}
+            onChange={handleChange}
+          >
+          <MenuItem to="/kebueke" value="kebuke" className="menu-item" activeClassName="menu-item--active">
+            可不可熟成紅茶
+          </MenuItem>
+          <MenuItem to="/50lan" value="50lan" className="menu-item" activeClassName="menu-item--active">
+            五十嵐
+          </MenuItem>
+            <Option value="macu">麻古茶坊</Option>
+            <Option value="milkshop">迷克夏</Option>
+            <Option value="Ching-Shin">清心福全</Option>
+          </Select>
+          <div className="menu-list">
+          <Table
+            columns={columns}
+            expandable={{
+              expandedRowRender: record => <p style={{ margin: 0 }}>{record.description}</p>,
+              rowExpandable: record => record.name !== 'Not Expandable',
+            }}
+            dataSource={menu}
+          />,
+          </div>
+      </>
     );
 }
  

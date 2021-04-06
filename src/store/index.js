@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import useReducerWithThunk from "use-reducer-thunk";
 import products from "../json/products.json";
-import menuproducts from "../json/menuproducts.json";
+import menus from "../json/kebuke.json";
 import {
   SET_PAGE_CONTENT,
   SET_NAVBAR_ACTIVEITEM,
@@ -29,11 +29,9 @@ const initialState = {
     product: {},
     qty: 1,
   },
-  menuproducts:{
-    id: "1",
-    menuproducts
-
-  }
+  menuList:{
+    menus,
+  },
 };
 
 function reducer(state, action) {
@@ -66,6 +64,12 @@ function reducer(state, action) {
       return { ...state, cartItems };
     case SET_PRODUCT_DETAIL:
       return { ...state, productDetail: action.payload };
+    case SET_MENU:
+        return { 
+          ...state,
+          menuList:action.payload,
+          
+        };
     default:
       return state;
   }
