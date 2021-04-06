@@ -32,6 +32,7 @@ const initialState = {
   menuList:{
     menus,
   },
+  
 };
 
 function reducer(state, action) {

@@ -5,17 +5,21 @@ import { Button, Radio } from 'antd';
 import {PlusSquareOutlined } from '@ant-design/icons';
 export default function MenuItem(menu) {
   
+  console.log(menu.menu)
+  // console.log(menu.menu.name)
   
   return (
     <>
-      
+       {menu.menu.map(item=>(
       <div className="menu-content">
+       
+          <p className="menu-content-name">{item.name}</p>
+          <p className="menu-content-price">{item.price}</p> 
         
-        <p className="menu-content-name">{menu.menu.name}</p>
-        <p className="menu-content-price">{menu.menu.price}</p>
+         
         <Button className="menu-addbt" type="default" icon={<PlusSquareOutlined />}  />
       </div>
-    
+    ))}
     
  </>
   );
