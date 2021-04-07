@@ -8,13 +8,13 @@ import {addToComparisonItem} from "../actions/";
     //   console.log(item.item.id);
       const openNotification = () => {
         notification.open({
-          message: 'Notification Title',
+          message: '加入比較',
           description:
-            {compareItems},
+            `${item.item.name}已加入比較`,
           onClick: () => {
-            console.log(compareItems.name);
+            // console.log(compareItems.name);
           },
-        });
+        }); 
       };
       useEffect(()=>{
         localStorage.setItem("compareItems", JSON.stringify(compareItems));
@@ -22,7 +22,7 @@ import {addToComparisonItem} from "../actions/";
 
       const addToComparison = () => {
           openNotification();
-        //   console.log(item);
+          console.log(item);
         addToComparisonItem(dispatch,item);
       };
       return (
