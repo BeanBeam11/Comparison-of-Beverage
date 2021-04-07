@@ -21,7 +21,7 @@ export const getJSON = (url) => {
       return milkshop;
     case "/macu":
       return macu;
-    case "/Ching-Shin":
+    case "/chingshin":
       return chingshin;
   }
 };

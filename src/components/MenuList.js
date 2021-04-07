@@ -29,7 +29,7 @@ const onClickMenu=(value)=>{
             <Option value="/fiftylan"> 五十嵐</Option>
             <Option value="/macu">麻古茶坊</Option>
             <Option value="/milkshop">迷克夏</Option>
-            <Option value="/Ching-Shin">清心福全</Option>
+            <Option value="/chingshin">清心福全</Option>
           </Select>
     <div className="menu">
             <MenuItem menu={menus}/>
