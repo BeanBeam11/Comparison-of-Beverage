@@ -4,7 +4,8 @@ import {
   ADD_CART_ITEM,
   REMOVE_CART_ITEM,
   SET_PRODUCT_DETAIL,
-  SET_MENU
+  SET_MENU,
+  ADD_TO_COMPARISON
 } from "../utils/constants";
 
 import products from "../json/products.json";
@@ -66,5 +67,18 @@ export const menuContentSet = (dispatch,menus) => {
   dispatch({
     type:SET_MENU,
     payload:{menus}
-  })
+  });
+}
+export const addToComparisonItem=(dispatch,beverage)=>{
+  const item = {
+    id: beverage.id,
+    name: beverage.name,
+    image: beverage.image,
+    price: beverage.price,
+    
+  };
+  dispatch({
+    type: ADD_TO_COMPARISON,
+    payload: item,
+  });
 }

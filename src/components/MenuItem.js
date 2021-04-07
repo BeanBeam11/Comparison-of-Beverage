@@ -1,9 +1,12 @@
 import { Button,Table } from 'antd';
 import {PlusSquareOutlined } from '@ant-design/icons';
+import AddToComparison from "./AddToComparison";
+import { MemoryRouter } from 'react-router';
 export default function MenuItem(menu) {
   
-  console.log(menu.menu)
+  // console.log(menu.menu)
   // console.log(menu.menu.name)
+ 
   const columns = [
     {
       title: '品項',
@@ -17,9 +20,11 @@ export default function MenuItem(menu) {
     },
     {
       title:'加入比較',
-      
+      key:'operation',
       width: 100,
-      render:()=><Button className="menu-addbt" type="default" icon={<PlusSquareOutlined />}  />,
+      // render:()=><Button className="menu-addbt" type="default" icon={<PlusSquareOutlined />}  />,
+      render:(value)=><AddToComparison item={value}/>
+                
     }
   ];
   
@@ -30,7 +35,7 @@ export default function MenuItem(menu) {
       <div className="menu-content">
        
           
-          <Table columns={columns} dataSource={menu.menu} pagination={{ pageSize: 50 }} scroll={{ y: 500 }} />,
+          <Table value={menu.menu.id} columns={columns} dataSource={menu.menu} pagination={{ pageSize: 50 }} scroll={{ y: 500 }} />,
          
        
       </div>

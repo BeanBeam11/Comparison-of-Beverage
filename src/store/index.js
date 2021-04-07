@@ -8,14 +8,17 @@ import {
   ADD_CART_ITEM,
   REMOVE_CART_ITEM,
   SET_PRODUCT_DETAIL,
-  SET_MENU
+  SET_MENU,
+  ADD_TO_COMPARISON
 } from "../utils/constants";
 
 export const StoreContext = createContext();
 let cartItems = localStorage.getItem("cartItems")
   ? JSON.parse(localStorage.getItem("cartItems"))
   : [];
-
+let compareItems = localStorage.getItem("compareItems")
+  ? JSON.parse(localStorage.getItem("compareItems"))
+  :[];
 const initialState = {
   page: {
     title: "NORDIC NEST Shopping Cart",
@@ -32,7 +35,7 @@ const initialState = {
   menuList:{
     menus,
   },
-  
+  compareItems,
 };
 
 function reducer(state, action) {
@@ -49,17 +52,17 @@ function reducer(state, action) {
           activeItem: action.payload,
         },
       };
-    case ADD_CART_ITEM:
-      const item = action.payload;
-      const product = state.cartItems.find((x) => x.id === item.id);
-      if (product) {
-        cartItems = state.cartItems.map((x) =>
-          x.id === product.id ? item : x
-        );
-        return { ...state, cartItems };
-      }
-      cartItems = [...state.cartItems, item];
-      return { ...state, cartItems };
+    // case ADD_CART_ITEM:
+    //   const item = action.payload;
+    //   const product = state.cartItems.find((x) => x.id === item.id);
+    //   if (product) {
+    //     cartItems = state.cartItems.map((x) =>
+    //       x.id === product.id ? item : x
+    //     );
+    //     return { ...state, cartItems };
+    //   }
+    //   cartItems = [...state.cartItems, item];
+    //   return { ...state, cartItems };
     case REMOVE_CART_ITEM:
       cartItems = state.cartItems.filter((x) => x.id !== action.payload);
       return { ...state, cartItems };
@@ -71,6 +74,17 @@ function reducer(state, action) {
           menuList:action.payload,
           
         };
+    case ADD_TO_COMPARISON:
+      const item = action.payload;
+      const beverge = state.compareItems.find((x) => x.id === item.id);
+      if (beverge) {
+        compareItems = state.compareItems.map((x) =>
+          x.id === beverge.id ? item : x
+        );
+        return { ...state, compareItems };
+      }
+      compareItems = [...state.cartItems, item];
+      return { ...state, compareItems };
     default:
       return state;
   }
