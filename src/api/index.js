@@ -8,6 +8,9 @@ import tableware from "../json/tableware.json";
 import kebuke from "../json/kebuke.json";
 import fiftylan from "../json/50lan"; 
 import milkshop from "../json/milkshop.json";
+import macu from "../json/macu.json";
+import chingshin from "../json/chingshin.json";
+
 export const getJSON = (url) => {
   switch (url) {
     case "/kebuke":
@@ -16,5 +19,9 @@ export const getJSON = (url) => {
       return fiftylan;
     case "/milkshop":
       return milkshop;
+    case "/macu":
+      return macu;
+    case "/Ching-Shin":
+      return chingshin;
   }
 };
