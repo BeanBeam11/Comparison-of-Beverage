@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { Layout } from 'antd';
-import NavBar from "../components/NavBar";
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
 import { StoreContext } from "../store"

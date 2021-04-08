@@ -1,7 +1,5 @@
-import { Button,Table } from 'antd';
-import {PlusSquareOutlined } from '@ant-design/icons';
+import {Table } from 'antd';
 import AddToComparison from "./AddToComparison";
-import { MemoryRouter } from 'react-router';
 export default function MenuItem(menu) {
   
   // console.log(menu.menu)

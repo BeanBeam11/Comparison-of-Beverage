@@ -1,7 +1,7 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css';
 import Home from './pages/Home'
-import Product from './pages/Product'
+
 import MenuPage from './pages/MenuPage'
 import Comment from './pages/Comment'
 import Compare from './pages/Compare'
@@ -18,7 +18,7 @@ function App() {
           <Route exact path="/comment" component={Comment} />
           <Route exact path="/:menuListName" component={MenuPage} />
           {/* <Route exact path="/:pageName" component={Home} /> */}
-          <Route path="/product/:productId" component={Product} />
+          
         </Switch>
       </BrowserRouter>
     </StoreProvider>

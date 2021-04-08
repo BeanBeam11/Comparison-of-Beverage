@@ -428,7 +428,69 @@ span.ham-menu-bar3--touch {
   transform: rotate(-45deg);
 }
 /*Comparison*/
-
+.compare{
+  display: flex;
+  flex-direction: column;
+}
+.compare-title{
+  color:black;
+  width:auto;
+  height: 2.6rem;
+  font-size:2.2rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.compare-description{
+  color:black;
+  width:auto;
+  height: 1.75rem;
+  font-size:1.5rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 2rem;
+}
+.compare-reset{
+  width:9.3rem;
+  height:3rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 2rem;
+}
+.compare-card{
+  display: flex;
+  flex-direction:row;
+  margin-top: 2rem;
+}
+.compare-items{
+  background-color: white;
+  width:19rem;
+  height:64.3rem;
+  margin-left: 13rem;
+}
+.compare-delete{
+  margin-left: 88%;
+}
+.compare-items-title{
+  color:black;
+  width:auto;
+  height: 1.75rem;
+  font-size:1.5rem;
+}
+.compare-items-name{
+  color:black;
+  width:auto;
+  height: 1.75rem;
+  font-size:1.5rem;
+}
+.compare-items-price{
+  color:black;
+  width:auto;
+  height: 1.75rem;
+  font-size:1.5rem;
+}
 /*Menu*/
 .menu{
   width:42.5rem ;

@@ -1,12 +1,8 @@
-import { useContext } from "react";
 import { Layout } from 'antd';
-import NavBar from "../components/NavBar";
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
-import ProductList from "../components/ProductList";
-import { StoreContext } from "../store"
 
-const { Header, Content, Footer } = Layout;
+const { Header,Footer } = Layout;
 function Comment() {
  
     return (
@@ -16,7 +12,6 @@ function Comment() {
         <Header className="layout-header">
           <AppHeader  />
         </Header>
-      
         <Footer className="layout-footer">
           <AppFooter />
         </Footer>

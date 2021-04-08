@@ -5,9 +5,6 @@ import {menuContentSet} from "../actions";
 import {Select,Button} from 'antd';
 import { getJSON } from "../api";
 const {Option} =Select;
-function handleChange(value) {
-  
-}
 
 export default function MenuList({menus}) {
 const {dispatch} = useContext(StoreContext);
@@ -15,7 +12,6 @@ const onClickMenu=(value)=>{
     menuContentSet(dispatch,getJSON(value.key));
     console.log(value.key);
 }
-
   return (
     <>
     <div className="menu-select-box">

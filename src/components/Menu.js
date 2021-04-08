@@ -1,10 +1,6 @@
 import {Select} from 'antd'
-import { useContext } from "react";
 import MenuItem from './MenuItem';
 import { Table } from 'antd';
-import { StoreContext } from "../store"
-import { menuList } from "../actions";
-import { getJSON } from "../api";
 const {Option} =Select;
 function handleChange(value) {
   

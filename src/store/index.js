@@ -1,38 +1,18 @@
 import { createContext } from "react";
 import useReducerWithThunk from "use-reducer-thunk";
-import products from "../json/products.json";
 import menus from "../json/kebuke.json";
 import {
-  SET_PAGE_CONTENT,
-  SET_NAVBAR_ACTIVEITEM,
-  ADD_CART_ITEM,
-  REMOVE_CART_ITEM,
-  SET_PRODUCT_DETAIL,
   SET_MENU,
-  ADD_TO_COMPARISON
+  ADD_TO_COMPARISON,
+  REMOVE_COMPARISON_ITEM
 } from "../utils/constants";
 
 export const StoreContext = createContext();
-let cartItems = localStorage.getItem("cartItems")
-  ? JSON.parse(localStorage.getItem("cartItems"))
-  : [];
 let compareItems = localStorage.getItem("compareItems")
   ? JSON.parse(localStorage.getItem("compareItems"))
   :[];
 // let compareItems;
 const initialState = {
-  page: {
-    title: "NORDIC NEST Shopping Cart",
-    products,
-  },
-  navBar: {
-    activeItem: "/",
-  },
-  cartItems,
-  productDetail: {
-    product: {},
-    qty: 1,
-  },
   menuList:{
     menus,
   },
@@ -41,34 +21,6 @@ const initialState = {
 
 function reducer(state, action) {
   switch (action.type) {
-    case SET_PAGE_CONTENT:
-      return {
-        ...state,
-        page: action.payload,
-      };
-    case SET_NAVBAR_ACTIVEITEM:
-      return {
-        ...state,
-        navBar: {
-          activeItem: action.payload,
-        },
-      };
-    // case ADD_CART_ITEM:
-    //   const item = action.payload;
-    //   const product = state.cartItems.find((x) => x.id === item.id);
-    //   if (product) {
-    //     cartItems = state.cartItems.map((x) =>
-    //       x.id === product.id ? item : x
-    //     );
-    //     return { ...state, cartItems };
-    //   }
-    //   cartItems = [...state.cartItems, item];
-    //   return { ...state, cartItems };
-    case REMOVE_CART_ITEM:
-      cartItems = state.cartItems.filter((x) => x.id !== action.payload);
-      return { ...state, cartItems };
-    case SET_PRODUCT_DETAIL:
-      return { ...state, productDetail: action.payload };
     case SET_MENU:
         return { 
           ...state,
@@ -76,7 +28,6 @@ function reducer(state, action) {
           
         };
     case ADD_TO_COMPARISON:
-      // return { ...state, compareItems: action.payload}
       const item = action.payload;
       const beverge = state.compareItems.find((x) => x.id === item.id);
       if (beverge) {
@@ -87,7 +38,9 @@ function reducer(state, action) {
       }
       compareItems = [...state.compareItems, item];
       return { ...state, compareItems };
-        
+    case REMOVE_COMPARISON_ITEM:
+      compareItems= state.compareItems.filter((x) => x.id !==action.payload);
+      return { ...state, compareItems};
     default:
       return state;
   }

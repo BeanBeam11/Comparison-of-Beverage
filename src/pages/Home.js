@@ -1,15 +1,11 @@
-import { useContext } from "react";
 import { Layout } from 'antd';
-import NavBar from "../components/NavBar";
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
-import ProductList from "../components/ProductList";
-import { StoreContext } from "../store"
+
 
 const { Header, Content, Footer } = Layout;
 
 function Home() {
-  const { state: { page: { title, products } } } = useContext(StoreContext);
   return (
     <Layout className="container main-layout">
       
