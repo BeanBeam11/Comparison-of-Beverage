@@ -2,11 +2,10 @@
 
 /* RWD Container */
 .container {
-    width: 100%;
-    display: flex;
-    align-self: center;
-    
-    background-color: #111828;
+  width: 100%;
+  display: flex;
+  align-self: center;
+  background-color: #F9F6F2;
 }
 
 /* sm */
@@ -48,7 +47,7 @@
 body {
   font-size: 16px;
   line-height: 1.6;
-  background-color: #111828;
+  background-color: #F9F6F2;
   color: white;
 }
 
@@ -60,10 +59,12 @@ body {
 
 .layout-header,
 .layout-footer {
+  position: relative;
   padding: 0;
   height: auto;
+  width: auto;
   line-height: 1.6;
-  background-color: #111828;
+  background-color: #EBE0D3;
 }
 
 .layout-content {
@@ -427,14 +428,11 @@ span.ham-menu-bar3--touch {
 .menu{
   width:42.5rem ;
   height:43.0625rem;
-  
-  
   border: solid gray 1px;
   padding:0;
-  margin-top: 2.4375rem;
-  margin-bottom:24.0625rem;
-  margin-left: 18.75rem;
-  
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 .menu-select{
   margin-top:2.8125rem;
@@ -502,35 +500,38 @@ span.ham-menu-bar3--touch {
 
 /* Footer */
 .footer {
+  position: relative;
   margin-top: 3rem;
-  height: 9.375rem;
+  height: 3.1rem;
+  width: 100%;
   text-align: center;
 }
-
 .hr-footer-line {
- margin: 0;
+  margin: 0;
   padding: 0;
-  width: 126.8%;
+  width: 100%;
   border: 0;
   border-top: solid 1px; 
   border-color: #3e3f97;
   opacity: 1;
   border-radius: 0.2rem;
+  display: none;
 }
 .footer-content{
+  position: absolute;
   display: flex;
   flex-direction: row;
 }
 .footer-text-icon{
-  width:1.9375rem;
-  height:1.9375rem;
+  width:1.5rem;
+  height:1.5rem;
   margin-top: 3.875rem;
   margin-left:4.375rem;
 }
 .footer-text{
   width:6rem;
   height:1.75rem;
-  font-size:1.5rem;
+  font-size:1rem;
   margin-top:3.6875rem;
   margin-bottom: 0;
   margin-left:0.625rem;
