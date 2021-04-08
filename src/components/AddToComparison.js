@@ -16,15 +16,16 @@ import {addToComparisonItem} from "../actions/";
           },
         }); 
       };
-      useEffect(()=>{
-        localStorage.setItem("compareItems", JSON.stringify(compareItems));
-      }, [compareItems])
+      
 
       const addToComparison = () => {
           openNotification();
-          console.log(item);
-        addToComparisonItem(dispatch,item);
+          // console.log(item);
+        addToComparisonItem(dispatch,item.item);
       };
+      useEffect(()=>{
+        localStorage.setItem("compareItems", JSON.stringify(compareItems));
+      }, [compareItems])
       return (
         <Button type="primary" onClick={addToComparison}>
             加入比較
