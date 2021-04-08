@@ -39,11 +39,7 @@ export default function Header({ title }) {
           <img className='header-right-navbar-icon' src="https://www.flaticon.com/svg/vstatic/svg/2948/2948035.svg?token=exp=1617466812~hmac=8ef0e63f4ab4879bc54e0d5154749b69"/>
           </Link>
         </div>
-       
-        
       </div>
-      
-      <hr className="hr-header-line" />
     </header>
   );
 }
