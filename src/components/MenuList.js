@@ -18,25 +18,29 @@ const onClickMenu=(value)=>{
 
   return (
     <>
-    <Select
-            className="menu-select"
-            labelInValue
-            defaultValue={{ value: '可不可熟成紅茶' }}
-            style={{ width: 250 }}
-            onChange={onClickMenu}
-          >
-            <Option value="/kebuke">可不可熟成紅茶</Option>
-            <Option value="/fiftylan"> 五十嵐</Option>
-            <Option value="/macu">麻古茶坊</Option>
-            <Option value="/milkshop">迷克夏</Option>
-            <Option value="/chingshin">清心福全</Option>
-          </Select>
+    <div className="menu-select-box">
+      <Select
+        className="menu-select"
+        labelInValue
+        defaultValue={{ value: '可不可熟成紅茶' }}
+        style={{ width: 150 }}
+        onChange={onClickMenu}
+      >
+        <Option value="/kebuke">可不可熟成紅茶</Option>
+        <Option value="/fiftylan"> 五十嵐</Option>
+        <Option value="/macu">麻古茶坊</Option>
+        <Option value="/milkshop">迷克夏</Option>
+        <Option value="/chingshin">清心福全</Option>
+      </Select>
+    </div>
     <div className="menu">
             <MenuItem menu={menus}/>
-      </div>
-        <Button className="menu-compare-bt" shape="round"  >
-          開始比較
-        </Button>
+    </div>
+    <div className="menu-compare-bt-box">
+      <Button className="menu-compare-bt" shape="round"  >
+        開始比較
+      </Button>
+    </div> 
     </>
        
      

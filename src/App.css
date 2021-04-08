@@ -442,19 +442,33 @@ span.ham-menu-bar3--touch {
 .ant-table-container{
   color: #301A0A;
 }
+.menu-select-box{
+  position: relative;
+  width: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 .menu-select{
   position: relative;
-  margin: auto;
-  margin: 2rem;
+  margin: 2rem 0;
 }
 .menu-content{
   display: flex;
   flex-direction: row;
-  width:auto;
-  height:1.75rem;
+  width: auto;
+  height: 1.75rem;
+}
+.menu-compare-bt-box{
+  position: relative;
+  width: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .menu-compare-bt{
-  margin-left:35.3125rem;
+  color: #301A0A;
+  margin: 2rem 0;
 }
 .ant-table-header .ant-table-cell{
   color: #301A0A;
