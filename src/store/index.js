@@ -19,6 +19,7 @@ let cartItems = localStorage.getItem("cartItems")
 let compareItems = localStorage.getItem("compareItems")
   ? JSON.parse(localStorage.getItem("compareItems"))
   :[];
+// let compareItems;
 const initialState = {
   page: {
     title: "NORDIC NEST Shopping Cart",
@@ -75,6 +76,7 @@ function reducer(state, action) {
           
         };
     case ADD_TO_COMPARISON:
+      // return { ...state, compareItems: action.payload}
       const item = action.payload;
       const beverge = state.compareItems.find((x) => x.id === item.id);
       if (beverge) {
@@ -83,8 +85,9 @@ function reducer(state, action) {
         );
         return { ...state, compareItems };
       }
-      compareItems = [...state.cartItems, item];
+      compareItems = [...state.compareItems, item];
       return { ...state, compareItems };
+        
     default:
       return state;
   }
