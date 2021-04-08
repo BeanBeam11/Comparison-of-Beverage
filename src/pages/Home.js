@@ -18,7 +18,7 @@ function Home() {
           <AppHeader />
         </Header>
         <Content className="layout-content">
-          <ProductList products={products} />
+          {/* <ProductList products={products} /> */}
         </Content>
         <Footer className="layout-footer">
           <AppFooter />
