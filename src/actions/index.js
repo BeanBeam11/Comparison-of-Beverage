@@ -1,7 +1,8 @@
 import {
   SET_MENU,
   ADD_TO_COMPARISON,
-  REMOVE_COMPARISON_ITEM
+  REMOVE_COMPARISON_ITEM,
+  REMOVE_ALL
 } from "../utils/constants";
 
 export const menuContentSet = (dispatch,menus) => {
@@ -29,3 +30,9 @@ export const removeComparisonItem = (dispatch,beverageId) => {
     payload: beverageId,
   });
 };
+export const removeall=(dispatch,count)=>{
+  dispatch({
+    type: REMOVE_ALL,
+    payload: count
+  })
+}

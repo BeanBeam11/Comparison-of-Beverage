@@ -4,7 +4,8 @@ import menus from "../json/kebuke.json";
 import {
   SET_MENU,
   ADD_TO_COMPARISON,
-  REMOVE_COMPARISON_ITEM
+  REMOVE_COMPARISON_ITEM,
+  REMOVE_ALL
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -51,6 +52,9 @@ function reducer(state, action) {
       count--;
       compareItems= state.compareItems.filter((x) => x.id !==action.payload);
       return { ...state, compareItems,count};
+    case REMOVE_ALL:
+      count=0;
+      return { ...state,count};
     default:
       return state;
   }

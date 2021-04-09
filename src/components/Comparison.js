@@ -1,7 +1,7 @@
 import {useEffect, useContext} from "react";
 import {StoreContext} from "../store";
 import { Button} from "antd";
-import {removeComparisonItem} from "../actions";
+import {removeComparisonItem,removeall} from "../actions";
 export default function Comparison(){
 
     const {state:{compareItems,count},dispatch} =useContext(StoreContext);
@@ -18,7 +18,7 @@ export default function Comparison(){
             <div className="compare">
                 <p className="compare-title">飲料比較</p>
                 <p className="compare-description">已選擇{count}件商品，請挑選最多3件來比較。</p>
-                <Button className="compare-reset">重設全部</Button>
+                <Button className="compare-reset" onClick={()=>removeall(dispatch)}>重設全部</Button>
             </div>
             {compareItems.length===0?(
                 <div>Did not add beverage items</div>
