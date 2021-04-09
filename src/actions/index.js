@@ -10,7 +10,7 @@ export const menuContentSet = (dispatch,menus) => {
     payload:{menus}
   });
 }
-export const addToComparisonItem=(dispatch,beverage)=>{
+export const addToComparisonItem=(dispatch,beverage,count)=>{
   const item = {
     id: beverage.id,
     name: beverage.name,
@@ -20,7 +20,7 @@ export const addToComparisonItem=(dispatch,beverage)=>{
   };
   dispatch({
     type: ADD_TO_COMPARISON,
-    payload: item,
+    payload: item,count
   });
 }
 export const removeComparisonItem = (dispatch,beverageId) => {

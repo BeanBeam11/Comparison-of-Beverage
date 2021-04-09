@@ -4,8 +4,9 @@ import {StoreContext} from "../store"
 import {addToComparisonItem} from "../actions/";
   
   export default function AddToComparison(item){
-    const {state:{compareItems}, dispatch} =useContext(StoreContext);
+    const {state:{compareItems,count}, dispatch} =useContext(StoreContext);
     //   console.log(item.item.id);
+
       const openNotification = () => {
         notification.open({
           message: '加入比較',
@@ -16,16 +17,34 @@ import {addToComparisonItem} from "../actions/";
           },
         }); 
       };
-      
+      const openNotification_Full = () => {
+        notification.open({
+          message: '加入比較',
+          description:
+            "已有三件商品",
+          onClick: () => {
+            // console.log(compareItems.name);
+          },
+        }); 
+      };
 
       const addToComparison = () => {
-          openNotification();
+          
           // console.log(item);
-        addToComparisonItem(dispatch,item.item);
+        if(count<3){
+          openNotification();
+          addToComparisonItem(dispatch,item.item,count);
+        }
+        else{
+          openNotification_Full();
+        }
+        
+        
       };
       useEffect(()=>{
         localStorage.setItem("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
+       localStorage.setItem("count",JSON.stringify(count));
       return (
         <Button type="primary" onClick={addToComparison}>
             加入比較

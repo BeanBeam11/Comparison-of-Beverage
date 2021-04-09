@@ -11,12 +11,14 @@ export const StoreContext = createContext();
 let compareItems = localStorage.getItem("compareItems")
   ? JSON.parse(localStorage.getItem("compareItems"))
   :[];
+let count=0;
 // let compareItems;
 const initialState = {
   menuList:{
     menus,
   },
   compareItems,
+  count,
 };
 
 function reducer(state, action) {
@@ -30,17 +32,25 @@ function reducer(state, action) {
     case ADD_TO_COMPARISON:
       const item = action.payload;
       const beverge = state.compareItems.find((x) => x.id === item.id);
+      
       if (beverge) {
+        
+        count++;
+        
         compareItems = state.compareItems.map((x) =>
           x.id === beverge.id ? item : x
         );
-        return { ...state, compareItems };
+        console.log(count);
+        return { ...state, compareItems,count };
       }
+      
       compareItems = [...state.compareItems, item];
-      return { ...state, compareItems };
+      count+=1;
+      return { ...state, compareItems,count };
     case REMOVE_COMPARISON_ITEM:
+      count--;
       compareItems= state.compareItems.filter((x) => x.id !==action.payload);
-      return { ...state, compareItems};
+      return { ...state, compareItems,count};
     default:
       return state;
   }
