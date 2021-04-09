@@ -10,15 +10,17 @@ export default function Comparison(){
     useEffect(()=>{
         localStorage.setItem("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
+    useEffect(()=>{
+        localStorage.getItem("count",JSON.stringify(count));
+    },[count])
     
-    localStorage.setItem("count",JSON.stringify(count));
     console.log(count);
     return(
         <>
             <div className="compare">
                 <p className="compare-title">飲料比較</p>
                 <p className="compare-description">已選擇{count}件商品，請挑選最多3件來比較。</p>
-                <Button className="compare-reset" onClick={()=>removeall(dispatch)}>重設全部</Button>
+                <Button className="compare-reset" onClick={()=>removeall(dispatch,count,compareItems)}>重設全部</Button>
             </div>
             {compareItems.length===0?(
                 <div>Did not add beverage items</div>

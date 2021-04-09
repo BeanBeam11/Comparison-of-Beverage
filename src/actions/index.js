@@ -30,9 +30,9 @@ export const removeComparisonItem = (dispatch,beverageId) => {
     payload: beverageId,
   });
 };
-export const removeall=(dispatch,count)=>{
+export const removeall=(dispatch,count,beverage)=>{
   dispatch({
     type: REMOVE_ALL,
-    payload: count
+    payload: count,beverage
   })
 }

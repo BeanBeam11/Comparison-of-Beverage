@@ -49,12 +49,16 @@ function reducer(state, action) {
       count+=1;
       return { ...state, compareItems,count };
     case REMOVE_COMPARISON_ITEM:
-      count--;
+      if(count>0){
+        count--;
+      }
       compareItems= state.compareItems.filter((x) => x.id !==action.payload);
       return { ...state, compareItems,count};
     case REMOVE_ALL:
+      
+      compareItems= state.compareItems.map((x) => x.id !==action.payload);
       count=0;
-      return { ...state,count};
+      return { ...state,compareItems,count};
     default:
       return state;
   }
