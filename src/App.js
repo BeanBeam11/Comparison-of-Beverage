@@ -13,12 +13,9 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          
           <Route exact path="/compare" component={Compare} />
           <Route exact path="/comment" component={Comment} />
-          <Route exact path="/:menuListName" component={MenuPage} />
-          {/* <Route exact path="/:pageName" component={Home} /> */}
-          
+          <Route exact path="/:menuListName" component={MenuPage} /> 
         </Switch>
       </BrowserRouter>
     </StoreProvider>
