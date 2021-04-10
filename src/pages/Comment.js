@@ -1,17 +1,19 @@
 import { Layout } from 'antd';
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
-
-const { Header,Footer } = Layout;
+import CommentList from "../components/CommentList"
+const { Header,Content,Footer } = Layout;
 function Comment() {
  
     return (
       <Layout className="container main-layout">
-      
       <Layout className="bg-gray">
         <Header className="layout-header">
           <AppHeader  />
         </Header>
+        <Content className="layout-content">
+         <CommentList/>
+        </Content>
         <Footer className="layout-footer">
           <AppFooter />
         </Footer>

@@ -176,7 +176,59 @@ body {
     width: 10rem;
   }
 }
-
+/*Home*/
+.swiper{
+  margin-top: 6.5rem;
+  height:5rem;
+}
+.swiper-img{
+  width:2rem;
+  height:10rem;
+}
+.home-compare{
+  
+}
+.home-title{
+  width:auto;
+  height:auto;
+  font-size:2.25rem;
+  color:black;
+}
+.home-card{
+  display:flex;
+  flex-direction: row;
+  width:53.75rem;
+  height:21rem;
+  border:solid 1px black;
+  border-radius: 10px;
+  margin-top: 1rem;
+  margin-left: 15rem;
+  margin-bottom: 1rem;
+}
+.home-card-img{
+  width:10.8rem;
+  height:14.8rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+}
+.home-card-text{
+  display:flex;
+  flex-direction: column;
+}
+.home-card-title{
+  width:auto;
+  height:auto;
+  font-size:1.5rem;
+  color:black;
+  margin-left: 12rem;
+}
+.home-card-description{
+  width:17rem;
+  height:auto;
+  font-size:1rem;
+  color:black;
+  margin-left: 10rem;
+}
 /* Cart */
 .cart-summary-text {
   color: white;
