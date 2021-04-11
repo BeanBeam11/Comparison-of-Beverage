@@ -10,11 +10,11 @@ export default function Footer() {
                     <img className="footer-icon" src="./img/icon_service.png"/>
                     <p className="footer-text">服務條款</p>
                 </div>
-                <div className="footer-item footer-item-1">
-                        <img className="footer-icon footer-icon-1"src="./img/icon_facebook.png"/>
-                        <img className="footer-icon footer-icon-1" src="./img/icon_instagram.png"/>
-                        <img className="footer-icon footer-icon-1" src="./img/icon_line.png"/>
-                        <p className="footer-text">© 2021 Beverage Comparator</p>
+                <div className="footer-item footer-item-center">
+                        <img className="footer-icon footer-icon-center"src="./img/icon_facebook.png"/>
+                        <img className="footer-icon footer-icon-center" src="./img/icon_instagram.png"/>
+                        <img className="footer-icon footer-icon-center" src="./img/icon_line.png"/>
+                        <p className="footer-text footer-text-center">© 2021 Beverage Comparator</p>
                 </div>
                 <div className="footer-item">
                     <img className="footer-icon" src="./img/icon_question.png"/>
