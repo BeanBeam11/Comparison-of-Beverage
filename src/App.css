@@ -641,7 +641,21 @@ span.ham-menu-bar3--touch {
   align-self: center;
   color: #8183ff;
 }
-
+/*Comment*/
+.comment-add{
+  width:45rem;
+  height:11.6rem;
+  border:solid 1px black;
+  display: flex;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.comment-add-img{
+  width:6.25rem;
+  height:6.25rem;
+  
+}
 /* Footer */
 .footer {
   position: relative;
