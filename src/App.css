@@ -67,7 +67,6 @@ body {
   padding: 0;
   width: 100%;
   height: 8rem;
-  line-height: 1.6;
   background-color: #EBE0D3;
   color: #573D2D;
 }
@@ -85,42 +84,51 @@ body {
 
 /* Header */
 .header {
-  text-align: center;
-}
-
-.header-wrap {
-  display: flex;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  line-height: 8rem;
+  text-align: center;
+  padding: 0 8rem;
 }
-
-.header-text {
+.header-wrap-left {
+  position: relative;
   display: flex;
   flex-direction: row;
 }
 .header-logo{
-  width:7.1875rem;
-  height:3.4375rem;
-  margin-top: 1.5625rem;
-  margin-left:3rem;
+  width:8rem;
 }
-
-.header-left-navbar{
+.header-wrap-center {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+  margin-right: auto;
+}
+.header-navbar-center{
   width:auto;
   height:1.75rem;
+  color: #573D2D;
   font-size: 1.5rem;
-  margin-top: 2.375rem;
   margin-left: 3.8rem;
 }
-.header-right-navbar{
-  
+.header-wrap-right {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
-.header-right-search{
- 
+.header-item{
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem;
 }
-.header-right-navbar-icon{
-  width:2.5rem;
-  height:2.5rem;
-  
+.header-search{
+  width: 10rem;
+}
+.header-icon{
+  width:2rem;
 }
 
 /* Footer */
