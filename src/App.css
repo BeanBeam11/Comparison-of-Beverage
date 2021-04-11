@@ -45,6 +45,10 @@
 } 
 
 /* general */
+html{
+  width: 100vw;
+  height: 100%;
+}
 body {
   font-size: 16px;
   line-height: 1.6;
@@ -56,6 +60,12 @@ body {
   font-size: 0;
 }
 
+.ant-pagination-item-active a{
+  color: #573D2D;
+}
+.ant-pagination-item-active{
+  border: 1px solid #573D2D;
+}
 .container-fluid {
   margin: 0 auto;
   max-width: 1200px;
@@ -264,6 +274,11 @@ body {
   width: auto;
   height: 1.75rem;
 }
+.ant-btn-primary{
+  color: #301A0A;
+  background: none;
+  border-color: #301A0A;
+}
 .menu-compare-bt-box{
   position: relative;
   width: 90px;
@@ -273,7 +288,8 @@ body {
 }
 .menu-compare-bt{
   color: #301A0A;
-  margin: 2rem 0;
+  margin: 2rem 0 5rem;
+  border-radius: 5px;
 }
 .ant-table-header .ant-table-cell{
   color: #301A0A;
@@ -282,6 +298,13 @@ body {
 .ant-table-cell{
   color: #301A0A;
   background-color: #fff;
+}
+.ant-table-tbody > tr > td, .ant-table-thead > tr > th{
+  padding: 1rem 2rem;
+}
+.ant-pagination{
+  /* width: 40rem; */
+  padding: 0.5rem 2rem;
 }
 
 /*Comparison*/

@@ -1,5 +1,6 @@
 import {useEffect, useContext} from "react";
 import { Button, notification } from 'antd';
+import Icon from './Icons';
 import {StoreContext} from "../store"
 import {addToComparisonItem} from "../actions/";
   
@@ -47,7 +48,7 @@ import {addToComparisonItem} from "../actions/";
        localStorage.setItem("count",JSON.stringify(count));
       return (
         <Button type="primary" onClick={addToComparison}>
-            加入比較
+          加入比較
         </Button>
       );
   }

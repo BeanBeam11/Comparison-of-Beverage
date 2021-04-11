@@ -33,7 +33,7 @@ export default function MenuItem(menu) {
       <div className="menu-content">
        
           
-          <Table value={menu.menu.id} columns={columns} dataSource={menu.menu} pagination={{ pageSize: 50 }} scroll={{ y: 500 }} />,
+          <Table value={menu.menu.id} columns={columns} dataSource={menu.menu} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
          
        
       </div>
