@@ -25,15 +25,15 @@ export default function Comparison(){
             {compareItems.length===0?(
                 <div>Did not add beverage items</div>
             ):( 
-                <div className="compare-card">
+                <div className="compare-area">
                 
                 {compareItems.map(item=>(
-                        <div className="compare-items">
+                        <div className="compare-items-box">
                             <Button className="compare-delete" onClick={()=>removeComparisonItem(dispatch,item.id)}>x</Button>
-                            <p className="compare-items-title">店家:{item.id}</p>
-                            <p className="compare-items-name">名稱:{item.name}</p>
-                            <p className="compare-items-price">價格:{item.price}</p>
-                            <Button className="compare-add">加入收藏</Button>
+                            <p className="compare-items">店家：{item.id}</p>
+                            <p className="compare-items">名稱：{item.name}</p>
+                            <p className="compare-items">價格：{item.price}</p>
+                            <Button className="compare-items compare-add">加入收藏</Button>
                         </div>
                    
                 ))}
