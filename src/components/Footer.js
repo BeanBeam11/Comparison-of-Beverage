@@ -3,25 +3,25 @@ export default function Footer() {
         <footer className="footer">
             <div className="footer-content">
                 <div className="footer-item">
-                    <img className="footer-icon" src="https://image.flaticon.com/icons/png/128/4104/4104794.png"/>
+                    <img className="footer-icon" src="./img/icon_privacy.png"/>
                     <p className="footer-text">隱私政策</p>
                 </div>
                 <div className="footer-item">
-                    <img className="footer-icon" src="https://image.flaticon.com/icons/png/128/570/570170.png"/>
+                    <img className="footer-icon" src="./img/icon_service.png"/>
                     <p className="footer-text">服務條款</p>
                 </div>
                 <div className="footer-item footer-item-1">
-                        <img className="footer-icon footer-icon-1"src="https://image.flaticon.com/icons/png/128/747/747374.png"/>
-                        <img className="footer-icon footer-icon-1" src="https://image.flaticon.com/icons/png/128/1384/1384031.png"/>
-                        <img className="footer-icon footer-icon-1" src="https://image.flaticon.com/icons/png/128/2111/2111527.png"/>
+                        <img className="footer-icon footer-icon-1"src="./img/icon_facebook.png"/>
+                        <img className="footer-icon footer-icon-1" src="./img/icon_instagram.png"/>
+                        <img className="footer-icon footer-icon-1" src="./img/icon_line.png"/>
                         <p className="footer-text">© 2021 Beverage Comparator</p>
                 </div>
                 <div className="footer-item">
-                    <img className="footer-icon" src="https://image.flaticon.com/icons/png/128/906/906794.png"/>
+                    <img className="footer-icon" src="./img/icon_question.png"/>
                     <p className="footer-text">常見問題</p>
                 </div>
                 <div className="footer-item">
-                    <img className="footer-icon" src="https://image.flaticon.com/icons/png/128/2089/2089181.png"/>
+                    <img className="footer-icon" src="./img/icon_mail.png"/>
                     <p className="footer-text">聯絡我們</p>
                 </div>
             </div>
