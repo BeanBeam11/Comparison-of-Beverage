@@ -199,49 +199,54 @@ body {
   width:2rem;
   height:10rem;
 }
-.home-compare{
-  
+.home-compare-bt-box{
+  position: relative;
+  width: 90px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.home-compare-bt{
+  color: #301A0A;
+  margin: 2rem 0 5rem;
+  border-radius: 5px;
 }
 .home-title{
-  width:auto;
-  height:auto;
+  width: 100vw;
+  text-align: center;
   font-size:2.25rem;
-  color:black;
 }
 .home-card{
   display:flex;
   flex-direction: row;
-  width:53.75rem;
-  height:21rem;
-  border:solid 1px black;
+  width:50rem;
+  height:20rem;
+  border:solid 1px #301A0A;
   border-radius: 10px;
-  margin-top: 1rem;
-  margin-left: 15rem;
-  margin-bottom: 1rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-bottom: 2rem;
+  padding: 2rem 5rem;
+}
+.home-card-img-box{
+  width: 15rem;
+  height: 16rem;
 }
 .home-card-img{
-  width:10.8rem;
-  height:14.8rem;
-  margin-top: 3rem;
-  margin-left: 2rem;
+  width: 12rem;
 }
 .home-card-text{
   display:flex;
   flex-direction: column;
+  width: 25rem;
+  height: 16rem;
 }
 .home-card-title{
-  width:auto;
-  height:auto;
   font-size:1.5rem;
-  color:black;
-  margin-left: 12rem;
 }
 .home-card-description{
-  width:17rem;
-  height:auto;
   font-size:1rem;
-  color:black;
-  margin-left: 10rem;
 }
 
 /*Menu*/
