@@ -32,6 +32,7 @@ function reducer(state, action) {
         };
     case ADD_TO_COMPARISON:
       const item = action.payload;
+      // console.log(compareItems)
       const beverge = state.compareItems.find((x) => x.id === item.id);
       
       if (beverge) {
@@ -41,7 +42,7 @@ function reducer(state, action) {
         compareItems = state.compareItems.map((x) =>
           x.id === beverge.id ? item : x
         );
-        console.log(count);
+        // console.log(count);
         return { ...state, compareItems,count };
       }
       

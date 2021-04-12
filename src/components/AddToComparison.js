@@ -34,6 +34,7 @@ import {addToComparisonItem} from "../actions/";
           // console.log(item);
         if(count<3){
           openNotification();
+          // console.log(item.item);
           addToComparisonItem(dispatch,item.item,count);
         }
         else{
@@ -45,6 +46,7 @@ import {addToComparisonItem} from "../actions/";
       useEffect(()=>{
         localStorage.setItem("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
+      
        localStorage.setItem("count",JSON.stringify(count));
       return (
         <Button onClick={addToComparison} >
