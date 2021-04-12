@@ -228,6 +228,8 @@ body {
   margin: auto;
   margin-bottom: 2rem;
   padding: 2rem 5rem;
+  background-color: #fff;
+  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.3);
 }
 .home-card-img-box{
   width: 15rem;
@@ -235,6 +237,7 @@ body {
 }
 .home-card-img{
   width: 12rem;
+  max-height: 16rem;
 }
 .home-card-text{
   display:flex;
