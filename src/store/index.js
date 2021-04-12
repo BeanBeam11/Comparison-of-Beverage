@@ -1,4 +1,5 @@
 import { createContext } from "react";
+import Cookie from "js-cookie";
 import useReducerWithThunk from "use-reducer-thunk";
 import menus from "../json/kebuke.json";
 import {
@@ -9,9 +10,8 @@ import {
 } from "../utils/constants";
 
 export const StoreContext = createContext();
-let compareItems = localStorage.getItem("compareItems")
-  ? JSON.parse(localStorage.getItem("compareItems"))
-  :[];
+let compareItems = Cookie.getJSON("compareItems");
+if(!compareItems) compareItems=[];
 let count=0;
 // let compareItems;
 const initialState = {
@@ -32,7 +32,9 @@ function reducer(state, action) {
         };
     case ADD_TO_COMPARISON:
       const item = action.payload;
-      // console.log(compareItems)
+      console.log(state.compareItems);
+      console.log(compareItems);
+      console.log(action.payload);
       const beverge = state.compareItems.find((x) => x.id === item.id);
       
       if (beverge) {

@@ -1,6 +1,7 @@
 import {useEffect, useContext} from "react";
 import {StoreContext} from "../store";
 import { Button} from "antd";
+import Cookie from "js-cookie";
 import {removeComparisonItem,removeall} from "../actions";
 export default function Comparison(){
 
@@ -8,10 +9,10 @@ export default function Comparison(){
     // console.log(compareItems);
     
     useEffect(()=>{
-        localStorage.setItem("compareItems", JSON.stringify(compareItems));
+        Cookie.set("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
     useEffect(()=>{
-        localStorage.getItem("count",JSON.stringify(count));
+        Cookie.get("count",JSON.stringify(count));
     },[count])
     
     console.log(count);

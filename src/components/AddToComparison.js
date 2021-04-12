@@ -1,5 +1,6 @@
 import {useEffect, useContext} from "react";
 import { Button, notification } from 'antd';
+import Cookie from "js-cookie";
 import Icon from './Icons';
 import {StoreContext} from "../store"
 import {addToComparisonItem} from "../actions/";
@@ -20,7 +21,7 @@ import {addToComparisonItem} from "../actions/";
       };
       const openNotification_Full = () => {
         notification.open({
-          message: '加入比較',
+          message: '無法加入比較',
           description:
             "已有三件商品",
           onClick: () => {
@@ -44,10 +45,9 @@ import {addToComparisonItem} from "../actions/";
         
       };
       useEffect(()=>{
-        localStorage.setItem("compareItems", JSON.stringify(compareItems));
+        Cookie.set("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
-      
-       localStorage.setItem("count",JSON.stringify(count));
+       Cookie.set("count",JSON.stringify(count));
       return (
         <Button onClick={addToComparison} >
           加入比較

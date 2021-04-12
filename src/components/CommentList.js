@@ -22,7 +22,7 @@ export default function CommentList() {
     console.log(cities)
     return(
         <>
-            <div class="comment-add">
+            {/* <div class="comment-add">
                 <img class="comment-add-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpEZZf3-Qc1z5MtboZNbXh-EcVyYQcMyWEbQ&usqp=CAU"/>
                 <Select defaultValue={provinceData[0]} style={{ width: 120 }} onChange={handleProvinceChange}>
         {provinceData.map(province => (
@@ -34,7 +34,7 @@ export default function CommentList() {
           <Option key={city}>{city}</Option>
         ))}
       </Select>
-            </div>
+            </div> */}
         </>
     );
 }
