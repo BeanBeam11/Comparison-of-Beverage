@@ -47,8 +47,9 @@ import {addToComparisonItem} from "../actions/";
       }, [compareItems])
        localStorage.setItem("count",JSON.stringify(count));
       return (
-        <Button type="primary" onClick={addToComparison}>
+        <Button onClick={addToComparison} >
           加入比較
-        </Button>
+          {/* <Icon style={{width:200}}/> */}
+        </Button> 
       );
   }
