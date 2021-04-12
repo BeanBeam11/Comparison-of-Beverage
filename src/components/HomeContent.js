@@ -1,5 +1,6 @@
 import { Carousel } from 'antd';
 import {Button,BackTop} from 'antd'
+import { Link } from "react-router-dom";
 import Swiper from 'react-id-swiper';
 import 'react-id-swiper/src/styles/css/swiper.css';
 export default function HomeContent(){
@@ -25,7 +26,9 @@ export default function HomeContent(){
         </Swiper>
       </div>
       <div className="home-compare-bt-box">
-        <Button className="home-compare-bt">開始比較</Button>
+        <Link to='/menu'>
+          <Button className="home-compare-bt">開始比較</Button>
+        </Link>
       </div>
       <p className="home-title">各家主打商品</p>
         <div className="home-card">
