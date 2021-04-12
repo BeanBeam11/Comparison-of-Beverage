@@ -1,286 +1,343 @@
 [
     {
       "id": "CS01",
+      "company":"清心福全",
       "name":"原鄉四季",
       "price":"20 / 25"
     },
     {
         "id": "CS02",
+        "company":"清心福全",
         "name":"特級綠茶",
         "price":"20 / 25"
     },
     {
         "id": "CS03",
+        "company":"清心福全",
         "name":"烏龍綠茶",
         "price":"20 / 25"
     },
     {
         "id": "CS04",
+        "company":"清心福全",
         "name":"翡翠烏龍",
         "price":"20 / 25"
     },
     {
         "id": "CS05",
+        "company":"清心福全",
         "name":"極品清茶",
         "price":"20 / 25"
     },
     {
         "id": "CS06",
+        "company":"清心福全",
         "name":"錫蘭紅茶",
         "price":"20 / 25"
     },
     {
         "id": "CS07",
+        "company":"清心福全",
         "name":"嚴選高山茶",
         "price":"20 / 25"
     },
     {
         "id": "CS08",
+        "company":"清心福全",
         "name":"特選普洱",
         "price":"20 / 25"
     },
     {
         "id": "CS09",
+        "company":"清心福全",
         "name":"優多綠茶",
         "price":"35 / 45"
     },
     {
         "id": "CS10",
+        "company":"清心福全",
         "name":"優多檸檬",
         "price":"45 / 60"
     },
     {
         "id": "CS11",
+        "company":"清心福全",
         "name":"優多葡萄柚",
         "price":"45 / 60"
     },
     {
         "id": "CS12",
+        "company":"清心福全",
         "name":"錫蘭奶紅",
         "price":"40 / 50"
     },
     {
         "id": "CS13",
+        "company":"清心福全",
         "name":"特級奶綠",
         "price":"40 / 50"
     },
     {
         "id": "CS14",
+        "company":"清心福全",
         "name":"烏龍奶茶",
         "price":"40 / 50"
     },
     {
         "id": "CS15",
+        "company":"清心福全",
         "name":"珍珠奶茶",
         "price":"40 / 50"
     },
     {
         "id": "CS16",
+        "company":"清心福全",
         "name":"粉圓奶茶",
         "price":"40 / 50"
     },
     {
         "id": "CS17",
+        "company":"清心福全",
         "name":"仙草凍奶茶",
         "price":"40 / 50"
     },
     {
         "id": "CS18",
+        "company":"清心福全",
         "name":"布丁奶茶",
         "price":"40 / 50"
     },
     {
         "id": "CS19",
+        "company":"清心福全",
         "name":"椰果奶茶",
         "price":"40 / 50"
     },
     {
         "id": "CS20",
+        "company":"清心福全",
         "name":"蜂蜜奶茶",
         "price":"45 / 60"
     },
     {
         "id": "CS21",
+        "company":"清心福全",
         "name":"冬瓜茶",
         "price":"30 / - -"
     },
     {
         "id": "CS22",
+        "company":"清心福全",
         "name":"冬瓜青茶",
         "price":"35 / - -"
     },
     {
         "id": "CS23",
+        "company":"清心福全",
         "name":"冬瓜檸檬",
         "price":"55 / - -"
     },
     {
         "id": "CS24",
+        "company":"清心福全",
         "name":"梅子綠茶",
         "price":"35 / 45"
     },
     {
         "id": "CS25",
+        "company":"清心福全",
         "name":"紅茶豆漿",
         "price":"- - / 45"
     },
     {
         "id": "CS26",
+        "company":"清心福全",
         "name":"情人茶",
         "price":"40 / 50"
     },
     {
         "id": "CS27",
+        "company":"清心福全",
         "name":"蜜茶",
         "price":"30 / 40"
     },
     {
         "id": "CS28",
+        "company":"清心福全",
         "name":"蜂蜜烏龍/綠茶",
         "price":"35 / 45"
     },
     {
         "id": "CS29",
+        "company":"清心福全",
         "name":"清心巧克力",
         "price":"- - / 50"
     },
     {
         "id": "CS30",
+        "company":"清心福全",
         "name":"濃情巧克力",
         "price":"- - / 50"
     },
     {
         "id": "CS31",
+        "company":"清心福全",
         "name":"咖啡奶茶",
         "price":"35 / 60"
     },
     {
         "id": "CS32",
+        "company":"清心福全",
         "name":"綠豆沙奶茶",
         "price":"45 / 55"
     },
     {
         "id": "CS33",
+        "company":"清心福全",
         "name":"芋香奶茶",
         "price":"45 / 55"
     },
     {
         "id": "CS34",
+        "company":"清心福全",
         "name":"檸檬汁",
         "price":"40 / 55"
     }, 
     {
         "id": "CS35",
+        "company":"清心福全",
         "name":"輕檸四季",
         "price":"- - / 45"
     }, 
     {
         "id": "CS36",
+        "company":"清心福全",
         "name":"檸檬綠茶/紅茶",
         "price":"40 / 55"
     }, 
     {
         "id": "CS37",
+        "company":"清心福全",
         "name":"蜂蜜檸檬",
         "price":"50 / 65"
     }, 
     {
         "id": "CS38",
+        "company":"清心福全",
         "name":"金桔檸檬",
         "price":"40 / 55"
     }, 
     {
         "id": "CS39",
+        "company":"清心福全",
         "name":"桔茶",
         "price":"40 / 55"
     }, 
     {
         "id": "CS40",
+        "company":"清心福全",
         "name":"葡萄柚汁",
         "price":"40 / 55"
     }, 
     {
         "id": "CS41",
+        "company":"清心福全",
         "name":"葡萄柚綠茶",
         "price":"40 / 55"
     },
     {
         "id": "CS42",
+        "company":"清心福全",
         "name":"和風抹茶",
         "price":"35 / 45"
     },
     {
         "id": "CS43",
+        "company":"清心福全",
         "name":"翡翠抹茶",
         "price":"35 / 45"
     },
     {
         "id": "CS44",
+        "company":"清心福全",
         "name":"抹茶拿鐵",
         "price":"45 / 60"
     },
     {
         "id": "CS45",
+        "company":"清心福全",
         "name":"鮮奶茶",
         "price":"45 / 60"
     },
     {
         "id": "CS46",
+        "company":"清心福全",
         "name":"鮮奶冬瓜",
         "price":"- - / 60"
     },
     {
         "id": "CS47",
+        "company":"清心福全",
         "name":"鮮奶豆漿",
         "price":"- - / 60"
     },
     {
         "id": "CS48",
+        "company":"清心福全",
         "name":"咖啡拿鐵",
         "price":"50 / 70"
     },
     {
         "id": "CS49",
+        "company":"清心福全",
         "name":"清心巧克力拿鐵",
         "price":"- - / 70"
     },
     {
         "id": "CS50",
+        "company":"清心福全",
         "name":"濃情巧克力拿鐵",
         "price":"- - / 70"
     },
     {
         "id": "CS51",
+        "company":"清心福全",
         "name":"冰淇淋紅茶",
         "price":"40 / 50"
     },
     {
         "id": "CS52",
+        "company":"清心福全",
         "name":"冰淇淋抹茶",
         "price":"- - / 70"
     },
     {
         "id": "CS53",
+        "company":"清心福全",
         "name":"冰淇淋奶茶",
         "price":"45 / 65"
     },
     {
         "id": "CS54",
+        "company":"清心福全",
         "name":"桂圓茶",
         "price":"35 / 50"
     },
     {
         "id": "CS55",
+        "company":"清心福全",
         "name":"桂圓奶茶",
         "price":"40 / 60"
     },
     {
         "id": "CS56",
+        "company":"清心福全",
         "name":"薑母茶",
         "price":"35 / 50"
     },
     {
         "id": "CS57",
+        "company":"清心福全",
         "name":"薑母奶茶",
         "price":"40 / 60"
     }    
