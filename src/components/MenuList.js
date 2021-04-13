@@ -18,7 +18,7 @@ const onClickMenu=(value)=>{
       <Select
         className="menu-select"
         labelInValue
-        defaultValue={{ value: '可不可熟成紅茶' }}
+        defaultValue={{ value: '可不可熟成紅茶' }}  
         style={{ width: 150 }}
         onChange={onClickMenu}
       >

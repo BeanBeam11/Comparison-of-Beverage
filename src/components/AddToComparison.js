@@ -1,6 +1,7 @@
 import {useEffect, useContext} from "react";
 import { Button, notification } from 'antd';
 import Cookie from "js-cookie";
+import {PlusSquareOutlined} from '@ant-design/icons';
 import Icon from './Icons';
 import {StoreContext} from "../store"
 import {addToComparisonItem} from "../actions/";
@@ -49,9 +50,6 @@ import {addToComparisonItem} from "../actions/";
       }, [compareItems])
        Cookie.set("count",JSON.stringify(count));
       return (
-        <Button onClick={addToComparison} >
-          加入比較
-          {/* <Icon style={{width:200}}/> */}
-        </Button> 
+        <Button className="addcompare-bt" type="default" icon={<PlusSquareOutlined />}  />
       );
   }

@@ -33,7 +33,7 @@ export default function Header({ }) {
         <Link to='/' >
           <img className='header-item header-icon' src="./img/icon_heart.png"/>
         </Link>
-        <Link to='/' >
+        <Link to='/login' >
           <img className='header-item header-icon' src="./img/icon_user.png"/>
         </Link>
       </div>

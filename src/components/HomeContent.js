@@ -1,8 +1,7 @@
 import { Carousel } from 'antd';
 import {Button,BackTop} from 'antd'
 import { Link } from "react-router-dom";
-import Swiper from 'react-id-swiper';
-import 'react-id-swiper/src/styles/css/swiper.css';
+
 export default function HomeContent(){
     const params = {
         direction: 'horizontal',
@@ -17,13 +16,7 @@ export default function HomeContent(){
     return(
         <>
         <div className="swiper">
-        <Swiper {...params}>
-          <img className="swiper-img" src="http://kebuke.com/wp-content/uploads/2021/03/WORKS_201912%E8%8C%B6%E7%BD%90%E7%A6%AE%E7%9B%92_0-scaled.jpg"/>
-          <img className="swiper-img" src="http://kebuke.com/wp-content/uploads/2021/02/WORKS_201911_%E6%A3%92%E7%90%83_0.jpg"/>
-          <img className="swiper-img" src="http://kebuke.com/wp-content/uploads/2021/03/WORKS_201912%E8%8C%B6%E7%BD%90%E7%A6%AE%E7%9B%92_0-scaled.jpg"/>
-          <img className="swiper-img" src="http://kebuke.com/wp-content/uploads/2021/02/WORKS_201911_%E6%A3%92%E7%90%83_0.jpg"/>
-          <img className="swiper-img" src="http://kebuke.com/wp-content/uploads/2021/03/WORKS_201912%E8%8C%B6%E7%BD%90%E7%A6%AE%E7%9B%92_0-scaled.jpg"/>
-        </Swiper>
+        
       </div>
       <div className="home-compare-bt-box">
         <Link to='/menu'>

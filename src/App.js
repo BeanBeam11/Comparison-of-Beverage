@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import MenuPage from './pages/MenuPage'
 import Comment from './pages/Comment'
 import Compare from './pages/Compare'
+import Login from './pages/LoginPage'
 import { StoreProvider } from "./store";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/compare" component={Compare} />
           <Route exact path="/comment" component={Comment} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/:menuListName" component={MenuPage} /> 
         </Switch>
       </BrowserRouter>

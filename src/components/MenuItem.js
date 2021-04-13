@@ -20,6 +20,7 @@ export default function MenuItem(menu) {
       title:'加入比較',
       key:'operation',
       width: 100,
+      
       // render:()=><Button className="menu-addbt" type="default" icon={<PlusSquareOutlined />}  />,
       render:(value)=><AddToComparison item={value}/>
                 
