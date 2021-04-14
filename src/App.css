@@ -1,5 +1,6 @@
 @import '~antd/dist/antd.css';
 
+
 /* RWD Container */
 .container {
   width: 100%;
@@ -192,17 +193,21 @@ body {
 
 /*Home*/
 .swiper{
+    display: flex;
+    flex-direction: row;
     background: #fff;
     text-align: center;
     font-size: 18px;
     line-height: 200px;
     box-sizing: border-box;
     border: 1px solid #ccc;
+    color: black;
 }
 .swiper-img{
-  width:2rem;
+ 
+  width:auto;
   height:10rem;
-}
+} */
 .home-compare-bt-box{
   position: relative;
   width: 90px;

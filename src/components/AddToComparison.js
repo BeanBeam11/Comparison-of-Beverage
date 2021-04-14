@@ -50,6 +50,6 @@ import {addToComparisonItem} from "../actions/";
       }, [compareItems])
        Cookie.set("count",JSON.stringify(count));
       return (
-        <Button className="addcompare-bt" type="default" icon={<PlusSquareOutlined />}  />
+        <Button onClick={addToComparison} className="addcompare-bt" type="default" icon={<PlusSquareOutlined />} />
       );
   }
