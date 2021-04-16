@@ -10,7 +10,7 @@ export default function Header({ }) {
     <header className="header">
       <div className="header-wrap-left">
         <Link to='/'>
-          <img className="header-logo" src="./img/logo_tea_da.png"/>
+          <img className="header-logo" src="./img/logo_drink_what.png"/>
         </Link>
       </div>
       <div className="header-wrap-center">

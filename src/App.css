@@ -227,7 +227,8 @@ body {
 .home-title{
   width: 100vw;
   text-align: center;
-  font-size:2.25rem;
+  font-size: 2.25rem;
+  font-weight: 500;
 }
 .home-card{
   display:flex;
@@ -338,6 +339,7 @@ body {
   width: 100vw;
   font-size: 2rem;
   margin: 2rem 0 0;
+  font-weight: 500;
 }
 .compare-description{
   width: 100vw;
