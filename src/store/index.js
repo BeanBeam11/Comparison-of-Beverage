@@ -24,7 +24,13 @@ const initialState = {
   },
   compareItems,
   count,
-  commentList
+  commentList:{
+    users: [],
+    shop: [],
+    product:[],
+    description: [],
+  }
+
   
 
 };
@@ -71,7 +77,7 @@ function reducer(state, action) {
       return { ...state,compareItems,count};
     case ADD_TO_COMMENT:
       const content=action.payload;
-      commentList = content;
+      
     
       
       

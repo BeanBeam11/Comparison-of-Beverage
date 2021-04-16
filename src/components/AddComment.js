@@ -14,8 +14,7 @@ export default function AddComment() {
     const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷克夏","清心福全"];
     const [shops, setShops] = useState(kebuke);
     const [shopName, setshopName] = useState(kebuke.name);
-    // const [productName,setProductName] = useState();
-    // const [description,setDescription] = useState();
+    const resource={users:"",shop:"",product:"",description:""};
     const handleProvinceChange = value => {
       console.log(value);
         switch (value){
@@ -47,25 +46,13 @@ export default function AddComment() {
           
         }
       };
-      // const onshopNameChange=(value) => {
-      //   setshopName(value);
-      // };
-      // const productNameSet=value => {
-      //   setProductName(value);
-      // }
-      // const onChange=value=>{
-      //   setDescription(value);
-      // }
     const Publish=()=> {
-      const resource={name:"Json",shop:"可不可",product:"熟成紅茶",description:"好好喝"};
+      const resource={users:"Json",shop:"可不可",product:"熟成紅茶",description:"好好喝"};
       addToComment(dispatch,resource);
     }
     useEffect(()=>{
       Cookie.set("commentList", JSON.stringify(commentList));
     }, [commentList])
-    
-    // console.log(cityData);
-    
     return(
         <>
             <div class="comment-add">
@@ -81,9 +68,8 @@ export default function AddComment() {
           <Option key={city.name}>{city.name}</Option>
           
         ))}
-        
       </Select>
-      <img src="https://image.flaticon.com/icons/png/128/1837/1837512.png" class="comment-add-icon"/>
+        <img src="https://image.flaticon.com/icons/png/128/1837/1837512.png" class="comment-add-icon"/>
       <Input placeholder="寫點評論..." className="comment-input"/>
       <Button onClick={Publish} className="comment-publish">發布</Button>
             </div>

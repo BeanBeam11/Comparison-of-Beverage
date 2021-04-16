@@ -8,8 +8,13 @@ export default function CommentList() {
     console.log(commentList);
     return(
         <>
-         <AddComment/>
-        
+            <AddComment/>
+            <div class="comment-list">
+                <p  class="comment-list-txt">{commentList.users}</p>
+                <p class="comment-list-txt">{commentList.shop}</p>
+                <p class="comment-list-txt">{commentList.product}</p>
+                <p class="comment-list-txt">{commentList.description}</p>
+            </div>
         </>
     );
 }
