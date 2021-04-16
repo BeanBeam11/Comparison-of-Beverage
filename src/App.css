@@ -1,4 +1,6 @@
 @import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap');
+/* font-family: 'Shippori Mincho', serif;*/
 
 
 /* RWD Container */
@@ -8,6 +10,7 @@
   align-self: center;
   background-color: #F9F6F2;
   color: #573D2D;
+  font-family: 'Shippori Mincho', serif;
 }
 
 /* sm */
@@ -128,7 +131,7 @@ body {
   height:1.75rem;
   /* color: #573D2D; */
   color: #F9F6F2;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   margin-left: 3.8rem;
 }
 .header-wrap-right {
