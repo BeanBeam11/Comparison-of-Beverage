@@ -200,17 +200,16 @@ body {
 /*Home*/
 .swiper{
   display: flex;
-  flex-direction: row;
-  background: #fff;
-  text-align: center;
-  font-size: 18px;
-  line-height: 200px;
-  box-sizing: border-box;
-  border: 1px solid #ccc;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  width:50rem;
+    
 }
 .swiper-img{
-  width: auto;
-  height: 10rem;
+  width: 50rem;
+ 
 } 
 .home-compare-bt-box{
   position: relative;
