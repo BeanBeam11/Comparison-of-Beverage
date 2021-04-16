@@ -6,13 +6,17 @@ import {
   SET_MENU,
   ADD_TO_COMPARISON,
   REMOVE_COMPARISON_ITEM,
-  REMOVE_ALL
+  REMOVE_ALL,
+  ADD_TO_COMMENT
 } from "../utils/constants";
 
 export const StoreContext = createContext();
 let compareItems = Cookie.getJSON("compareItems");
 if(!compareItems) compareItems=[];
 let count=0;
+let commentList = Cookie.getJSON("commentList");
+if(!commentList) commentList=[];
+// let commentList=[];
 // let compareItems;
 const initialState = {
   menuList:{
@@ -20,6 +24,9 @@ const initialState = {
   },
   compareItems,
   count,
+  commentList
+  
+
 };
 
 function reducer(state, action) {
@@ -62,9 +69,18 @@ function reducer(state, action) {
       compareItems= state.compareItems.map((x) => x.id !==action.payload);
       count=0;
       return { ...state,compareItems,count};
+    case ADD_TO_COMMENT:
+      const content=action.payload;
+      commentList = content;
+    
+      
+      
+      return { ...state,commentList};
     default:
       return state;
   }
+  
+
 }
 
 export function StoreProvider(props) {
