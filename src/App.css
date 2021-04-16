@@ -202,17 +202,15 @@ body {
 
 /*Home*/
 .swiper{
+  width: 65vw;
   display: flex;
   right: 0;
   left: 0;
   margin: auto;
-  
-  width:50rem;
-    
+  margin-top: 1rem;
 }
 .swiper-img{
-  width: 50rem;
- 
+  width: 65vw;
 } 
 .home-compare-bt-box{
   position: relative;
@@ -223,7 +221,7 @@ body {
 }
 .home-compare-bt{
   color: #301A0A;
-  margin: 2rem 0 5rem;
+  margin: 1rem 0 5rem;
   border-radius: 5px;
 }
 .home-title{
