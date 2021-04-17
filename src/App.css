@@ -420,6 +420,8 @@ body {
 .comment-add-img{
   width: 6.25rem;
   height: 6.25rem;
+  border-radius: 50%;
+  background-color: #fff;
 }
 .comment-add-icon{
   width: 1.75rem;
