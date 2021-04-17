@@ -23,7 +23,7 @@ const columns = [
           <Select
             className="comparison-select"
             labelInValue
-            defaultValue={{ value: 'kebuke' }}
+            defaultValue={{ value: 'milkshop' }}
             style={{ width: 250 }}
             onChange={handleChange}
           >

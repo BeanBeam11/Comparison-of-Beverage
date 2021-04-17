@@ -11,7 +11,7 @@ import {StoreContext} from "../store"
 export default function AddComment() {
   const {state:{commentList},dispatch}= useContext(StoreContext);
   const { Option } = Select;
-  const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷克夏","清心福全"];
+  const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷客夏","清心福全"];
   const [shops, setShops] = useState(kebuke);
   const [shopName, setshopName] = useState(kebuke.name);
   const resource={users:"",shop:"",product:"",description:""};
@@ -33,7 +33,7 @@ export default function AddComment() {
           setShops(macu);
           setshopName(macu.name);
           break;
-        case "迷克夏":
+        case "迷客夏":
           console.log("milk");
           setShops(milkshop);
           setshopName(milkshop.name);
