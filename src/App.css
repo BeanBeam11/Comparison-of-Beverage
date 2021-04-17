@@ -93,7 +93,7 @@ body {
 
 .layout-content {
   background-color: #F9F6F2;
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 5rem);
 }
 
 .main-layout {
@@ -129,7 +129,7 @@ body {
   flex-direction: row;
 }
 .header-logo{
-  width:6rem;
+  width: 6rem;
 }
 .header-wrap-center {
   position: relative;
@@ -139,8 +139,8 @@ body {
   margin-right: auto;
 }
 .header-navbar-center{
-  width:auto;
-  height:1.75rem;
+  width: auto;
+  height: 1.75rem;
   /* color: #573D2D; */
   color: #F9F6F2;
   font-size: 1.2rem;
@@ -161,7 +161,7 @@ body {
   width: 10rem;
 }
 .header-icon{
-  width:2rem;
+  width: 2rem;
 }
 
 /* Footer */
@@ -195,7 +195,7 @@ body {
   margin-top: 2rem;
 }
 .footer-icon{
-  width:1.5rem;
+  width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
 }
@@ -205,8 +205,8 @@ body {
   margin: 0 0.5rem;
 }
 .footer-text{
-  height:1.75rem;
-  font-size:1rem;
+  height: 1.75rem;
+  font-size: 1rem;
 }
 .footer-text-center{
   margin-top: 0.5rem;
@@ -243,11 +243,11 @@ body {
   font-weight: 500;
 }
 .home-card{
-  display:flex;
+  display: flex;
   flex-direction: row;
-  width:50rem;
-  height:20rem;
-  border:solid 1px #301A0A;
+  width: 50rem;
+  height: 20rem;
+  border: solid 1px #301A0A;
   border-radius: 10px;
   right: 0;
   left: 0;
@@ -266,22 +266,22 @@ body {
   max-height: 16rem;
 }
 .home-card-text{
-  display:flex;
+  display: flex;
   flex-direction: column;
   width: 25rem;
   height: 16rem;
 }
 .home-card-title{
-  font-size:1.5rem;
+  font-size: 1.5rem;
 }
 .home-card-description{
-  font-size:1rem;
+  font-size: 1rem;
 }
 
 /*Menu*/
 .menu{
-  width:42.5rem ;
-  height:43.0625rem;
+  width: 42.5rem;
+  height: 43.0625rem;
   border: solid gray 1px;
   padding:0;
   right: 0;
@@ -355,12 +355,12 @@ body {
 }
 .compare-description{
   width: 100vw;
-  font-size:1.2rem;
+  font-size: 1.2rem;
   margin: 1rem 0;
 }
 .compare-reset{
-  width:6rem;
-  height:2rem;
+  width: 6rem;
+  height: 2rem;
   right: 0;
   left: 0;
   margin: auto;
@@ -370,14 +370,14 @@ body {
 .compare-area{
   position: relative;
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   width: 80vw;
   margin: 2rem auto 5rem;
 }
 .compare-items-box{
   background-color: white;
-  width:25vw;
-  height:40rem;
+  width: 25vw;
+  height: 40rem;
   margin-left: calc( 5vw / 3);
   font-size: 1rem;
 }
@@ -388,7 +388,7 @@ body {
   box-sizing: border-box;
 }
 .compare-items{
-  width:auto;
+  width: auto;
   margin: 0.5rem 3vw;
 }
 .addcompare-bt{
@@ -399,61 +399,60 @@ body {
 .comment-list{
   margin-top: 100px;
   margin-left: 100px;
-  width:720px;
-  height:186px;
+  width: 720px;
+  height: 186px;
   border: 1px solid #301A0A;
 }
 .comment-list-txt{
-  height:20px;
+  height: 20px;
   width: 100%;
-  font-size:18px;
-  
+  font-size: 18px;
 }
 .comment-add{
-  width:45rem;
-  height:11.6rem;
-  border:solid 1px #301A0A;
+  width: 45rem;
+  height: 11.6rem;
+  border: solid 1px #301A0A;
   display: flex;
   right: 0;
   left: 0;
   margin: auto;
 }
 .comment-add-img{
-  width:6.25rem;
-  height:6.25rem;
+  width: 6.25rem;
+  height: 6.25rem;
 }
 .comment-add-icon{
-  width:1.75rem;
-  height:1.6rem;
+  width: 1.75rem;
+  height: 1.6rem;
   margin-top: 0.5%;
   margin-left: 2%;
 }
 .comment-input{
-  width:31rem;
-  height:4.3rem;
+  width: 31rem;
+  height: 4.3rem;
 }
 .comment-publish{
-  width:6.25rem;
-  height:40px;
-  color:#B2B1B1;
-  font-size:1.5rem;
-
+  width: 6.25rem;
+  height: 40px;
+  color :#B2B1B1;
+  font-size: 1.5rem;
 }
+
 /*Login*/
 .login{
-  width:40vw;
-  height:30vw;
+  width: 40vw;
+  height: 30vw;
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   right: 0;
   left: 0;
-  margin:auto;
+  margin: auto;
   margin-top: 2rem;
   margin-bottom: 5rem;
-  border:1px solid #301A0A;
+  border: 1px solid #301A0A;
 }
 .login-title{
-  font-size:1.5rem;
+  font-size: 1.5rem;
   font-weight: 500;
   display: flex;
   right: 0;
@@ -469,11 +468,11 @@ body {
   margin: auto;
 }
 .login-bt{
-  font-size:1rem;
+  font-size: 1rem;
   display: flex;
   right: 0;
   left: 0;
-  margin:auto;
+  margin: auto;
   margin-top: 5rem;
   color: #301A0A;
 }
