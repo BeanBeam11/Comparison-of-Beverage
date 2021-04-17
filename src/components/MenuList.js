@@ -18,14 +18,14 @@ const onClickMenu=(value)=>{
       <Select
         className="menu-select"
         labelInValue
-        defaultValue={{ value: '可不可熟成紅茶' }}  
+        defaultValue={{ value: '迷客夏' }}  
         style={{ width: 150 }}
         onChange={onClickMenu}
       >
         <Option value="/kebuke">可不可熟成紅茶</Option>
         <Option value="/fiftylan"> 五十嵐</Option>
         <Option value="/macu">麻古茶坊</Option>
-        <Option value="/milkshop">迷克夏</Option>
+        <Option value="/milkshop">迷客夏</Option>
         <Option value="/chingshin">清心福全</Option>
       </Select>
     </div>
