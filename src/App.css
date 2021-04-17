@@ -393,6 +393,10 @@ body {
   margin-left: calc(25vw - 2rem);
   box-sizing: border-box;
 }
+.compare-img{
+  width: 18vw;
+  margin: 0.5rem 3vw;
+}
 .compare-items{
   width: auto;
   margin: 0.5rem 3vw;

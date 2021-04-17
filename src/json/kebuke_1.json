@@ -3,7 +3,9 @@
       "id":"KBK01",
       "company":"可不可熟成紅茶",
       "name":"熟成紅茶",
-      "price":"25 / 30"
+      "price":"25 / 30",
+      "image":"./img/img_kebuke_01.jpeg",
+      "grade":"4.8"
     },
     {
       "id":"KBK02",

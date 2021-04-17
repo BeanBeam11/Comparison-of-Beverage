@@ -17,9 +17,9 @@ export const addToComparisonItem=(dispatch,beverage,count)=>{
     id: beverage.id,
     company:beverage.company,
     name: beverage.name,
-    // image: beverage.image,
+    image: beverage.image,
     price: beverage.price,
-    
+    grade: beverage.grade
   };
   dispatch({
     type: ADD_TO_COMPARISON,
