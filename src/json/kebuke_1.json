@@ -11,87 +11,105 @@
       "id":"KBK02",
       "company":"可不可熟成紅茶",
       "name":"麗春紅茶",
-      "price":"25 / 30"
+      "price":"25 / 30",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK03",
       "company":"可不可熟成紅茶",
       "name":"太妃紅茶",
-      "price":"30 / 35"
+      "price":"30 / 35",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK04",
       "company":"可不可熟成紅茶",
       "name":"胭脂紅茶",
-      "price":"35 / 40"
-  
+      "price":"35 / 40",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK05",
       "company":"可不可熟成紅茶",
       "name":"雪藏紅茶",
-      "price":"45 / 55"
-      
+      "price":"45 / 55",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK06",
       "company":"可不可熟成紅茶",
       "name":"春芽綠茶",
-      "price":"25 / 30"
+      "price":"25 / 30",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK07",
       "company":"可不可熟成紅茶",
       "name":"春梅冰茶",
-      "price":"35 / 45"
+      "price":"35 / 45",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK08",
       "company":"可不可熟成紅茶",
       "name":"熟成冷露",
-      "price":"25 / 30"
+      "price":"25 / 30",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK09",
       "company":"可不可熟成紅茶",
       "name":"雪花冷露",
-      "price":"25 / 30"
-  
+      "price":"25 / 30",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK10",
       "company":"可不可熟成紅茶",
       "name":"春芽冷露",
-      "price":"25 / 30"
-  
+      "price":"25 / 30",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK11",
       "company":"可不可熟成紅茶",
       "name":"冷露歐雷",
-      "price":"40 / 50"
-  
+      "price":"40 / 50",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK12",
       "company":"可不可熟成紅茶",
       "name":"熟成歐雷",
-      "price":"40  /  50"
-  
+      "price":"40  /  50",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK13",
       "company":"可不可熟成紅茶",
       "name":"白玉歐雷",
-      "price":"50 / 60"
-  
+      "price":"50 / 60",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     },
     {
       "id":"KBK14",
       "company":"可不可熟成紅茶",
       "name":"熟成檸果",
-      "price":"- - /  50"
-  
+      "price":"- - /  50",
+      "image":"./img/img_unknown.jpg",
+      "grade":"4.8"
     }
   ]
     
