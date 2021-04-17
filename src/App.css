@@ -93,6 +93,7 @@ body {
 
 .layout-content {
   background-color: #F9F6F2;
+  min-height: calc(100vh - 8rem);
 }
 
 .main-layout {
@@ -101,7 +102,18 @@ body {
   width: 100vw;
   min-height: 100vh;
 }
-
+/* btn setting*/
+.ant-btn:hover, .ant-btn:focus{
+  color: #BF9C4F;
+  border-color: #BF9C4F;
+}
+.ant-btn:active {
+  color: #BF9C4F;
+  border-color: #BF9C4F;
+}
+.ant-select:hover{
+  border-color: #BF9C4F;
+}
 /* Header */
 .header {
   position: relative;
@@ -389,10 +401,9 @@ body {
   margin-left: 100px;
   width:720px;
   height:186px;
-  border: 1px solid black;
+  border: 1px solid #301A0A;
 }
 .comment-list-txt{
-  color: black;
   height:20px;
   width: 100%;
   font-size:18px;
@@ -401,7 +412,7 @@ body {
 .comment-add{
   width:45rem;
   height:11.6rem;
-  border:solid 1px black;
+  border:solid 1px #301A0A;
   display: flex;
   right: 0;
   left: 0;
@@ -410,7 +421,6 @@ body {
 .comment-add-img{
   width:6.25rem;
   height:6.25rem;
-  
 }
 .comment-add-icon{
   width:1.75rem;
@@ -421,8 +431,6 @@ body {
 .comment-input{
   width:31rem;
   height:4.3rem;
-  
-  
 }
 .comment-publish{
   width:6.25rem;
@@ -433,35 +441,39 @@ body {
 }
 /*Login*/
 .login{
-  width:40%;
-  height:90%;
+  width:40vw;
+  height:30vw;
   display: flex;
   flex-direction:column;
   right: 0;
   left: 0;
   margin:auto;
-  margin-top: 1%;
-  margin-bottom: 1%;
-  border:1px solid black;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  border:1px solid #301A0A;
 }
 .login-title{
   font-size:1.5rem;
-  color:black;
+  font-weight: 500;
   display: flex;
   right: 0;
   left: 0;
-  margin:auto;
-  margin-top:10%;
+  margin: auto;
+  margin-top: 3.5rem;
+  margin-bottom: 3rem;
 }
-.login-input{
-  
+.ant-space-item{
+  width: 30vw;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
-.login-click{
+.login-bt{
   font-size:1rem;
-  color:black;
   display: flex;
   right: 0;
   left: 0;
   margin:auto;
-  margin-top:10%;
+  margin-top: 5rem;
+  color: #301A0A;
 }

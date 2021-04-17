@@ -5,14 +5,15 @@ export default function Login() {
   return (
     <div className="login">
         <p className="login-title">LOGIN IN</p>
-        <Space direction="vertical" className="login-input">
-            <Input placeholder="input account" />
+        <Space direction="vertical">
+            <Input  className="login-input" placeholder="input account" />
             <Input.Password
+            className="login-input"
             placeholder="input password"
             iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
             />
         </Space>
-        <Button className="login-click">登入</Button>
+        <Button className="login-bt">登入</Button>
     </div>
   );
 }
