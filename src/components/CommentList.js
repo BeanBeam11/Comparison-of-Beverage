@@ -9,23 +9,23 @@ export default function CommentList() {
     return(
         <>
             <AddComment/>
-            <div class="comment-list">
-                <p  class="comment-list-txt">{commentList.users}</p>
-                <p class="comment-list-txt">{commentList.shop}</p>
-                <p class="comment-list-txt">{commentList.product}</p>
-                <p class="comment-list-txt">{commentList.description}</p>
+            <div className="comment-list">
+                <p  className="comment-list-txt">{commentList.users}</p>
+                <p className="comment-list-txt">{commentList.shop}</p>
+                <p className="comment-list-txt">{commentList.product}</p>
+                <p className="comment-list-txt">{commentList.description}</p>
             </div>
-            <div class="comment-list">
-                <p  class="comment-list-txt">{commentList.users}</p>
-                <p class="comment-list-txt">{commentList.shop}</p>
-                <p class="comment-list-txt">{commentList.product}</p>
-                <p class="comment-list-txt">{commentList.description}</p>
+            <div className="comment-list">
+                <p  className="comment-list-txt">{commentList.users}</p>
+                <p className="comment-list-txt">{commentList.shop}</p>
+                <p className="comment-list-txt">{commentList.product}</p>
+                <p className="comment-list-txt">{commentList.description}</p>
             </div>
-            <div class="comment-list">
-                <p  class="comment-list-txt">{commentList.users}</p>
-                <p class="comment-list-txt">{commentList.shop}</p>
-                <p class="comment-list-txt">{commentList.product}</p>
-                <p class="comment-list-txt">{commentList.description}</p>
+            <div className="comment-list">
+                <p  className="comment-list-txt">{commentList.users}</p>
+                <p className="comment-list-txt">{commentList.shop}</p>
+                <p className="comment-list-txt">{commentList.product}</p>
+                <p className="comment-list-txt">{commentList.description}</p>
             </div>
         </>
     );

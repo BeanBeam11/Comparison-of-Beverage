@@ -38,8 +38,6 @@ const onClickMenu=(value)=>{
       </Button>
     </div> 
     </>
-       
-     
   );
 }
 
