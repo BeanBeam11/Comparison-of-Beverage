@@ -17,9 +17,9 @@ export default function HomeContent(){
     return(
         <> 
       <Swiper style={contentStyle}/>
-      <div className="home-compare-bt-box">
+      <div className="home-start-bt-box">
         <Link to='/menu'>
-          <Button className="home-compare-bt">開始比較</Button>
+          <Button className="home-start-bt">喝啥？</Button>
         </Link>
       </div>
       <p className="home-title">各家主打商品</p>

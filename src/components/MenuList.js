@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import { useContext} from "react";
 import {StoreContext} from "../store";
 import MenuItem from "./MenuItem";
 import {menuContentSet} from "../actions";
 import {Select,Button} from 'antd';
-import { getJSON } from "../api";
+import {getJSON} from "../api";
 const {Option} =Select;
 
 export default function MenuList({menus}) {
@@ -33,9 +34,11 @@ const onClickMenu=(value)=>{
             <MenuItem menu={menus}/>
     </div>
     <div className="menu-compare-bt-box">
-      <Button className="menu-compare-bt" shape="round"  >
-        開始比較
-      </Button>
+      <Link to='/compare'>
+        <Button className="menu-compare-bt" shape="round"  >
+          開始比較
+        </Button>
+      </Link>
     </div> 
     </>
   );
