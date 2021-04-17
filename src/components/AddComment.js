@@ -1,6 +1,6 @@
 import { Select,Input,Button } from 'antd';
 import {useState,useEffect, useContext} from "react";
-import kebuke from "../json/kebuke.json";
+import kebuke from "../json/kebuke_1.json";
 import fiftylan from "../json/50lan"; 
 import milkshop from "../json/milkshop.json";
 import macu from "../json/macu.json";
