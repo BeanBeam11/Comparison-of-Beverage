@@ -15,6 +15,18 @@ export default function CommentList() {
                 <p class="comment-list-txt">{commentList.product}</p>
                 <p class="comment-list-txt">{commentList.description}</p>
             </div>
+            <div class="comment-list">
+                <p  class="comment-list-txt">{commentList.users}</p>
+                <p class="comment-list-txt">{commentList.shop}</p>
+                <p class="comment-list-txt">{commentList.product}</p>
+                <p class="comment-list-txt">{commentList.description}</p>
+            </div>
+            <div class="comment-list">
+                <p  class="comment-list-txt">{commentList.users}</p>
+                <p class="comment-list-txt">{commentList.shop}</p>
+                <p class="comment-list-txt">{commentList.product}</p>
+                <p class="comment-list-txt">{commentList.description}</p>
+            </div>
         </>
     );
 }

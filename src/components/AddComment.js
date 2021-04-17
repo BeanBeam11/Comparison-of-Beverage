@@ -55,22 +55,30 @@ export default function AddComment() {
   }, [commentList])
   return(
     <>
-      <div class="comment-add">
-        <img class="comment-add-img" src="./img/user_note.png"/>
-        <Select defaultValue={provinceData[0]} style={{ width: 120 }} onChange={handleProvinceChange}>
-          {provinceData.map(province => (
-            <Option key={province}>{province}</Option>
-          ))}
-        </Select>
-        <Select defaultValue="請選擇飲料" style={{ width: 120 }}>
-          {shops.map(city => (
-            <Option key={city.name}>{city.name}</Option>
-          ))}
-        </Select>
-        <img src="https://image.flaticon.com/icons/png/128/1837/1837512.png" class="comment-add-icon"/>
-        <Input placeholder="寫點評論..." className="comment-input"/>
-        <Button onClick={Publish} className="comment-publish">發布</Button>
-      </div>  
+      <div className="comment-add">
+        <div className="comment-area-right">
+          <img className="comment-add-img" src="./img/user_note.png"/>
+        </div>
+        <div className="comment-area-left">
+          <div className="comment-select">
+            <Select defaultValue={provinceData[0]} style={{ width: 150 }} onChange={handleProvinceChange}>
+              {provinceData.map(province => (
+                <Option key={province}>{province}</Option>
+              ))}
+            </Select>
+            <Select defaultValue="請選擇飲料" style={{ width: 120 }}>
+              {shops.map(city => (
+                <Option key={city.name}>{city.name}</Option>
+              ))}
+            </Select>
+            <img src="./img/icon_add_picture.png" className="comment-add-icon"/>
+          </div>
+          <div className="comment-input">
+            <Input placeholder="寫點評論..." className="comment-input"/>
+            <Button onClick={Publish} className="comment-bt-publish">發布</Button>
+          </div> 
+        </div>
+      </div>
     </>
   );
 }
