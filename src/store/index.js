@@ -1,7 +1,7 @@
 import { createContext } from "react";
 import Cookie from "js-cookie";
 import useReducerWithThunk from "use-reducer-thunk";
-import menus from "../json/milkshop.json";
+import menus from "../json/kebuke_1.json";
 import {
   SET_MENU,
   ADD_TO_COMPARISON,
