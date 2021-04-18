@@ -22,7 +22,9 @@ export default function HomeContent(){
           <Button className="home-start-bt">喝啥？</Button>
         </Link>
       </div>
-      <p className="home-title">各家主打商品</p>
+      <div className="home-title-box">
+        <p className="home-title">各家主打商品</p>
+      </div>
         <div className="home-card">
           <div className="home-card-img-box">
             <img className="home-card-img" src="./img/kebuke_apple_black_tea.jpeg"/>

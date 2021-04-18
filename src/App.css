@@ -12,11 +12,11 @@
   color: #573D2D;
   font-family: 'Shippori Mincho', serif;
 }
-
-/* sm */
-@media (min-width: 576px) { 
+/* RWD Setting*/
+/* mobile */
+@media (min-width: 480px) { 
   .container {
-    width: 540px;
+    width: 450px;
   }
 } 
 
@@ -158,6 +158,7 @@ body {
 }
 .header-search{
   width: 10rem;
+  margin-right: 1rem;
 }
 .header-icon{
   width: 2rem;
@@ -197,6 +198,7 @@ body {
   width: 1.5rem;
   height: 1.5rem;
   margin-right: 0.5rem;
+  cursor: pointer;
 }
 .footer-icon-center{
   width: 2rem;
@@ -206,6 +208,7 @@ body {
 .footer-text{
   height: 1.75rem;
   font-size: 1rem;
+  cursor: pointer;
 }
 .footer-text-center{
   margin-top: 0.5rem;
@@ -239,8 +242,15 @@ body {
   border-color: #301A0A;
   border-radius: 5px;
 }
+.home-title-box{
+  position: relative;
+  width: 80vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
 .home-title{
-  width: 100vw;
+  width: 80vw;
   text-align: center;
   font-size: 2.25rem;
   font-weight: 500;
@@ -352,15 +362,19 @@ body {
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 80vw;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 .compare-title{
-  width: 100vw;
+  width: 80vw;
   font-size: 2rem;
   margin: 2rem 0 0;
   font-weight: 500;
 }
 .compare-description{
-  width: 100vw;
+  width: 80vw;
   font-size: 1.2rem;
   margin: 1rem 0;
 }
@@ -508,3 +522,69 @@ body {
   margin-top: 5rem;
   color: #301A0A;
 }
+
+/* RWD Setting*/
+/* mobile */
+@media (max-width: 480px) { 
+  .container{
+    font-size: 12px;
+  }
+  .header {
+    padding: 0 3rem;
+  }
+  .footer-content{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    padding: 0 15rem;
+  }
+  .swiper{
+    width: 100vw;
+  }
+  .swiper-img{
+    width: 100vw;
+  } 
+  .home-card{
+    width: 40rem;
+    padding: 2rem;
+  }
+  .comment-add{
+    width: 40rem;
+  }
+  .comment-add-img{
+    width: 5rem;
+    height: 5rem;
+  }
+  .comment-input{
+    width: 28rem;
+  }
+  .comment-bt-publish{
+    margin-left: calc(28rem - 4rem);
+  }
+  .comment-list{
+    width: 40rem;
+  }
+  .login{
+    width: 85vw;
+    height: 80vw;
+  }
+  .ant-space-item{
+    width: 80vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  .login-bt{
+    font-size: 1rem;
+    display: flex;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 5rem;
+    color: #301A0A;
+  }
+} 
