@@ -92,7 +92,7 @@ body {
 
 .layout-content {
   background-color: #F9F6F2;
-  min-height: calc(100vh - 5rem);
+  min-height: 100vh;
 }
 
 .main-layout {
@@ -162,6 +162,33 @@ body {
 }
 .header-icon{
   width: 2rem;
+}
+
+/* Drawer */
+.drawer-btn{
+  width: 3rem;
+  height: 3rem;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  display: none;
+}
+.drawer-icon{
+  width: 2rem;
+}
+.ant-drawer-body{
+  background-color: #F9F6F2;
+}
+.drawer-item-top{
+  margin-top: 30vh;
+}
+.drawer-item{
+  font-family: 'Shippori Mincho', serif;
+  color: #301A0A;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.drawer-item:hover{
+  color: #BF9C4F;
 }
 
 /* Footer */
@@ -347,7 +374,7 @@ body {
   background-color: #fff;
 }
 .ant-table-tbody > tr > td, .ant-table-thead > tr > th{
-  padding: 1rem 2rem;
+  text-align: center;
 }
 .ant-pagination{
   /* width: 40rem; */
@@ -397,9 +424,9 @@ body {
 .compare-items-box{
   background-color: white;
   width: 25vw;
-  height: 40rem;
-  margin-left: calc( 5vw / 3);
+  height: 80vw;
   font-size: 1rem;
+  margin: 0 calc(5vw / 6) 0;
 }
 .compare-delete{
   width: 2rem;
@@ -495,7 +522,9 @@ body {
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 5rem;
+  background-color: #F4EFE8;
   border: 1px solid #301A0A;
+  border-radius: 5px;
 }
 .login-title{
   font-size: 1.5rem;
@@ -528,20 +557,30 @@ body {
 @media (max-width: 480px) { 
   .container{
     font-size: 12px;
+    min-width: 320px;
   }
   .header {
-    padding: 0 3rem;
+    padding: 0 2rem;
   }
-  .footer-content{
-    position: absolute;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-content: center;
-    padding: 0 15rem;
+  .drawer-btn{
+    display: block;
+    margin-right: 2rem;
   }
+  .header-wrap-left {
+    right: 0;
+    left: 0;
+    margin: auto;
+  }
+  .header-wrap-center{
+    display: none;
+  }
+  .header-search{
+    display: none;
+  }
+  .footer{
+    display: none;
+  }
+  /* HOME */
   .swiper{
     width: 100vw;
   }
@@ -549,25 +588,65 @@ body {
     width: 100vw;
   } 
   .home-card{
-    width: 40rem;
+    width: 90vw;
+    height: 75vw;
     padding: 2rem;
   }
+  .home-card-img-box{
+    width: 35vw;
+    height: 75vw;
+  }
+  .home-card-img{
+    width: 30vw;
+    max-height: 75vw;
+  }
+  .home-card-text{
+    width: 55vw;
+    height: 75vw;
+    padding: 0 0 0 1.5rem;
+  }
+  /* MENU */
+  .menu{
+    width: 90vw;
+  }
+  /* COMPARE */
+  .compare-area{
+    width: 90vw;
+  }
+  .compare-items-box{
+    width: 28vw;
+    font-size: 0.8rem;
+    margin: 0 calc(6vw / 6) 0;
+  }
+  .compare-delete{
+    margin-left: calc(28vw - 2rem);
+  }
+  /* COMMENT */
   .comment-add{
-    width: 40rem;
+    width: 90vw;
+  }
+  .comment-area-right{
+    width: 20%;
+    padding: 0.5rem;
   }
   .comment-add-img{
-    width: 5rem;
-    height: 5rem;
+    width: 13vw;
+    height: 13vw;
+  }
+  .comment-area-left{
+    width: 80%;
+    padding: 0 0 0 0.3rem;
   }
   .comment-input{
-    width: 28rem;
+    width: 63vw;
   }
   .comment-bt-publish{
-    margin-left: calc(28rem - 4rem);
+    margin-left: calc(63vw - 4rem);
   }
   .comment-list{
-    width: 40rem;
+    width: 90vw;
   }
+  /* LOGIN */
   .login{
     width: 85vw;
     height: 80vw;

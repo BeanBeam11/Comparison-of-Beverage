@@ -1,13 +1,16 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../store";
-import {  Input} from "antd";
+import { Input } from "antd";
+import  NavBar from "./NavBar.js";
+
 const { Search } = Input;
 export default function Header({ }) {
   const { dispatch } = useContext(StoreContext);
   const onSearch = value => console.log(value);
   return (
     <header className="header">
+      <NavBar />
       <div className="header-wrap-left">
         <Link to='/'>
           <img className="header-logo" src="./img/logo_drink_what.png"/>
@@ -25,11 +28,9 @@ export default function Header({ }) {
         </Link>
       </div>
       <div className="header-wrap-right">
-        <Link to='/' >
-          <div className="header-item">
-            <Search placeholder="想喝什麼？" className='header-search' allowClear onSearch={onSearch} />
-          </div>
-        </Link>
+        <div className="header-item">
+          <Search placeholder="想喝什麼？" className='header-search' allowClear onSearch={onSearch} />
+        </div>
         <Link to='/login' >
           <img className='header-item header-icon' src="./img/icon_heart.png"/>
         </Link>

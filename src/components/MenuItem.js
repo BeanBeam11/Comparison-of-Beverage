@@ -9,17 +9,17 @@ export default function MenuItem(menu) {
     {
       title: '品項',
       dataIndex: 'name',
-      width: 150,
+      width: '45%'
     },
     {
       title: '價格',
       dataIndex: 'price',
-      width: 150,
+      width: '25%'
     },
     {
-      title:'加入比較',
-      key:'operation',
-      width: 100,
+      title: '加入比較',
+      key: 'operation',
+      width: '30%',
       
       // render:()=><Button className="menu-addbt" type="default" icon={<PlusSquareOutlined />}  />,
       render:(value)=><AddToComparison item={value}/>

@@ -7,12 +7,12 @@ function Comment() {
  
     return (
       <Layout className="container main-layout">
-      <Layout className="bg-gray">
+      <Layout className="">
         <Header className="layout-header">
           <AppHeader  />
         </Header>
         <Content className="layout-content">
-         <CommentList/>
+          <CommentList/>
         </Content>
         <Footer className="layout-footer">
           <AppFooter />

@@ -11,12 +11,12 @@ function Compare() {
     return (
       <Layout className="container main-layout">
       
-      <Layout className="bg-gray">
+      <Layout className="">
         <Header className="layout-header">
           <AppHeader  />
         </Header>
         <Content className="layout-content">
-         <Comparison />
+          <Comparison />
         </Content>
         <Footer className="layout-footer">
           <AppFooter />

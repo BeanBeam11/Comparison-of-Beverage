@@ -6,10 +6,10 @@ export default function Login() {
     <div className="login">
         <p className="login-title">LOGIN IN</p>
         <Space direction="vertical">
-            <Input  className="login-input" placeholder="input account" />
+            <Input  className="login-input" placeholder="Account" />
             <Input.Password
             className="login-input"
-            placeholder="input password"
+            placeholder="Password"
             iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
             />
         </Space>
