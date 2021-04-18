@@ -40,6 +40,7 @@ export const removeall=(dispatch,count,beverage)=>{
   });
 };
 export const  addToComment=(dispatch,contents)=>{
+  console.log(contents);
   const content={
     users:contents.users,
     shop:contents.shop,

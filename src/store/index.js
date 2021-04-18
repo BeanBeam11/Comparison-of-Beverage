@@ -77,7 +77,8 @@ function reducer(state, action) {
       return { ...state,compareItems,count};
     case ADD_TO_COMMENT:
       const content=action.payload;
-      
+      commentList=content;
+         
     
       
       
