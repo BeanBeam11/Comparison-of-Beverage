@@ -462,7 +462,7 @@ body {
   width: 20%;
   padding: 1rem;
 }
-.comment-add-img{
+.comment-img-user{
   position: relative;
   width: 6.25rem;
   height: 6.25rem;
@@ -483,7 +483,7 @@ body {
 .comment-select-beverage{
   width: 8rem;
 }
-.comment-add-icon{
+.comment-icon-add-img{
   width: 1.5rem;
   height: 1.5rem;
   margin-top: 0.3rem;
@@ -650,9 +650,9 @@ body {
   .comment-select-beverage{
     width: 23vw;
   }
-  .comment-add-img{
-    width: 10vw;
-    height: 10vw;
+  .comment-img-user{
+    width: 13vw;
+    height: 13vw;
   }
   .comment-area-left{
     width: 80%;

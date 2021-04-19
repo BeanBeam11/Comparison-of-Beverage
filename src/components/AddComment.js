@@ -57,7 +57,7 @@ export default function AddComment() {
     <>
       <div className="comment-add">
         <div className="comment-area-right">
-          <img className="comment-add-img" src="./img/user_note.png"/>
+          <img className="comment-img-user" src="./img/user_note.png"/>
         </div>
         <div className="comment-area-left">
           <div className="comment-select">
@@ -71,7 +71,7 @@ export default function AddComment() {
                 <Option key={city.name}>{city.name}</Option>
               ))}
             </Select>
-            <img className="comment-add-icon" src="./img/icon_add_picture.png"/>
+            <img className="comment-icon-add-img" src="./img/icon_add_picture.png"/>
           </div>
           <div className="comment-input">
             <Input placeholder="寫點評論..." className="comment-input"/>
