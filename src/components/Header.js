@@ -11,23 +11,23 @@ export default function Header({ }) {
   return (
     <header className="header">
       <NavBar />
-      <div className="header-wrap-left">
+      <div className="header-box-left">
         <Link to='/'>
           <img className="header-logo" src="./img/logo_drink_what.png"/>
         </Link>
       </div>
-      <div className="header-wrap-center">
-        <Link to='/menu' >
-          <p className='header-navbar-center'>菜單</p>
+      <div className="header-box-center">
+        <Link to='/menu' className="header-item-center" >
+          菜單
         </Link>
-        <Link to='/compare' >
-          <p className='header-navbar-center'>飲料比較</p>
+        <Link to='/compare' className="header-item-center" >
+          飲料比較
         </Link>
-        <Link to='/comment' >
-          <p className='header-navbar-center'>評論區</p>
+        <Link to='/comment' className="header-item-center" >
+          評論區
         </Link>
       </div>
-      <div className="header-wrap-right">
+      <div className="header-box-right">
         <div className="header-item">
           <Search placeholder="想喝什麼？" className='header-search' allowClear onSearch={onSearch} />
         </div>
