@@ -175,6 +175,9 @@ a:hover{
 .header-icon{
   width: 2rem;
 }
+.header-icon:hover{
+  opacity: 0.5;
+}
 
 /* Drawer */
 .drawer-btn{
@@ -245,6 +248,9 @@ a:hover{
   width: 2rem;
   height: 2rem;
   margin: 0 0.5rem;
+}
+.footer-icon-center:hover{
+  opacity: 0.5;
 }
 .footer-text{
   height: 1.75rem;
