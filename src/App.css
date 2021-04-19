@@ -117,6 +117,14 @@ a:hover{
 .ant-select:hover{
   border-color: #BF9C4F;
 }
+.ant-btn{
+  color: #573D2D;
+  background: white;
+  /* border-color: #301A0A; */
+}
+.ant-select-selection-item{
+  color: #573D2D;
+}
 
 /* Header */
 .header {
@@ -187,7 +195,7 @@ a:hover{
 }
 .drawer-item{
   font-family: 'Shippori Mincho', serif;
-  color: #301A0A;
+  color: #573D2D;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -269,9 +277,9 @@ a:hover{
   width: 6rem;
   height: 2.5rem;
   font-size: 1.2rem;
-  color: #301A0A;
+  color: #573D2D;
   margin: 1rem 0 5rem;
-  border-color: #301A0A;
+  border-color: #573D2D;
   border-radius: 5px;
 }
 .home-title-box{
@@ -292,7 +300,7 @@ a:hover{
   flex-direction: row;
   width: 50rem;
   height: 20rem;
-  border: solid 1px #301A0A;
+  border: solid 1px #573D2D;
   border-radius: 10px;
   right: 0;
   left: 0;
@@ -334,7 +342,7 @@ a:hover{
   margin: auto;
 }
 .ant-table-container{
-  color: #301A0A;
+  color: #573D2D;
 }
 .menu-select-box{
   position: relative;
@@ -353,11 +361,6 @@ a:hover{
   width: auto;
   height: 1.75rem;
 }
-.ant-btn-primary{
-  color: #301A0A;
-  background: none;
-  border-color: #301A0A;
-}
 .menu-compare-bt-box{
   position: relative;
   width: 90px;
@@ -366,16 +369,16 @@ a:hover{
   margin: auto;
 }
 .menu-compare-bt{
-  color: #301A0A;
+  color: #573D2D;
   margin: 2rem 0 5rem;
   border-radius: 5px;
 }
 .ant-table-header .ant-table-cell{
-  color: #301A0A;
+  color: #573D2D;
   background-color: #F4EFE8;
 }
 .ant-table-cell{
-  color: #301A0A;
+  color: #573D2D;
   background-color: #fff;
 }
 .ant-table-tbody > tr > td, .ant-table-thead > tr > th{
@@ -446,6 +449,9 @@ a:hover{
 .compare-items{
   width: auto;
   margin: 0.5rem 3vw;
+}
+.compare-add-to-fav-btn{
+  color: #573D2D;
 }
 
 /*Comment*/
@@ -534,7 +540,7 @@ a:hover{
   margin-top: 2rem;
   margin-bottom: 5rem;
   background-color: #F4EFE8;
-  border: 1px solid #301A0A;
+  border: 1px solid #573D2D;
   border-radius: 5px;
 }
 .login-title{
@@ -560,7 +566,7 @@ a:hover{
   left: 0;
   margin: auto;
   margin-top: 5vh;
-  color: #301A0A;
+  color: #573D2D;
 }
 
 /* --- RWD Setting --- */
@@ -710,6 +716,6 @@ a:hover{
     left: 0;
     margin: auto;
     margin-top: 5rem;
-    color: #301A0A;
+    color: #573D2D;
   }
 } 

@@ -36,7 +36,7 @@ export default function Comparison(){
                             <p className="compare-items">名稱：{item.name}</p>
                             <p className="compare-items">價格：{item.price}</p>
                             <p className="compare-items">評分：{item.grade}</p>
-                            <Button className="compare-items compare-add">加入收藏</Button>
+                            <Button className="compare-items compare-add-to-fav-btn">加入收藏</Button>
                         </div>
                    
                 ))}
