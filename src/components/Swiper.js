@@ -4,7 +4,7 @@ export default function Swiper(){
         <>
             <Carousel autoplay className="swiper">
                 <div >
-                    <img className="swiper-img" src="./img/swiper_50lan.jpeg"/>
+                    <img className="swiper-img" src="./img/swiper_macu.jpeg"/>
                 </div>
                 <div>
                     <img className="swiper-img" src="./img/swiper_kebuke.jpeg"/>
@@ -13,7 +13,7 @@ export default function Swiper(){
                     <img className="swiper-img" src="./img/swiper_milkshop.jpeg"/>
                 </div>
                 <div >
-                    <img className="swiper-img" src="./img/swiper_macu.jpeg"/>
+                    <img className="swiper-img" src="./img/swiper_50lan.jpeg"/>
                 </div>
                 <div >
                     <img className="swiper-img"src="./img/swiper_chingshin.jpeg"/>
