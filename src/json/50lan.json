@@ -3,330 +3,417 @@
     "id": "50lan01",
     "company":"50嵐",
     "name":"茉莉綠茶",
-    "price":"25 / 30"
+    "price":"25 / 30",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan02",
     "company":"50嵐",
     "name":"阿薩姆紅茶",
-    "price":"25 / 30"
+    "price":"25 / 30",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan03",
     "company":"50嵐",
     "name":"四季春青茶",
-    "price":"25 / 30"
+    "price":"25 / 30",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan04",
     "company":"50嵐",
     "name":"黃金烏龍",
-    "price":"25 / 30"
+    "price":"25 / 30",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan05",
     "company":"50嵐",
     "name":"波霸紅/綠",
-    "price":"30 / 40"
+    "price":"30 / 40",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan06",
     "company":"50嵐",
     "name":"燕麥紅/綠/青",
-    "price":"30 / 40"
-
+    "price":"30 / 40",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan07",
     "company":"50嵐",
     "name":"微檸檬紅/青",
-    "price":"30 / 40"
-
+    "price":"30 / 40",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan08",
     "company":"50嵐",
     "name":"檸檬綠/青",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan09",
     "company":"50嵐",
     "name":"梅の綠",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan10",
     "company":"50嵐",
     "name":"8冰綠/情人茶",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan11",
     "company":"50嵐",
     "name":"多多綠",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan12",
     "company":"50嵐",
     "name":"冰淇淋紅茶",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan13",
     "company":"50嵐",
     "name":"旺來紅/青",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan14",
     "company":"50嵐",
     "name":"蜂蜜紅/綠",
-    "price":"35 / 50"
-
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan15",
     "company":"50嵐",
     "name":"鮮柚綠",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan16",
     "company":"50嵐",
     "name":"紅茶拿鐵",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan17",
     "company":"50嵐",
     "name":"綠茶拿鐵",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan18",
     "company":"50嵐",
     "name":"烏龍拿鐵",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan19",
     "company":"50嵐",
     "name":"珍珠紅茶拿鐵",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan20",
     "company":"50嵐",
     "name":"波霸紅茶拿鐵",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan21",
     "company":"50嵐",
     "name":"燕麥紅茶拿鐵",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan22",
     "company":"50嵐",
     "name":"燕麥烏龍拿鐵",
-    "price":"45 / 60"
-
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan23",
     "company":"50嵐",
     "name":"布丁紅茶拿鐵",
-    "price":"50 / 70"
-
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan24",
     "company":"50嵐",
     "name":"冰淇淋紅茶拿鐵",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan25",
     "company":"50嵐",
     "name":"阿華田拿鐵",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan26",
     "company":"50嵐",
     "name":"燕麥阿華田拿鐵",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan27",
     "company":"50嵐",
     "name":"可可芭蕾拿鐵",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan28",
     "company":"50嵐",
     "name":"奶茶/奶綠",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan29",
     "company":"50嵐",
     "name":"烏龍奶",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan30",
     "company":"50嵐",
     "name":"珍珠奶茶",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan31",
     "company":"50嵐",
     "name":"波霸奶茶",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan32",
     "company":"50嵐",
     "name":"燕麥奶茶",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan33",
     "company":"50嵐",
     "name":"燕麥奶青",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan34",
     "company":"50嵐",
     "name":"燕麥烏龍奶",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan35",
     "company":"50嵐",
     "name":"蜂蜜奶茶",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan36",
     "company":"50嵐",
     "name":"布丁奶茶",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan37",
     "company":"50嵐",
     "name":"冰淇淋奶茶",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan38",
     "company":"50嵐",
     "name":"紅茶瑪奇朵",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },   
   {
     "id": "50lan39",
     "company":"50嵐",
     "name":"青茶瑪奇朵",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan40",
     "company":"50嵐",
     "name":"阿華田",
-    "price":"40 / 55"
+    "price":"40 / 55",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan41",
     "company":"50嵐",
     "name":"燕麥阿華田",
-    "price":"40 / 55"
+    "price":"40 / 55",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan42",
     "company":"50嵐",
     "name":"可可芭蕾",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan43",
     "company":"50嵐",
     "name":"檸檬汁",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan44",
     "company":"50嵐",
     "name":"檸檬蜜",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan45",
     "company":"50嵐",
     "name":"金桔檸檬",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan46",
     "company":"50嵐",
     "name":"金桔檸檬蜜",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan47",
     "company":"50嵐",
     "name":"檸檬梅汁",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan48",
     "company":"50嵐",
     "name":"檸檬多多",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan49",
     "company":"50嵐",
     "name":"葡萄柚汁",
-    "price":"45 / 60"
+    "price":"45 / 60",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan50",
     "company":"50嵐",
     "name":"葡萄柚蜜",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan51",
     "company":"50嵐",
     "name":"葡萄柚多多",
-    "price":"50 / 70"
+    "price":"50 / 70",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   },
   {
     "id": "50lan52",
     "company":"50嵐",
     "name":"8冰茶",
-    "price":"35 / 50"
+    "price":"35 / 50",
+    "image":"./img/img_unknown.jpg",
+    "grade":"4.8"
   }
 ]
   
