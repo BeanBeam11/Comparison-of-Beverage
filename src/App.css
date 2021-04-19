@@ -646,6 +646,9 @@ a:hover{
   .compare-area{
     width: 90vw;
   }
+  .compare-description{
+    font-size: 1rem;
+  }
   .compare-items-box{
     width: 28vw;
     height: 50vh;
