@@ -429,7 +429,7 @@ a:hover{
 .compare-items-box{
   background-color: white;
   width: 25vw;
-  height: 80vw;
+  height: 50vw;
   font-size: 1rem;
   margin: 0 calc(5vw / 6) 0;
 }
@@ -648,6 +648,7 @@ a:hover{
   }
   .compare-items-box{
     width: 28vw;
+    height: 50vh;
     font-size: 0.8rem;
     margin: 0 calc(6vw / 6) 0;
   }
