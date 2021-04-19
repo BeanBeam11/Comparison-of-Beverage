@@ -527,7 +527,7 @@ a{
 /*Login*/
 .login{
   width: 40vw;
-  height: 30vw;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   right: 0;
@@ -561,7 +561,7 @@ a{
   right: 0;
   left: 0;
   margin: auto;
-  margin-top: 5rem;
+  margin-top: 5vh;
   color: #301A0A;
 }
 
