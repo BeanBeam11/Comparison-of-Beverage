@@ -101,9 +101,8 @@ body {
   width: 100vw;
   min-height: 100vh;
 }
-a{
-  width: auto;
-  height: auto;
+a:hover{
+  color: #BF9C4F;
 }
 
 /* btn setting*/
