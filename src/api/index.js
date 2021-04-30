@@ -36,3 +36,23 @@ const firebaseConfig = {
 };
 
 firebase.initializeApp(firebaseConfig);
+
+var db = firebase.firestore();
+
+var jsoncol =[]
+
+//  jsoncol.forEach(function(obj) {
+//     db.collection("beverage").doc("json").collection("").add({
+//         id: obj.id,
+//         company: obj.company,
+//         name: obj.name,
+//         price: obj.price,
+//         image: obj.image,
+//         grade: obj.grade
+//     }).then(function(docRef) {
+//         console.log("Document written with ID: ", docRef.id);
+//     })
+//     .catch(function(error) {
+//         console.error("Error adding document: ", error);
+//     });
+// });
