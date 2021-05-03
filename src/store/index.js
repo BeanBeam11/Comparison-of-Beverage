@@ -12,82 +12,74 @@ import {
 
 export const StoreContext = createContext();
 let compareItems = Cookie.getJSON("compareItems");
-if(!compareItems) compareItems=[];
-let count=0;
+if (!compareItems) compareItems = [];
+let count = 0;
 let commentList = Cookie.getJSON("commentList");
-if(!commentList) commentList=[];
-// let commentList=[];
-// let compareItems;
+if (!commentList) commentList = [];
+
 const initialState = {
-  menuList:{
+  menuList: {
     menus,
   },
   compareItems,
   count,
-  commentList:{
+  commentList: {
     users: [],
     shop: [],
-    product:[],
+    product: [],
     description: [],
   }
-
-  
-
 };
 
 function reducer(state, action) {
+
   switch (action.type) {
+
     case SET_MENU:
-        return { 
-          ...state,
-          menuList:action.payload,
-          
-        };
+      return {
+        ...state,
+        menuList: action.payload,
+
+      };
+
     case ADD_TO_COMPARISON:
       const item = action.payload;
       console.log(state.compareItems);
       console.log(compareItems);
       console.log(action.payload);
       const beverge = state.compareItems.find((x) => x.id === item.id);
-      
       if (beverge) {
-        
         count++;
-        
         compareItems = state.compareItems.map((x) =>
           x.id === beverge.id ? item : x
         );
         // console.log(count);
-        return { ...state, compareItems,count };
+        return { ...state, compareItems, count };
       }
-      
       compareItems = [...state.compareItems, item];
-      count+=1;
-      return { ...state, compareItems,count };
+      count += 1;
+      return { ...state, compareItems, count };
+
     case REMOVE_COMPARISON_ITEM:
-      if(count>0){
+      if (count > 0) {
         count--;
       }
-      compareItems= state.compareItems.filter((x) => x.id !==action.payload);
-      return { ...state, compareItems,count};
+      compareItems = state.compareItems.filter((x) => x.id !== action.payload);
+      return { ...state, compareItems, count };
+
     case REMOVE_ALL:
-      
-      compareItems= state.compareItems.map((x) => x.id !==action.payload);
-      count=0;
-      return { ...state,compareItems,count};
+      compareItems = state.compareItems.map((x) => x.id !== action.payload);
+      count = 0;
+      return { ...state, compareItems, count };
+
     case ADD_TO_COMMENT:
-      const content=action.payload;
-      commentList=content;
-         
-    
-      
-      
-      return { ...state,commentList};
+      const content = action.payload;
+      commentList = content;
+      return { ...state, commentList };
+
     default:
       return state;
   }
-  
-
 }
 
 export function StoreProvider(props) {
