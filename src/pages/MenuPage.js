@@ -6,7 +6,7 @@ import { StoreContext } from "../store"
 import MenuList from "../components/MenuList";
 const { Header, Content, Footer } = Layout;
 function MenuPage() {
-  const { state: { menuList: { menus}  } } = useContext(StoreContext);
+  const { state: { menuList: { menus } } } = useContext(StoreContext);
   return (
     <Layout className="container main-layout">
       
