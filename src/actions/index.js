@@ -5,11 +5,13 @@ import {
   REMOVE_ALL,
   ADD_TO_COMMENT
 } from "../utils/constants";
-
-export const menuContentSet = (dispatch,menus) => {
+import {getProductById} from "../api";
+export const menuContentSet = async(dispatch,menus) => {
+  console.log(menus);
+  const products = await getProductById(menus);
   dispatch({
     type:SET_MENU,
-    payload:{menus}
+    payload:{products}
   });
 }
 export const addToComparisonItem=(dispatch,beverage,count)=>{

@@ -2,8 +2,8 @@ import {Table } from 'antd';
 import AddToComparison from "./AddToComparison";
 export default function MenuItem(menu) {
   
-  // console.log(menu.menu)
-  // console.log(menu.menu.name)
+  console.log(menu.menu)
+  // console.log(menu.menu.id)
  
   const columns = [
     {
