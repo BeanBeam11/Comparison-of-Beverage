@@ -38,6 +38,7 @@ const initialState = {
 function reducer(state, action) {
   switch (action.type) {
     case SET_MENU:
+      console.log(action.payload)
         return { 
           ...state,
           menuList:action.payload,

@@ -1,8 +1,11 @@
 import {Table } from 'antd';
+import { useContext } from "react";
+import { StoreContext } from "../store"
 import AddToComparison from "./AddToComparison";
 export default function MenuItem(menu) {
+  const { state: { menuList:{menus} }}= useContext(StoreContext);
   
-  console.log(menu.menu)
+  console.log(menus)
   // console.log(menu.menu.id)
  
   const columns = [
@@ -34,7 +37,7 @@ export default function MenuItem(menu) {
       <div className="menu-content">
        
           
-          <Table value={menu.menu.id} columns={columns} dataSource={menu.menu} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
+          <Table value={menus.id} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
          
        
       </div>

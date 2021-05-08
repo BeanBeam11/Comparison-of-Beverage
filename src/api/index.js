@@ -19,15 +19,42 @@ const firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 
-const productsCollectionRef = firebase.firestore().collection("beverage");
-const productsDocRef = productsCollectionRef.doc("json");
-const allProductsCollectionRef = productsDocRef.collection("allProducts");
+/*Login*/
+const auth = firebase.auth();
+// auth.createUserWithEmailAndPassword(email,password);
+// auth.signInWithEmailAndPassword(email,password);
+// auth.signout();
+// auth.onAuthStateChanged(function(user){
+//   if(user){
+//     console.log("has logged in")
+//   }
+//   else{
+//     console.log("not logged in")
+//   }
+// });
 
-export const getProductById = async (productId) => {
+export const SignIn = (email,password) => {
+  auth.signinWithEmailAndPassword(email,password).catch(function(e){})
+    
+}
+
+const db=firebase.firestore();
+const menubrand=db.collection("beverage");
+const menujson=menubrand.doc("json");
+let products=menujson.collection("kebuke");
+
+export const getMenuById = async (menuId) => {
   // REFERENCE PRODUCTS COLLECTION
-  const doc = await productsDocRef.collection(productId).get();
-  console.log(doc);
-  return doc.data()
+  const doc = await menujson.collection(menuId);
+   let jsonProducts = [];
+ doc.onSnapshot(querySnapshot => {
+  querySnapshot.forEach(docs => {
+    // console.log(docs.data());
+    jsonProducts.push(docs.data());
+  });
+});
+console.log(jsonProducts);
+  return jsonProducts;
 }
 
 // export const getProducts = async (url) => {
