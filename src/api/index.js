@@ -56,3 +56,14 @@ var jsoncol =[]
 //         console.error("Error adding document: ", error);
 //     });
 // });
+
+/*Lisen edition */
+const beverage = firebase.firestore().collection("beverage");
+const beverageJson=beverage.doc("json");
+
+export const getFireJSON=(menuId)=>{
+  return beverageJson.collection("menuId");
+}
+export const initialMenu=()=>{
+  return beverageJson.collection("kebuke");
+}

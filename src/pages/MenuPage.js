@@ -6,7 +6,7 @@ import { StoreContext } from "../store"
 import MenuList from "../components/MenuList";
 const { Header, Content, Footer } = Layout;
 function MenuPage() {
-  const { state: { menuList: { menus } } } = useContext(StoreContext);
+  const { state: { menuList } } = useContext(StoreContext);
   return (
     <Layout className="container main-layout">
       
@@ -15,7 +15,7 @@ function MenuPage() {
           <AppHeader />
         </Header>
         <Content className="layout-content">
-          <MenuList menus={menus}/>
+          <MenuList menus={ menuList}/>
         </Content>
         <Footer className="layout-footer">
           <AppFooter />

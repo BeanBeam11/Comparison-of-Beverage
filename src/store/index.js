@@ -1,7 +1,8 @@
 import { createContext } from "react";
 import Cookie from "js-cookie";
 import useReducerWithThunk from "use-reducer-thunk";
-import menus from "../json/kebuke_1.json";
+// import menus from "../json/kebuke_1.json";
+import {initialMenu} from "../api";
 import {
   SET_MENU,
   ADD_TO_COMPARISON,
@@ -16,11 +17,12 @@ if (!compareItems) compareItems = [];
 let count = 0;
 let commentList = Cookie.getJSON("commentList");
 if (!commentList) commentList = [];
-
+let menus=initialMenu();
+let  menuList=initialMenu();
 const initialState = {
-  menuList: {
-    menus,
-  },
+  menuList,
+    // menus,
+  
   compareItems,
   count,
   commentList: {
@@ -36,12 +38,13 @@ function reducer(state, action) {
   switch (action.type) {
 
     case SET_MENU:
+      console.log(menuList);
       return {
         ...state,
-        menuList: action.payload,
+        menuList:action.payload,
 
       };
-
+      
     case ADD_TO_COMPARISON:
       const item = action.payload;
       console.log(state.compareItems);

@@ -5,10 +5,18 @@ import {
   REMOVE_ALL,
   ADD_TO_COMMENT
 } from "../utils/constants";
-// import {getProductById} from "../api";
-export const menuContentSet = async(dispatch,menus) => {
-  console.log(menus);
-  // const products = await getProductById(menus);
+import {getFireJSON} from "../api";
+export const menuContentSet = async(dispatch,menusId) => {
+ 
+  const menus = await getFireJSON(menusId);
+  // console.log(menus);
+  // let content=[];
+  // menus.get().then(querySnapshot => {
+  //   querySnapshot.forEach(doc => {
+  //     content.push(doc.data());
+  //   });
+  // });
+  // console.log(content);
   dispatch({
     type:SET_MENU,
     payload:{menus}
