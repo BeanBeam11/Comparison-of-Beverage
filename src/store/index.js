@@ -37,12 +37,13 @@ function reducer(state, action) {
   switch (action.type) {
 
     case SET_MENU:
-      console.log(action.payload)
-      menus=action.payload
-      console.log(menus)
+      console.log(action.payload);
       return {
-        ...state,
-        menus
+        
+        menuList:{ 
+          menus:action.payload
+        }
+        
       };
       
     case ADD_TO_COMPARISON:

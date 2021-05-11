@@ -1,26 +1,13 @@
 import {Table } from 'antd';
+import { StoreContext } from "../store"
+import { useContext } from "react";
 import AddToComparison from "./AddToComparison";
-export default function MenuItem(menu) {
-  console.log(menu);
-  console.log(menu.menu);
-  console.log(JSON.stringify(menu.menu));
+export default function MenuItem() {
 
-  
-  // let productname=[];
-  // let productdata=[];
-  // menu.menu.get().then(querySnapshot => {
-  //   querySnapshot.forEach(doc => {
-  //     // console.log(doc.id, doc.data().name);
-  //     productname.push(doc.data().name);
-      
-  //     productdata.push(JSON.stringify(doc.data()));
 
-  //   });
-  // });
-  
-  // console.log(productname);
-  // console.log(productdata);
-  // console.log(JSON.stringify(productdata));
+  const { state: { menuList:{ menus} } } = useContext(StoreContext);
+  console.log(menus);
+  console.log(JSON.stringify(menus));
   const columns = [
     {
       title: '品項',
@@ -50,7 +37,7 @@ export default function MenuItem(menu) {
       <div className="menu-content">
        
           
-          <Table value={menu} columns={columns} dataSource={menu.menu} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
+          <Table value={menus} columns={columns} dataSource={menus.menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
          
        
       </div>

@@ -16,7 +16,7 @@ function MenuPage() {
           <AppHeader />
         </Header>
         <Content className="layout-content">
-          <MenuList menus={menus}/>
+          <MenuList/>
         </Content>
         <Footer className="layout-footer">
           <AppFooter />

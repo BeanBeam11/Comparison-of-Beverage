@@ -7,7 +7,7 @@ import {Select,Button} from 'antd';
 import {getJSON} from "../api";
 const {Option} =Select;
 
-export default function MenuList({menus}) {
+export default function MenuList() {
 const {dispatch} = useContext(StoreContext);
 const onClickMenu=(value)=>{ 
     menuContentSet(dispatch,value.key);
@@ -31,7 +31,7 @@ const onClickMenu=(value)=>{
       </Select>
     </div>
     <div className="menu">
-            <MenuItem menu={menus}/>
+            <MenuItem/>
     </div>
     <div className="menu-compare-bt-box">
       <Link to='/compare'>
