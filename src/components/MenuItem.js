@@ -2,20 +2,25 @@ import {Table } from 'antd';
 import AddToComparison from "./AddToComparison";
 export default function MenuItem(menu) {
   console.log(menu);
-  console.log(menu.menu)
+  console.log(menu.menu);
+  console.log(JSON.stringify(menu.menu));
 
   
-  let productname=[];
-  let productdata=[];
-  menu.menu.get().then(querySnapshot => {
-    querySnapshot.forEach(doc => {
-      // console.log(doc.id, doc.data().name);
-      productname.push(doc.data().name);
-      productdata.push(doc.data());
-    });
-  });
-  console.log(productname);
-  console.log(productdata);
+  // let productname=[];
+  // let productdata=[];
+  // menu.menu.get().then(querySnapshot => {
+  //   querySnapshot.forEach(doc => {
+  //     // console.log(doc.id, doc.data().name);
+  //     productname.push(doc.data().name);
+      
+  //     productdata.push(JSON.stringify(doc.data()));
+
+  //   });
+  // });
+  
+  // console.log(productname);
+  // console.log(productdata);
+  // console.log(JSON.stringify(productdata));
   const columns = [
     {
       title: '品項',
@@ -39,13 +44,13 @@ export default function MenuItem(menu) {
   ];
   
   
-  return (
+  return (  
     <>
       
       <div className="menu-content">
        
           
-          <Table value={productname} columns={columns} dataSource={productdata} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
+          <Table value={menu} columns={columns} dataSource={menu.menu} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
          
        
       </div>

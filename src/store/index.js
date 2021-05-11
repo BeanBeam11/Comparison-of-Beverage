@@ -18,11 +18,10 @@ let count = 0;
 let commentList = Cookie.getJSON("commentList");
 if (!commentList) commentList = [];
 let menus=initialMenu();
-let  menuList=initialMenu();
 const initialState = {
-  menuList,
-    // menus,
-  
+  menuList:{
+    menus
+  },
   compareItems,
   count,
   commentList: {
@@ -38,11 +37,12 @@ function reducer(state, action) {
   switch (action.type) {
 
     case SET_MENU:
-      console.log(menuList);
+      console.log(action.payload)
+      menus=action.payload
+      console.log(menus)
       return {
         ...state,
-        menuList:action.payload,
-
+        menus
       };
       
     case ADD_TO_COMPARISON:

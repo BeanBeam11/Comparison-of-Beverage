@@ -62,8 +62,22 @@ const beverage = firebase.firestore().collection("beverage");
 const beverageJson=beverage.doc("json");
 
 export const getFireJSON=(menuId)=>{
-  return beverageJson.collection("menuId");
+  let jsonMenu=[];
+  beverageJson.collection(menuId).get().then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+      jsonMenu.push(doc.data());
+    });
+  });
+  console.log(jsonMenu);
+  return jsonMenu;
 }
 export const initialMenu=()=>{
-  return beverageJson.collection("kebuke");
+  let jsoninitMenu=[];
+  beverageJson.collection("kebuke").get().then(querySnapshot => {
+    querySnapshot.forEach(doc => {
+      jsoninitMenu.push(doc.data());
+    });
+  });
+  console.log(jsoninitMenu);
+  return jsoninitMenu;
 }

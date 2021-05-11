@@ -17,9 +17,10 @@ export const menuContentSet = async(dispatch,menusId) => {
   //   });
   // });
   // console.log(content);
+  console.log(menus);
   dispatch({
     type:SET_MENU,
-    payload:{menus}
+    payload:menus
   });
 }
 export const addToComparisonItem=(dispatch,beverage,count)=>{
