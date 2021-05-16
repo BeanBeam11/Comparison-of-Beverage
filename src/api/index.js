@@ -37,6 +37,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+const auth = firebase.auth();
+
 var db = firebase.firestore();
 
 var jsoncol =[]
@@ -80,4 +82,15 @@ export const initialMenu=()=>{
   });
   console.log(jsoninitMenu);
   return jsoninitMenu;
+}
+
+export const signInWithEmailPassword = async (email, password) => {
+  return await auth.signInWithEmailAndPassword(email, password);
+}
+export const checkLoginApi = () => {
+  const user = auth.currentUser;
+  if(user.uid==true){
+    alert("sucess");
+  }
+  return user.uid?  true : false;
 }

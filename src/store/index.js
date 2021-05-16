@@ -18,6 +18,14 @@ let count = 0;
 let commentList = Cookie.getJSON("commentList");
 if (!commentList) commentList = [];
 let menus=initialMenu();
+
+let userInfo;
+try {
+  userInfo =  JSON.parse(localStorage.getItem("userInfo"));
+} catch(e) {
+  userInfo = null;
+}
+
 const initialState = {
   menuList:{
     menus
@@ -29,7 +37,13 @@ const initialState = {
     shop: [],
     product: [],
     description: [],
-  }
+  },
+  userSignin: {
+    loading: false,
+    userInfo,
+    remember: true,
+    error: "",
+  },
 };
 
 function reducer(state, action) {
