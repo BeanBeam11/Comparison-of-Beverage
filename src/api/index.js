@@ -87,12 +87,25 @@ export const initialMenu=()=>{
 export const signInWithEmailPassword = async (email, password) => {
   return await auth.signInWithEmailAndPassword(email, password);
 }
+export const signOut = () => {
+  auth.signOut();
+}
 export const checkLoginApi = () => {
   const user = auth.currentUser;
   if(user.uid==true){
     alert("sucess");
   }
   return user.uid?  true : false;
+}
+export const updateUserInfoApi = async (email, password, displayName) => {
+  const user = auth.currentUser;
+  if(displayName)
+    await user.updateProfile({ displayName });
+  if(email)
+    await user.updateEmail(String(email));
+  if(password)
+    await user.updatePassword(password);
+  return user;
 }
 export const registerWithEmailPassword = async (email, password, displayName) => {
   await auth.createUserWithEmailAndPassword(email, password);

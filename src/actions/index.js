@@ -12,8 +12,18 @@ import {
   BEGIN_REGISTER_REQUEST,
   SUCCESS_REGISTER_REQUEST,
   FAIL_REGISTER_REQUEST,
+  BEGIN_UPDATE_USERINFO,
+  SUCCESS_UPDATE_USERINFO,
+  FAIL_UPDATE_USERINFO,
 } from "../utils/constants";
-import {getFireJSON,signInWithEmailPassword,checkLoginApi,registerWithEmailPassword} from "../api";
+import {getFireJSON,
+  signInWithEmailPassword,
+  registerWithEmailPassword,
+  signOut,
+  updateUserInfoApi,
+  checkLoginApi,
+} from "../api";
+
 export const menuContentSet = async(dispatch,menusId) => {
  
   const menus = await getFireJSON(menusId);
@@ -122,4 +132,28 @@ export const registerToFirebase = async (dispatch, userInfo) => {
     console.log(e)
     return null;
   }
+}
+export const updateUserInfo = async (dispatch, userInfo) => {
+  dispatch({ type: BEGIN_UPDATE_USERINFO });
+  try {
+    const user = await updateUserInfoApi(
+      userInfo.email,
+      userInfo.password,
+      userInfo.name
+    );
+    dispatch({
+      type: SUCCESS_UPDATE_USERINFO,
+      payload: user.providerData[0],
+    });
+  } catch (e) {
+    dispatch({
+      type: FAIL_UPDATE_USERINFO,
+      payload: e.message,
+    });
+    console.log(e);
+  }
+};
+export const logoutFromFirebase = async (dispatch) => {
+  signOut();
+  dispatch({ type: LOGOUT_REQUEST });
 }

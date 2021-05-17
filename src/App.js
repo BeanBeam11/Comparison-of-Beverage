@@ -7,6 +7,7 @@ import Comment from './pages/Comment'
 import Compare from './pages/Compare'
 import Login from './pages/LoginPage'
 import Register from './pages/Register'
+import Profile from './pages/Profile'
 import { StoreProvider } from "./store";
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/comment" component={Comment} />
           <Route exact path="/login" component={Login} />
           <Route path="/register" component={Register} />
+          <Route path="/profile" component={Profile} />
           <Route exact path="/:menuListName" component={MenuPage} /> 
         </Switch>
       </BrowserRouter>

@@ -26,6 +26,9 @@ export default function Header({ }) {
         <Link to='/comment' className="header-item-center" >
           評論區
         </Link>
+        <Link to='/profile' className="header-item-center" >
+          profile
+        </Link>
       </div>
       <div className="header-box-right">
         <div className="header-item">
