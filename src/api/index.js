@@ -94,3 +94,9 @@ export const checkLoginApi = () => {
   }
   return user.uid?  true : false;
 }
+export const registerWithEmailPassword = async (email, password, displayName) => {
+  await auth.createUserWithEmailAndPassword(email, password);
+  const user = auth.currentUser;
+  await user.updateProfile({ displayName })
+  return user;
+}

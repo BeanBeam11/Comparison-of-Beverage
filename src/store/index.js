@@ -8,7 +8,15 @@ import {
   ADD_TO_COMPARISON,
   REMOVE_COMPARISON_ITEM,
   REMOVE_ALL,
-  ADD_TO_COMMENT
+  ADD_TO_COMMENT,
+  BEGIN_LOGIN_REQUEST,
+  SUCCESS_LOGIN_REQUEST,
+  FAIL_LOGIN_REQUEST,
+  LOGOUT_REQUEST,
+  REMEMBER_LOGIN,
+  BEGIN_REGISTER_REQUEST,
+  SUCCESS_REGISTER_REQUEST,
+  FAIL_REGISTER_REQUEST,
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -42,6 +50,11 @@ const initialState = {
     loading: false,
     userInfo,
     remember: true,
+    error: "",
+  },
+  userRegister: {
+    loading: false,
+    userInfo: null,
     error: "",
   },
 };
@@ -94,7 +107,65 @@ function reducer(state, action) {
       const content = action.payload;
       commentList = content;
       return { ...state, commentList };
-
+    case BEGIN_LOGIN_REQUEST:
+      return { ...state, userSignin: { ...state.userSignin, loading: true } };
+    case SUCCESS_LOGIN_REQUEST:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          loading: false,
+          userInfo: action.payload,
+          error: "",
+        },
+      };
+    case FAIL_LOGIN_REQUEST:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          loading: false,
+          userInfo: null,
+          error: action.payload,
+        },
+      };
+      case REMEMBER_LOGIN:
+      return {
+        ...state,
+        userSignin: {
+          ...state.userSignin,
+          remember: action.payload,
+        },
+      };
+    case BEGIN_REGISTER_REQUEST:
+      return {
+        ...state,
+        userRegister: { ...state.userRegister, loading: true },
+      };
+    case SUCCESS_REGISTER_REQUEST:
+      return {
+        ...state,
+        userRegister: {
+          ...state.userRegister,
+          loading: false,
+          userInfo: action.payload,
+          error: "",
+        },
+        userSignin: {
+          ...state.userSignin,
+          userInfo: action.payload,
+        },
+      };
+    case FAIL_REGISTER_REQUEST:
+      return {
+        ...state,
+        userRegister: {
+          ...state.userRegister,
+          loading: false,
+          userInfo: null,
+          error: action.payload,
+        },
+      };
     default:
       return state;
   }

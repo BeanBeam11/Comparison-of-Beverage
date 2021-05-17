@@ -8,9 +8,12 @@ import {
   SUCCESS_LOGIN_REQUEST,
   FAIL_LOGIN_REQUEST,
   REMEMBER_LOGIN,
-  LOGOUT_REQUEST
+  LOGOUT_REQUEST,
+  BEGIN_REGISTER_REQUEST,
+  SUCCESS_REGISTER_REQUEST,
+  FAIL_REGISTER_REQUEST,
 } from "../utils/constants";
-import {getFireJSON,signInWithEmailPassword,checkLoginApi} from "../api";
+import {getFireJSON,signInWithEmailPassword,checkLoginApi,registerWithEmailPassword} from "../api";
 export const menuContentSet = async(dispatch,menusId) => {
  
   const menus = await getFireJSON(menusId);
@@ -100,4 +103,23 @@ export const checkLogin = (dispatch) => {
     dispatch({ type: LOGOUT_REQUEST });    
   }
   return isLogin;
+}
+export const registerToFirebase = async (dispatch, userInfo) => {
+  dispatch({ type: BEGIN_REGISTER_REQUEST });
+  try {
+    const user = await registerWithEmailPassword(userInfo.email, userInfo.password, userInfo.name);
+    console.log(user)
+    dispatch({
+      type: SUCCESS_REGISTER_REQUEST,
+      payload: user.providerData[0],
+    })
+    return user;
+  } catch (e) {
+    dispatch({
+      type: FAIL_REGISTER_REQUEST,
+      payload: e.message
+    })
+    console.log(e)
+    return null;
+  }
 }
