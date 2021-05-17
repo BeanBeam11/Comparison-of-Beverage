@@ -40,96 +40,112 @@ export default function Login(redirect) {
   }, [ userInfo ]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <Form
-      name="normal_login"
-      className="login-form"
-      form={form}
-      initialValues={{
-        remember: true,
-      }}
-      onFinish={onFinish}
-    >
-      <Form.Item
-        name="email"
-        rules={[
-          {
-            type: "email",
-            message: "The input is not valid E-mail!",
-          },
-          {
-            required: true,
-            message: "Please input your E-mail!",
-          },
-        ]}
-        hasFeedback
+    <>
+    <div className="login-quote-wrapper">
+      <div className="login-quote-1">天氣好熱 ...</div>
+      <div className="login-quote-2">喝杯飲料吧 !</div>
+    </div>
+    <div className="login-form-wrapper">
+      <div className="login-title">Login</div>
+      <Form
+        name="normal_login"
+        className="login-form"
+        form={form}
+        initialValues={{
+          remember: true,
+        }}
+        onFinish={onFinish}
       >
-        <Input
-          prefix={<MailOutlined className="site-form-item-icon" />}
-          placeholder="E-Mail"
-        />
-      </Form.Item>
-      <Form.Item
-        name="password"
-        rules={[
-          {
-            required: true,
-            message: "Please input your Password!",
-          },
-        ]}
-        hasFeedback
-      >
-        <Input.Password
-          prefix={<LockOutlined className="site-form-item-icon" />}
-          type="password"
-          placeholder="Password"
-        />
-      </Form.Item>
-      <Form.Item>
         <Form.Item
-          name="remember"
-          noStyle
+          name="email"
+          className="login-email"
+          rules={[
+            {
+              type: "email",
+              message: "The input is not valid E-mail!",
+            },
+            {
+              required: true,
+              message: "Please input your E-mail!",
+            },
+          ]}
+          hasFeedback
         >
-          <Checkbox onChange={onChange} checked={remember}>Remember me</Checkbox>
+          <Input
+            prefix={<MailOutlined className="site-form-item-icon" />}
+            placeholder="E-mail"
+          />
+        </Form.Item>
+        <Form.Item
+          name="password"
+          className="login-password"
+          rules={[
+            {
+              required: true,
+              message: "Please input your Password!",
+            },
+          ]}
+          hasFeedback
+        >
+          <Input.Password
+            prefix={<LockOutlined className="site-form-item-icon" />}
+            type="password"
+            placeholder="Password"
+          />
+        </Form.Item>
+        <Form.Item
+          className="login-option"
+        >
+          <Form.Item
+            name="remember"
+            noStyle
+          >
+            <Checkbox onChange={onChange} checked={remember}>記住我</Checkbox>
+          </Form.Item>
+
+          <Link className="login-form__forgot" to={"/"}>
+            忘記密碼？
+          </Link>
         </Form.Item>
 
-        <Link className="login-form__forgot" to={"/"}>
-          Forgot password
-        </Link>
-      </Form.Item>
-
-      <Form.Item>
-        {loading ? (
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form__button"
-            loading
-          >
-            Log in
-          </Button>
-        ) : (
-          <Button
-            type="primary"
-            htmlType="submit"
-            className="login-form__button"
-          >
-            Log in
-          </Button>
-        )}
-        Or <Link to={"/register?redirect=shipping"}>register now!</Link>
-        {error === "" ? (
-          <></>
-        ) : (
-          <div className="login-form__error-wrap">
-            <h3 className="login-form__error-title">
-              <WarningOutlined className="site-form-item-icon" />
-              {"  "}There was a problem
-            </h3>
-            <p className="login-form__error-message">{error}</p>
-          </div>
-        )}
-      </Form.Item>
-    </Form>
+        <Form.Item
+          className="login-enter"
+        >
+          {loading ? (
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="login-form__button"
+              loading
+            >
+              登入
+            </Button>
+          ) : (
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="login-form__button"
+            >
+              登入
+            </Button>
+          )}
+          <div className="login-or">or</div>
+          <Link to={"/register?redirect=shipping"}>還沒有帳號嗎？現在註冊 !</Link>
+          {error === "" ? (
+            <></>
+          ) : (
+            <div className="login-form__error-wrap">
+              <h3 className="login-form__error-title">
+                <WarningOutlined className="site-form-item-icon" />
+                {"  "}There was a problem
+              </h3>
+              <p className="login-form__error-message">{error}</p>
+            </div>
+          )}
+        </Form.Item>
+      </Form>
+    </div>
+    </>
   );
 };
 

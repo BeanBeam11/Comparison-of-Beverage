@@ -535,45 +535,70 @@ a:hover{
 }
 
 /*Login*/
-.login{
+.login-quote-wrapper{
+  position: absolute;
   width: 40vw;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  right: 0;
-  left: 0;
-  margin: auto;
-  margin-top: 2rem;
-  margin-bottom: 5rem;
-  background-color: #F4EFE8;
-  border: 1px solid #573D2D;
-  border-radius: 5px;
+  height: 100vh;
 }
-.login-title{
-  font-size: 1.5rem;
-  font-weight: 500;
-  display: flex;
-  right: 0;
-  left: 0;
-  margin: auto;
-  margin-top: 3.5rem;
-  margin-bottom: 3rem;
+.login-quote-1{
+  width: 20vw;
+  font-size: 1.2rem;
+  text-align: left;
+  margin: 3rem 15vw 0.5rem 5vw;
 }
-.ant-space-item{
-  width: 30vw;
-  right: 0;
-  left: 0;
-  margin: auto;
+.login-quote-2{
+  width: 20vw;
+  font-size: 1.8rem;
+  text-align: left;
+  margin: 0 15vw 0 5vw;
 }
-.login-bt{
-  font-size: 1rem;
-  display: flex;
-  right: 0;
-  left: 0;
-  margin: auto;
-  margin-top: 5vh;
+.login-form{
   color: #573D2D;
 }
+.login-form-wrapper{
+  position: absolute;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  background-color: #fff;
+}
+.login-title{
+  font-size: 3rem;
+  color: #573D2D;
+  width: 30vw;
+  height: 5rem;
+  margin: 8vw 15vw 1rem;
+  text-align: center;
+}
+.login-email{
+  width: 30vw;
+  margin: 1rem 15vw 1rem;
+}
+.login-password{
+  width: 30vw;
+  margin: 1rem 15vw 1rem;
+}
+.login-option{
+  width: 30vw;
+  margin: 1rem 15vw 1rem;
+  text-align: center;
+}
+.login-form-wrapper .ant-checkbox-wrapper{
+  margin-right: 2rem;
+}
+.login-enter{
+  width: 30vw;
+  margin: 1rem 15vw 1rem;
+  text-align: center;
+}
+.login-form__button{
+  margin-top: 3rem;
+}
+.login-or{
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
 
 /* --- RWD Setting --- */
 /* mobile */
@@ -705,23 +730,4 @@ a:hover{
     width: 90vw;
   }
   /* LOGIN */
-  .login{
-    width: 85vw;
-    height: 60vh;
-  }
-  .ant-space-item{
-    width: 80vw;
-    right: 0;
-    left: 0;
-    margin: auto;
-  }
-  .login-bt{
-    font-size: 1rem;
-    display: flex;
-    right: 0;
-    left: 0;
-    margin: auto;
-    margin-top: 5rem;
-    color: #573D2D;
-  }
 } 
