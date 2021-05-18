@@ -26,7 +26,7 @@ import {getFireJSON,
 
 export const menuContentSet = async(dispatch,menusId) => {
  
-  const menus = await getFireJSON(menusId);
+  // const menus = await getFireJSON(menusId);
   // console.log(menus);
   // let content=[];
   // menus.get().then(querySnapshot => {
@@ -35,10 +35,10 @@ export const menuContentSet = async(dispatch,menusId) => {
   //   });
   // });
   // console.log(content);
-  console.log(menus);
+  console.log(menusId);
   dispatch({
     type:SET_MENU,
-    payload:menus
+    payload:menusId
   });
 }
 export const addToComparisonItem=(dispatch,beverage,count)=>{

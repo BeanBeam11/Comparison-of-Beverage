@@ -2,7 +2,7 @@ import { createContext } from "react";
 import Cookie from "js-cookie";
 import useReducerWithThunk from "use-reducer-thunk";
 // import menus from "../json/kebuke_1.json";
-import {initialMenu} from "../api";
+import {initialMenu,getFireJSON} from "../api";
 import {
   SET_MENU,
   ADD_TO_COMPARISON,
@@ -35,9 +35,9 @@ try {
 }
 
 const initialState = {
-  menuList:{
-    menus
-  },
+
+    menus,
+
   compareItems,
   count,
   commentList: {
@@ -64,14 +64,11 @@ function reducer(state, action) {
   switch (action.type) {
 
     case SET_MENU:
-      console.log(action.payload);
-      return {
-        
-        menuList:{ 
-          menus:action.payload
-        }
-        
-      };
+      menus=getFireJSON(action.payload);
+
+      console.log(menus);
+     
+      return {menus};
       
     case ADD_TO_COMPARISON:
       const item = action.payload;

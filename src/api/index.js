@@ -71,7 +71,7 @@ export const getFireJSON=(menuId)=>{
     });
   });
   console.log(jsonMenu);
-  return jsonMenu;
+  return  jsonMenu;
 }
 export const initialMenu=()=>{
   let jsoninitMenu=[];
@@ -81,7 +81,7 @@ export const initialMenu=()=>{
     });
   });
   console.log(jsoninitMenu);
-  return jsoninitMenu;
+  return  jsoninitMenu;
 }
 
 export const signInWithEmailPassword = async (email, password) => {
