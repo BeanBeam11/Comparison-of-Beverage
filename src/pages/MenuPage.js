@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { Layout } from 'antd';
 import AppHeader from "../components/Header"
 import AppFooter from "../components/Footer"
-import { StoreContext } from "../store"
 import MenuList from "../components/MenuList";
 const { Header, Content, Footer } = Layout;
 function MenuPage() {

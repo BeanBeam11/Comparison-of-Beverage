@@ -70,7 +70,7 @@ export const getFireJSON= async (menuId)=>{
       jsonMenu.push(doc.data());
     });
 
-  console.log(jsonMenu);
+
   return  jsonMenu;
 }
 export const initialMenu= async ()=>{
@@ -81,7 +81,7 @@ export const initialMenu= async ()=>{
       jsoninitMenu.push(doc.data());
    
   });
-  console.log(jsoninitMenu);
+  
   return  jsoninitMenu;
 }
 

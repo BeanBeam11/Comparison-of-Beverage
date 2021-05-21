@@ -4,7 +4,6 @@ import {StoreContext} from "../store";
 import MenuItem from "./MenuItem";
 import {menuContentSet} from "../actions";
 import {Select,Button} from 'antd';
-import {getJSON} from "../api";
 const {Option} =Select;
 
 export default function MenuList() {

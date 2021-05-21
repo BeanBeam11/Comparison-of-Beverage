@@ -8,7 +8,7 @@ export default function MenuItem() {
   const { state: { menus } } = useContext(StoreContext);
 
   
-  console.log(menus);
+  console.log(menus.length);
   
  
   const columns = [
@@ -39,8 +39,13 @@ export default function MenuItem() {
       
       <div className="menu-content">
        
+          {menus.length===0 ?(
+            <div className="menu-init">決定好要喝什麼了嗎?請點選上方選單選擇飲料菜單...</div>
+          ):(
+              <Table value={menus} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />
+              
+          )}
           
-          <Table value={menus} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />,
          
        
       </div>

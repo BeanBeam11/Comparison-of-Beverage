@@ -347,6 +347,9 @@ a:hover{
   left: 0;
   margin: auto;
 }
+.menu-init{
+  font-size: 1.5rem;
+}
 .ant-table-container{
   color: #573D2D;
 }
