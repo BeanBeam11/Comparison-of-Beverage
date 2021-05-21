@@ -26,20 +26,23 @@ import {getFireJSON,
 
 export const menuContentSet = async(dispatch,menusId) => {
  
-  // const menus = await getFireJSON(menusId);
-  // console.log(menus);
-  // let content=[];
-  // menus.get().then(querySnapshot => {
-  //   querySnapshot.forEach(doc => {
-  //     content.push(doc.data());
-  //   });
+  try{
+    const menucontent = await getFireJSON(menusId);
+    console.log(menucontent);
+    dispatch({
+      type:SET_MENU,
+      payload:menucontent
+    });
+    return menucontent;
+  }catch (error) {
+   
+    console.error(error);
+  }
+  // console.log(menusId);
+  // dispatch({
+  //   type:SET_MENU,
+  //   payload:menusId
   // });
-  // console.log(content);
-  console.log(menusId);
-  dispatch({
-    type:SET_MENU,
-    payload:menusId
-  });
 }
 export const addToComparisonItem=(dispatch,beverage,count)=>{
   const item = {

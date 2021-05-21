@@ -8,10 +8,8 @@ export default function MenuItem() {
   const { state: { menus } } = useContext(StoreContext);
 
   
+  console.log(menus);
   
-  menus.forEach((doc)=>{
-    console.log(doc);
-  });
  
   const columns = [
     {

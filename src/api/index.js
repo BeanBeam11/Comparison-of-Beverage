@@ -63,22 +63,23 @@ var jsoncol =[]
 const beverage = firebase.firestore().collection("beverage");
 const beverageJson=beverage.doc("json");
 
-export const getFireJSON=(menuId)=>{
+export const getFireJSON= async (menuId)=>{
   let jsonMenu=[];
-  beverageJson.collection(menuId).get().then(querySnapshot => {
-    querySnapshot.forEach(doc => {
+  const querySnapshot=await beverageJson.collection(menuId).get();
+    querySnapshot.forEach((doc) => {
       jsonMenu.push(doc.data());
     });
-  });
+
   console.log(jsonMenu);
   return  jsonMenu;
 }
-export const initialMenu=()=>{
+export const initialMenu= async ()=>{
   let jsoninitMenu=[];
-  beverageJson.collection("kebuke").get().then(querySnapshot => {
-    querySnapshot.forEach(doc => {
+  const querySnapshotinit=await beverageJson.collection("kebuke").get();
+ 
+    querySnapshotinit.forEach((doc) => {
       jsoninitMenu.push(doc.data());
-    });
+   
   });
   console.log(jsoninitMenu);
   return  jsoninitMenu;

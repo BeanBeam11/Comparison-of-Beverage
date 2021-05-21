@@ -36,7 +36,7 @@ try {
 
 const initialState = {
 
-    menus,
+  menus:[],
 
   compareItems,
   count,
@@ -64,11 +64,10 @@ function reducer(state, action) {
   switch (action.type) {
 
     case SET_MENU:
-      menus=getFireJSON(action.payload);
-
-      console.log(menus);
-     
-      return {menus};
+      return {
+        ...state,
+        menus:action.payload
+      };
       
     case ADD_TO_COMPARISON:
       const item = action.payload;
