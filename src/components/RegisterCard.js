@@ -47,7 +47,7 @@ const RegisterCard = ({ redirect }) => {
   };
 
   useEffect(() => {
-    if (userInfo) history.push(redirect);
+    if (userInfo) history.push("./login");
   }, [userInfo]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (

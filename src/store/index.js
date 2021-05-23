@@ -29,7 +29,7 @@ let menus=initialMenu();
 
 let userInfo;
 try {
-  userInfo =  JSON.parse(localStorage.getItem("userInfo"));
+  userInfo =  JSON.parse(Cookie.getJSON("userInfo"));//getItem("userInfo"));
 } catch(e) {
   userInfo = null;
 }

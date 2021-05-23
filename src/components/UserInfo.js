@@ -1,23 +1,28 @@
 import { useEffect, useContext } from "react";
 import { UserOutlined, UserSwitchOutlined } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
-
+import Cookie from "js-cookie";
 import { StoreContext } from "../store"
-
+import {checkLogin} from "../actions"
 export default function UserInfo(props) {
 
-   const { state: { userSignin : { userInfo, remember } } } = useContext(StoreContext);
+   const { state: { userSignin : { userInfo, remember } },dispatch } = useContext(StoreContext);
    const history = useHistory();
 
    const goToProfile = () => {
-      history.push("/login?redirect=profile");
+      if(checkLogin(dispatch)){
+         history.push("/profile");
+      }
+      else{
+         history.push("/login");
+      }
    };
 
    useEffect(() => {
       if(remember)
-         localStorage.setItem("userInfo", JSON.stringify(userInfo));
+        Cookie.set("userInfo", JSON.stringify(userInfo));
       else
-       localStorage.removeItem("userInfo");
+       Cookie.removeItem("userInfo");
    }, [userInfo, remember]);
 
    return (

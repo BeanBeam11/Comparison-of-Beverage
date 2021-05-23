@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { StoreContext } from "../store";
 import { Input } from "antd";
 import  NavBar from "./NavBar.js";
-
+import UserInfo from "./UserInfo";
 const { Search } = Input;
 export default function Header({ }) {
   const { dispatch } = useContext(StoreContext);
@@ -37,9 +37,12 @@ export default function Header({ }) {
         <Link to='/login' >
           <img className='header-item header-icon' src="./img/icon_heart.png"/>
         </Link>
-        <Link to='/login' >
+        {/* <Link to='/login' >
           <img className='header-item header-icon' src="./img/icon_user.png"/>
-        </Link>
+        </Link> */}
+        <div className='header-item header-icon'>
+        <UserInfo className='header-item header-icon' style={{}} />
+        </div>
       </div>
     </header>
   );

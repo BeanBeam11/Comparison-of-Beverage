@@ -93,10 +93,14 @@ export const signOut = () => {
 }
 export const checkLoginApi = () => {
   const user = auth.currentUser;
-  if(user.uid==true){
-    alert("sucess");
+  console.log(user);
+  if(user==null){
+    return(false);
   }
-  return user.uid?  true : false;
+  else{
+    return(true);
+  }
+  // return user.uid?  true : false;
 }
 export const updateUserInfoApi = async (email, password, displayName) => {
   const user = auth.currentUser;

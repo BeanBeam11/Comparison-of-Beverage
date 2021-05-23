@@ -36,7 +36,7 @@ export default function Login(redirect) {
   }
 
   useEffect(() => {    
-    if( userInfo && checkLogin(dispatch) ) history.push(redirect);
+    if( userInfo && checkLogin(dispatch) ) history.push("/profile");
   }, [ userInfo ]);// eslint-disable-line react-hooks/exhaustive-deps
 
   return (
