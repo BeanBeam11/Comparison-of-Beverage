@@ -27,10 +27,10 @@ export default function UserInfo(props) {
 
    return (
       <>
-         <nav onClick={goToProfile} style={{ ...props.style }} className="header-cart-summary" >
+         <nav onClick={goToProfile} style={{ ...props.style }} className='header-item header-icon' >
             {userInfo
-               ? <UserOutlined style={{ fontSize: '28px', color: '#ddd' }} />
-               : <UserSwitchOutlined style={{ fontSize: '28px', color: '#ddd' }} />
+               ? <img className='header-item header-icon' src="./img/icon_user.png"/>
+               : <img className='header-item header-icon' src="./img/icon_user.png"/>
 
             }
             <p className="cart-summary-text">
