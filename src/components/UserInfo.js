@@ -33,12 +33,12 @@ export default function UserInfo(props) {
                : <img className='header-item header-icon' src="./img/icon_user.png"/>
 
             }
-            <p className="cart-summary-text">
+            {/* <p className="cart-summary-text">
                {userInfo
                   ? `${userInfo.displayName}'s`
                   : `請登入`
                }
-            </p>
+            </p> */}
          </nav>
       </>
    );
