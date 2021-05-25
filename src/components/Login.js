@@ -114,7 +114,7 @@ export default function Login(redirect) {
         >
           {loading ? (
             <Button
-              type="primary"
+              type=""
               htmlType="submit"
               className="login-form__button"
               loading
@@ -123,7 +123,7 @@ export default function Login(redirect) {
             </Button>
           ) : (
             <Button
-              type="primary"
+              type=""
               htmlType="submit"
               className="login-form__button"
             >

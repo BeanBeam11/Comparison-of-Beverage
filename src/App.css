@@ -64,6 +64,10 @@ body {
   font-size: 0;
 }
 
+::selection {
+  color: #fff;
+  background: #BF9C4F;
+}
 .ant-pagination-item-active a{
   color: #573D2D;
 }
@@ -538,6 +542,16 @@ a:hover{
 }
 
 /*Login*/
+.login-form-wrapper a{
+  color: #573D2D;
+}
+.login-form-wrapper a:hover{
+  color: #BF9C4F;
+}
+.ant-checkbox-checked .ant-checkbox-inner{
+  background-color: #BF9C4F;
+  border-color: #BF9C4F;
+}
 .login-quote-wrapper{
   position: absolute;
   width: 40vw;
@@ -604,6 +618,7 @@ a:hover{
   margin-top: 3rem;
 }
 .login-or{
+  color: #573D2D;
   margin-top: 2rem;
   margin-bottom: 0.5rem;
 }
