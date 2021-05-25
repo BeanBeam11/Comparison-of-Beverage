@@ -5,8 +5,8 @@ import React, { useContext, useEffect } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { Form, Input, Button, Checkbox } from 'antd';
 import { WarningOutlined, MailOutlined, LockOutlined } from '@ant-design/icons';
-import { checkLogin, loginToFirebase, rememberLoginUser } from '../actions'
-import { StoreContext } from "../store"
+import { checkLogin, loginToFirebase, rememberLoginUser } from '../actions';
+import { StoreContext } from "../store";
 export default function Login(redirect) {
   // return (
   //   <div className="login">
@@ -44,6 +44,7 @@ export default function Login(redirect) {
     <div className="login-quote-wrapper">
       <div className="login-quote-1">天氣好熱 ...</div>
       <div className="login-quote-2">喝杯飲料吧 !</div>
+      <img className="img_login_illus" src="./img/login_illus_brown.png"/>
     </div>
     <div className="login-form-wrapper">
       <div className="login-title">Login</div>

@@ -555,6 +555,12 @@ a:hover{
   text-align: left;
   margin: 0 15vw 0 5vw;
 }
+.img_login_illus{
+  position: absolute;
+  height: 45vh;
+  bottom: 5rem;
+  right: 8vw;
+}
 .login-form{
   color: #573D2D;
 }
