@@ -39,25 +39,42 @@ firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
 
-var db = firebase.firestore();
-
-var jsoncol =[]
-
-//  jsoncol.forEach(function(obj) {
-//     db.collection("beverage").doc("json").collection("").add({
-//         id: obj.id,
-//         company: obj.company,
-//         name: obj.name,
-//         price: obj.price,
-//         image: obj.image,
-//         grade: obj.grade
-//     }).then(function(docRef) {
-//         console.log("Document written with ID: ", docRef.id);
-//     })
-//     .catch(function(error) {
-//         console.error("Error adding document: ", error);
-//     });
+/* PWA */
+const store = firebase.firestore();
+/* promise: */
+// store.enablePersistence()
+// .catch(function(err) {
+//     if (err.code == 'failed-precondition') {
+//         // Multiple tabs open, persistence can only be enabled
+//         // in one tab at a a time.
+//         // ...
+//         console.log(err.code);
+//     } else if (err.code == 'unimplemented') {
+//         // The current browser does not support all of the
+//         // features required to enable persistence
+//         // ...
+//         console.log(err.code);
+//     }
 // });
+/* async await: */
+const enableFireStoreDataPersistance = async () =>{
+  try {
+    await store.enablePersistence();
+  } catch (err) {
+    if (err.code == 'failed-precondition') {
+        // Multiple tabs open, persistence can only be enabled
+        // in one tab at a a time.
+        // ...
+        console.log(err.code);
+    } else if (err.code == 'unimplemented') {
+        // The current browser does not support all of the
+        // features required to enable persistence
+        // ...
+        console.log(err.code);
+    }
+  }
+}
+enableFireStoreDataPersistance();
 
 /*Lisen edition */
 const beverage = firebase.firestore().collection("beverage");
@@ -117,24 +134,4 @@ export const registerWithEmailPassword = async (email, password, displayName) =>
   const user = auth.currentUser;
   await user.updateProfile({ displayName })
   return user;
-}
-
-/*pwa*/
-store.enablePersistence().catch(function(err){
-  if(err.code=='failed-percondition'){
-    console.log(err.message);
-  }else if(err.code=='unimplemented'){
-    console.log(err.code);
-  }
-});
-const enableFireStoreDataPersistance=async()=>{
-  try{
-    await store.enablePersistence();
-  }catch(err){
-    if(err.code=='failed-percondition'){
-      console.log(err.code);
-    }else if(err.code=='unimplemented'){
-      console.log(err.code);
-    }
-  }
 }
