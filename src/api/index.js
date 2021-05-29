@@ -118,3 +118,23 @@ export const registerWithEmailPassword = async (email, password, displayName) =>
   await user.updateProfile({ displayName })
   return user;
 }
+
+/*pwa*/
+store.enablePersistence().catch(function(err){
+  if(err.code=='failed-percondition'){
+    console.log(err.message);
+  }else if(err.code=='unimplemented'){
+    console.log(err.code);
+  }
+});
+const enableFireStoreDataPersistance=async()=>{
+  try{
+    await store.enablePersistence();
+  }catch(err){
+    if(err.code=='failed-percondition'){
+      console.log(err.code);
+    }else if(err.code=='unimplemented'){
+      console.log(err.code);
+    }
+  }
+}
