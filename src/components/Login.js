@@ -47,7 +47,7 @@ export default function Login(redirect) {
       <img className="img_login_illus" src="./img/login_illus_brown.png"/>
     </div>
     <div className="login-form-wrapper">
-      <div className="login-title">Login</div>
+      <div className="login-title">Log in</div>
       <Form
         name="normal_login"
         className="login-form"
@@ -74,7 +74,7 @@ export default function Login(redirect) {
         >
           <Input
             prefix={<MailOutlined className="site-form-item-icon" />}
-            placeholder="E-mail"
+            placeholder=" E-mail"
           />
         </Form.Item>
         <Form.Item
@@ -91,7 +91,7 @@ export default function Login(redirect) {
           <Input.Password
             prefix={<LockOutlined className="site-form-item-icon" />}
             type="password"
-            placeholder="Password"
+            placeholder=" Password"
           />
         </Form.Item>
         <Form.Item
@@ -101,7 +101,7 @@ export default function Login(redirect) {
             name="remember"
             noStyle
           >
-            <Checkbox onChange={onChange} checked={remember}>記住我</Checkbox>
+            <Checkbox className="remember" onChange={onChange} checked={remember}>記住我</Checkbox>
           </Form.Item>
 
           <Link className="login-form__forgot" to={"/"}>
@@ -131,14 +131,14 @@ export default function Login(redirect) {
             </Button>
           )}
           <div className="login-or">or</div>
-          <Link to={"/register?redirect=shipping"}>還沒有帳號嗎？現在註冊 !</Link>
+          還沒有帳號嗎？<Link to={"/register?redirect=shipping"}>現在註冊 !</Link>
           {error === "" ? (
             <></>
           ) : (
             <div className="login-form__error-wrap">
               <h3 className="login-form__error-title">
                 <WarningOutlined className="site-form-item-icon" />
-                {"  "}There was a problem
+                {"  "}發生了一點問題...
               </h3>
               <p className="login-form__error-message">{error}</p>
             </div>

@@ -622,13 +622,15 @@ a:hover{
   margin: 1rem 15vw 1rem;
   text-align: center;
 }
-.login-form-wrapper .ant-checkbox-wrapper{
+.remember{
   margin-right: 2rem;
+  color: #573D2D;
 }
 .login-enter{
   width: 30vw;
   margin: 1rem 15vw 1rem;
   text-align: center;
+  color: #573D2D;
 }
 .login-form__button{
   margin-top: 3rem;
@@ -639,6 +641,103 @@ a:hover{
   margin-bottom: 0.5rem;
 }
 
+/*Register*/
+.register-form .ant-form-item{
+  color: #573D2D;
+}
+.ant-form-item-label > label{
+  color: #573D2D;
+}
+.register-form-wrapper .ant-input{
+  width: 25vw;
+} 
+.register-form-wrapper .ant-input-password{
+  width: 25vw;
+} 
+.agreement{
+  width: 11rem;
+  position: relative;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.agreement span{
+  color: #573D2D;
+}
+.register-enter{
+  width: 30vw;
+  margin: 3rem 15vw 1rem;
+  text-align: center;
+}
+.register-space{
+  margin-bottom: 1rem;
+}
+
+/*Profile*/
+.profile-nav-wrapper{
+  position: absolute;
+  width: 30vw;
+  height: 100vh;
+}
+.profile-img-box{
+  position: relative;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 3rem 10vw 1rem;
+  overflow: hidden;
+}
+.profile-img{
+  position: absolute;
+  width: 10vw;
+}
+.profile-name{
+  font-size: 1.2rem;
+  text-align: center;
+  width: 25vw;
+  margin: 1rem 2.5vw 1rem;
+}
+.profile-nav{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 25vw;
+  margin: 3rem 2.5vw 1rem;
+}
+.profile-nav-item{
+  font-size: 1.2rem;
+  color: #573D2D;
+  margin-bottom: 1rem;
+}
+.profile-form-wrapper{
+  position: absolute;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  background-color: #fff;
+}
+.profile-title{
+  font-size: 1.2rem;
+  color: #573D2D;
+  width: calc(1.2rem * 4);
+  height: 5rem;
+  margin: 1rem;
+  text-align: center;
+}
+.profile-form{
+  width: 30vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+.profile-btn-wrapper{
+  width: 12rem;
+  margin: 3rem auto;
+}
+.profile-form__button{
+  margin: 1rem;
+}
 
 /* --- RWD Setting --- */
 /* mobile */
