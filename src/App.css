@@ -178,6 +178,7 @@ a:hover{
 }
 .header-icon{
   width: 2rem;
+  cursor: pointer;
 }
 .header-icon:hover{
   opacity: 0.5;
