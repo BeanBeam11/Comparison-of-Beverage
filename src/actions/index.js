@@ -15,6 +15,7 @@ import {
   BEGIN_UPDATE_USERINFO,
   SUCCESS_UPDATE_USERINFO,
   FAIL_UPDATE_USERINFO,
+  ADD_COMMENT
 } from "../utils/constants";
 import {getFireJSON,
   signInWithEmailPassword,
@@ -22,6 +23,7 @@ import {getFireJSON,
   signOut,
   updateUserInfoApi,
   checkLoginApi,
+  PublishComment,
 } from "../api";
 
 export const menuContentSet = async(dispatch,menusId) => {
@@ -159,4 +161,20 @@ export const updateUserInfo = async (dispatch, userInfo) => {
 export const logoutFromFirebase = async (dispatch) => {
   signOut();
   dispatch({ type: LOGOUT_REQUEST });
+}
+
+/*Comment*/
+export const addComment = async (dispatch,user) => {
+    const Content={
+      useremail:user.useremail,
+      username:user.username,
+      brand:user.brand,
+      item:user.item,
+      content:user.content
+    };
+    const userInfo=await PublishComment(Content);
+    dispatch({ 
+      type:ADD_COMMENT,
+      payload: userInfo
+    })
 }

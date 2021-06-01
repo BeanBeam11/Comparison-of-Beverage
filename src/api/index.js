@@ -76,10 +76,10 @@ const enableFireStoreDataPersistance = async () =>{
 }
 enableFireStoreDataPersistance();
 
-/*Lisen edition */
+/*Lisen takefile */
 const beverage = firebase.firestore().collection("beverage");
 const beverageJson=beverage.doc("json");
-
+const allComments=firebase.firestore().collection("allcomment")
 export const getFireJSON= async (menuId)=>{
   let jsonMenu=[];
   const querySnapshot=await beverageJson.collection(menuId).get();
@@ -134,4 +134,15 @@ export const registerWithEmailPassword = async (email, password, displayName) =>
   const user = auth.currentUser;
   await user.updateProfile({ displayName })
   return user;
+}
+
+/*Lisen's edit comment*/ 
+export const PublishComment =async (userComment) => {
+  const commentRef = await allComments.doc();
+  const id = commentRef.id;
+  await commentRef.set({ 
+    ...userComment,
+    id
+  });
+  return(userComment,id);
 }

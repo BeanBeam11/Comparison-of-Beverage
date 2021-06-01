@@ -1,12 +1,12 @@
 import { Select,Input,Button } from 'antd';
 import {useState,useEffect, useContext} from "react";
 import kebuke from "../json/kebuke_1.json";
-import {addToComment,menuContentSet} from "../actions/";
+import {addToComment,menuContentSet,addComment} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
 export default function AddComment() {
-
-  const {state:{commentList,  menus },dispatch}= useContext(StoreContext);
+  const {state:{commentList,  menus,userSignin: { userInfo}},dispatch}= useContext(StoreContext);
+  const { displayName, email } = userInfo;
   const { Option } = Select;
   const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷客夏","清心福全"];
   const handleProvinceChange = value => {
@@ -36,8 +36,8 @@ export default function AddComment() {
       }
     };
   const Publish=()=> {
-    const resource={users:"Json",shop:"可不可",product:"熟成紅茶",description:"好好喝"};
-    addToComment(dispatch,resource);
+    const resource={useremail:email,username:displayName,brand:"可不可",item:"熟成紅茶",content:"好好喝"};
+    addComment(dispatch,resource);
   }
   useEffect(()=>{
     Cookie.set("commentList", JSON.stringify(commentList));

@@ -11,10 +11,11 @@ export default function UserInfo(props) {
 
    const goToProfile = () => {
       if(checkLogin(dispatch)){
-         history.push("/login");
+
+         history.push("/profile");
       }
       else{
-         history.push("/profile");
+         history.push("/login");
       }
    };
 

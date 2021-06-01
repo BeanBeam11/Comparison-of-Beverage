@@ -8,7 +8,7 @@ import {
   ADD_TO_COMPARISON,
   REMOVE_COMPARISON_ITEM,
   REMOVE_ALL,
-  ADD_TO_COMMENT,
+  ADD_COMMENT,
   BEGIN_LOGIN_REQUEST,
   SUCCESS_LOGIN_REQUEST,
   FAIL_LOGIN_REQUEST,
@@ -33,18 +33,30 @@ try {
 } catch(e) {
   userInfo = null;
 }
-
+let useremail;
+try {
+  useremail =  JSON.parse(Cookie.getJSON("userInfo")).email;//getItem("userInfo"));
+} catch(e) {
+  useremail = null;
+}
+let username;
+try {
+  username =  JSON.parse(Cookie.getJSON("userInfo")).displayName;//getItem("userInfo"));
+} catch(e) {
+  username = null;
+}
 const initialState = {
 
   menus:[],
-
+  
   compareItems,
   count,
   commentList: {
-    users: [],
-    shop: [],
-    product: [],
-    description: [],
+    useremail,
+    username,
+    brand:"",
+    item:"",
+    content:""
   },
   userSignin: {
     loading: false,
@@ -99,7 +111,7 @@ function reducer(state, action) {
       count = 0;
       return { ...state, compareItems, count };
 
-    case ADD_TO_COMMENT:
+    case ADD_COMMENT:
       const content = action.payload;
       commentList = content;
       return { ...state, commentList };
