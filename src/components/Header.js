@@ -1,13 +1,17 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { StoreContext } from "../store";
-import { Input } from "antd";
+import { Input,Button } from "antd";
 import  NavBar from "./NavBar.js";
 import UserInfo from "./UserInfo";
+import {getCommentAct} from "../actions"
 const { Search } = Input;
 export default function Header({ }) {
   const { dispatch } = useContext(StoreContext);
   const onSearch = value => console.log(value);
+  const Comment=()=>{
+    getCommentAct(dispatch);
+  }
   return (
     <header className="header">
       <NavBar />

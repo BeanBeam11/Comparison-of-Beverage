@@ -22,3 +22,4 @@ export const LOGOUT_REQUEST = "LOGOUT_REQUEST";
 
 //COMMENT
 export const ADD_COMMENT = "ADD_COMMENT";
+export const GET_COMMENT = "GET_COMMENT";

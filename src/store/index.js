@@ -17,6 +17,7 @@ import {
   BEGIN_REGISTER_REQUEST,
   SUCCESS_REGISTER_REQUEST,
   FAIL_REGISTER_REQUEST,
+  GET_COMMENT
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -48,7 +49,7 @@ try {
 const initialState = {
 
   menus:[],
-  
+  comment:[],
   compareItems,
   count,
   commentList: {
@@ -174,6 +175,11 @@ function reducer(state, action) {
           error: action.payload,
         },
       };
+    case GET_COMMENT:
+      return {
+        ...state,
+        comment: action.payload
+      }
     default:
       return state;
   }

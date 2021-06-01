@@ -146,3 +146,9 @@ export const PublishComment =async (userComment) => {
   });
   return(userComment,id);
 }
+
+export const getComment=async ()=>{
+  const comment =await allComments.doc().get();
+  console.log(comment);
+  return comment;
+}

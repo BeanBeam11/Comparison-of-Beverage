@@ -6,6 +6,7 @@ import {StoreContext} from "../store"
 export default function CommentList() {
     const {state:{commentList},dispatch}= useContext(StoreContext);
     console.log(commentList);
+    
     return(
         <>
             <AddComment/>

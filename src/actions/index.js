@@ -15,7 +15,8 @@ import {
   BEGIN_UPDATE_USERINFO,
   SUCCESS_UPDATE_USERINFO,
   FAIL_UPDATE_USERINFO,
-  ADD_COMMENT
+  ADD_COMMENT,
+  GET_COMMENT
 } from "../utils/constants";
 import {getFireJSON,
   signInWithEmailPassword,
@@ -24,6 +25,7 @@ import {getFireJSON,
   updateUserInfoApi,
   checkLoginApi,
   PublishComment,
+  getComment
 } from "../api";
 
 export const menuContentSet = async(dispatch,menusId) => {
@@ -177,4 +179,12 @@ export const addComment = async (dispatch,user) => {
       type:ADD_COMMENT,
       payload: userInfo
     })
+}
+
+export const getCommentAct = async (dispatch) => {
+  const content=await getComment();
+  dispatch({
+    type:GET_COMMENT,
+    payload: content
+  })
 }
