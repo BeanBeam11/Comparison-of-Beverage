@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { Form, Input, Button } from "antd";
 import { logoutFromFirebase, updateUserInfo } from "../actions";
@@ -6,14 +6,16 @@ import { StoreContext } from "../store";
 import { Link } from "react-router-dom";
 
 const ProfileCard = () => {
+
   const {
     state: {
       userSignin: { userInfo },
     },
     dispatch,
   } = useContext(StoreContext);
-  const { displayName, email } = userInfo;
   const history = useHistory();
+
+    const { displayName, email } = userInfo;
   const [form] = Form.useForm();
 
   const handleUpdate = (values) => {
@@ -25,6 +27,7 @@ const ProfileCard = () => {
     logoutFromFirebase(dispatch);
     history.push("/");
   };
+
   return (
     <>
     <div className="profile-nav-wrapper">

@@ -8,15 +8,15 @@ export default function UserInfo(props) {
 
    const { state: { userSignin : { userInfo, remember } },dispatch } = useContext(StoreContext);
    const history = useHistory();
-
+   
    const goToProfile = () => {
       if(checkLogin(dispatch)){
-
          history.push("/profile");
       }
       else{
          history.push("/login");
       }
+     
    };
 
    useEffect(() => {
