@@ -8,20 +8,6 @@ import { WarningOutlined, MailOutlined, LockOutlined } from '@ant-design/icons';
 import { checkLogin, loginToFirebase, rememberLoginUser } from '../actions';
 import { StoreContext } from "../store";
 export default function Login(redirect) {
-  // return (
-  //   <div className="login">
-  //       <p className="login-title">LOGIN IN</p>
-  //       <Space direction="vertical">
-  //           <Input  className="login-input" placeholder="Account" />
-  //           <Input.Password
-  //           className="login-input"
-  //           placeholder="Password"
-  //           iconRender={visible => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
-  //           />
-  //       </Space>
-  //       <Button className="login-bt">登入</Button>
-  //   </div>
-  // );
   const { state:{ userSignin: { userInfo, loading, error, remember } }, dispatch } = useContext(StoreContext);
   const [form] = Form.useForm();
   const history = useHistory();
