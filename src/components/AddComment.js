@@ -1,47 +1,36 @@
 import { Select,Input,Button } from 'antd';
 import {useState,useEffect, useContext} from "react";
 import kebuke from "../json/kebuke_1.json";
-import fiftylan from "../json/50lan"; 
-import milkshop from "../json/milkshop.json";
-import macu from "../json/macu.json";
-import chingshin from "../json/chingshin.json";
-import {addToComment} from "../actions/";
+import {addToComment,menuContentSet} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
 export default function AddComment() {
-  const {state:{commentList},dispatch}= useContext(StoreContext);
+
+  const {state:{commentList,  menus },dispatch}= useContext(StoreContext);
   const { Option } = Select;
   const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷客夏","清心福全"];
-  const [shops, setShops] = useState(kebuke);
-  const [shopName, setshopName] = useState(kebuke.name);
-  const resource={users:"",shop:"",product:"",description:""};
   const handleProvinceChange = value => {
     console.log(value);
       switch (value){
         case "可不可熟成紅茶":
           console.log("kbk");
-          setShops(kebuke);
-          setshopName(kebuke.name);
+          menuContentSet(dispatch,"kebuke");
           break;
         case "五十嵐":
           console.log("50");
-          setShops(fiftylan);
-          setshopName(fiftylan.name);
+          menuContentSet(dispatch,"50lan");
           break;
         case "麻古茶坊":
           console.log("macu");
-          setShops(macu);
-          setshopName(macu.name);
+          menuContentSet(dispatch,"macu");
           break;
         case "迷客夏":
           console.log("milk");
-          setShops(milkshop);
-          setshopName(milkshop.name);
+          menuContentSet(dispatch,"milkshop");
           break;
         case "清心福全":
           console.log("ching");
-          setShops(chingshin);
-          setshopName(chingshin.name);
+          menuContentSet(dispatch,"chingshin");
           break;
         
       }
@@ -67,8 +56,8 @@ export default function AddComment() {
               ))}
             </Select>
             <Select className="comment-select-beverage" defaultValue="請選擇飲料">
-              {shops.map(city => (
-                <Option key={city.name}>{city.name}</Option>
+              {menus.map(item => (
+                <Option key={item.name}>{item.name}</Option>
               ))}
             </Select>
             <img className="comment-icon-add-img" src="./img/icon_add_picture.png"/>

@@ -31,7 +31,7 @@ const ProfileCard = () => {
       <div className="profile-img-box">
         <img className="profile-img" src="./img/user_note.png"/>
       </div>
-      <div className="profile-name">Name</div>
+      <div className="profile-name">{displayName}</div>
       <div className="profile-nav">
         <Link to='/' className="profile-nav-item" >
           個人資料
