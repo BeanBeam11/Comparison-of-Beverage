@@ -30,7 +30,7 @@ const ProfileCard = () => {
 
   return (
     <>
-    <div className="profile-nav-wrapper">
+    <div className="profile-nav-wrapper header-mt">
       <div className="profile-img-box">
         <img className="profile-img" src="./img/user_note.png"/>
       </div>
@@ -44,7 +44,7 @@ const ProfileCard = () => {
         </Link>
       </div>
     </div>
-    <div className="profile-form-wrapper">
+    <div className="profile-form-wrapper header-mt">
       <div className="profile-title"></div>
       <Form
         onFinish={handleUpdate}

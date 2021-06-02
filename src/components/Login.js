@@ -27,12 +27,12 @@ export default function Login(redirect) {
 
   return (
     <>
-    <div className="login-quote-wrapper">
+    <div className="login-quote-wrapper header-mt">
       <div className="login-quote-1">天氣好熱 ...</div>
       <div className="login-quote-2">喝杯飲料吧 !</div>
-      <img className="img_login_illus" src="./img/login_illus_brown.png"/>
+      {/* <img className="img_login_illus" src="./img/login_illus_brown.png"/> */}
     </div>
-    <div className="login-form-wrapper">
+    <div className="login-form-wrapper header-mt">
       <div className="login-title">Log in</div>
       <Form
         name="normal_login"

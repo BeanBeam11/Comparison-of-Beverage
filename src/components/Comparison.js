@@ -18,7 +18,7 @@ export default function Comparison(){
     console.log(count);
     return(
         <>
-            <div className="compare">
+            <div className="compare header-mt">
                 <p className="compare-title">飲料比較</p>
                 <p className="compare-description">已選擇{count}件商品，請挑選最多3件來比較。</p>
                 <Button className="compare-reset" onClick={()=>removeall(dispatch,count,compareItems)}>重設全部</Button>
