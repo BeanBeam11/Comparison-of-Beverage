@@ -5,6 +5,7 @@ import { Input,Button } from "antd";
 import  NavBar from "./NavBar.js";
 import UserInfo from "./UserInfo";
 import {getCommentAct} from "../actions"
+import { useState } from 'react';
 
 const { Search } = Input;
 
@@ -14,8 +15,20 @@ export default function Header({ }) {
   const Comment=()=>{
     getCommentAct(dispatch);
   }
+  // header scroll
+  const [navbar,setNavbar] = useState(false);
+  const changeBackground = () => {
+    // console.log(window.scrollY);
+    if(window.scrollY >= 80){
+      setNavbar(true);
+    } else{
+      setNavbar(false);
+    }
+  }
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <header className="header">
+    <header className={navbar ? 'header active' : 'header'}>
       <NavBar />
       <div className="header-box-left">
         <Link to='/'>
