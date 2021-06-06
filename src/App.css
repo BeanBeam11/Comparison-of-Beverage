@@ -92,7 +92,7 @@ body {
   padding: 0;
   position: fixed;
   z-index: 1;
-  /* height: auto; */
+  height: auto;
   background-color: transparent;
 }
 
@@ -141,7 +141,7 @@ a:hover{
   position: relative;
   width: 100vw;
   height: 5rem;
-  background-color: rgba(87, 61, 45, 0.95);
+  /* background-color: rgba(87, 61, 45, 0.95); */
   color: #F9F6F2;
   position: relative;
   display: flex;
@@ -155,6 +155,12 @@ header .active{
   height: 4rem;
   line-height: 4rem;
   padding: 0 8rem;
+}
+header .hide{
+  display: none;
+}
+.bg-color{
+  background-color: rgba(87, 61, 45, 0.95);
 }
 .header-box-left {
   position: relative;

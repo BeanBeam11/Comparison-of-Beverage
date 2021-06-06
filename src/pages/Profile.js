@@ -13,7 +13,7 @@ function Profile() {
       <Layout className="container main-layout">
       
       <Layout className="">
-        <Header className="layout-header">
+        <Header className="layout-header bg-color">
           <AppHeader  />
         </Header>
         <Content className="layout-content">
