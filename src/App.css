@@ -796,6 +796,7 @@ header .hide{
   }
   .header {
     padding: 0 2rem;
+    background-color: rgba(87, 61, 45, 0.95);
   }
   header .active{
     height: 5rem;
@@ -839,6 +840,7 @@ header .hide{
   .swiper{
     width: 100vw;
     height: auto;
+    margin-top: 5rem;
   }
   .swiper-box{
     width: 100vw;
