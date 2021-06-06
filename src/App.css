@@ -777,6 +777,10 @@ header .active{
   .swiper-img{
     width: 100vw;
   } 
+  /* COMPARE */
+  .compare-items-box{
+    height: 50vh;
+  }
 }
 /* mobile */
 @media (max-width: 480px) { 
@@ -919,4 +923,66 @@ header .active{
     width: 90vw;
   }
   /* LOGIN */
+  .login-quote-wrapper{
+    display: none;
+  }
+  .login-form-wrapper{
+    width: 100vw;
+    background-color: transparent;
+  }
+  .login-title{
+    width: 100vw;
+    margin: 3rem 0 1rem;
+  }
+  .login-email{
+    width: 80vw;
+    margin: 3rem 10vw 1rem;
+  }
+  .login-password{
+    width: 80vw;
+    margin: 1rem 10vw 1rem;
+  }
+  .login-option{
+    width: 80vw;
+    margin: 3rem 10vw 1rem;
+  }
+  .login-enter{
+    width: 80vw;
+    margin: 1rem 10vw 1rem;
+  }
+  /*Register*/
+  .register-form-wrapper{
+    padding: 0 10vw 0;
+  }
+  .register-title{
+    width: 80vw;
+    margin: 3rem 0 1rem;
+  }
+  .register-form-wrapper .ant-input{
+    width: 80vw;
+  } 
+  .register-form-wrapper .ant-input-password{
+    width: 80vw;
+  } 
+  .register-enter{
+    width: 80vw;
+    margin: 3rem 0 1rem;
+  }
+  /*Profile*/
+  .profile-img-box{
+    position: relative;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 3rem 5vw 1rem;
+    overflow: hidden;
+  }
+  .profile-img{
+    position: absolute;
+    width: 20vw;
+  }
+  .profile-form{
+    width: 50vw;
+  }
 } 

@@ -58,7 +58,7 @@ const RegisterCard = ({ redirect }) => {
       {/* <img className="img_login_illus" src="./img/login_illus_brown.png"/> */}
     </div>
     <div className="login-form-wrapper register-form-wrapper header-mt">
-      <div className="login-title">Register</div>
+      <div className="login-title register-title">Register</div>
       <Form
         {...formItemLayout}
         form={form}
