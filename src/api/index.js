@@ -148,7 +148,12 @@ export const PublishComment =async (userComment) => {
 }
 
 export const getComment=async ()=>{
-  const comment =await allComments.doc().get();
+  let allcomment =[];
+  const comment =await allComments.get();
   console.log(comment);
-  return comment;
+  comment.forEach((doc)=>{
+    allcomment.push(doc.data());
+  })
+  console.log(allcomment);
+  return allcomment;
 }

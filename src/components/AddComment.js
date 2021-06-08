@@ -1,16 +1,31 @@
 import { Select,Input,Button } from 'antd';
 import {useState,useEffect, useContext} from "react";
 import kebuke from "../json/kebuke_1.json";
-import {addToComment,menuContentSet,addComment} from "../actions/";
+import {menuContentSet,addComment} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
 export default function AddComment() {
   const {state:{commentList,  menus,userSignin: { userInfo}},dispatch}= useContext(StoreContext);
-  const { displayName, email } = userInfo;
+  // const { displayName, email } = userInfo;
   const { Option } = Select;
+  const { TextArea } = Input;
   const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷客夏","清心福全"];
+  const [brand,setbrand]=useState("");
+  const [item,setitem]=useState("");
+  const [description,setdescription]=useState("");
+  const Setdescription = e=>{
+    setdescription(e.target.value);
+   
+  }
+  const Setitem = value=>{
+    console.log(value);
+    setitem(value);
+    console.log(item);
+  }
   const handleProvinceChange = value => {
     console.log(value);
+    setbrand(value);
+    console.log(brand);
       switch (value){
         case "可不可熟成紅茶":
           console.log("kbk");
@@ -36,12 +51,13 @@ export default function AddComment() {
       }
     };
   const Publish=()=> {
-    const resource={useremail:email,username:displayName,brand:"可不可",item:"熟成紅茶",content:"好好喝"};
+    const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,content:description};
     addComment(dispatch,resource);
   }
   useEffect(()=>{
     Cookie.set("commentList", JSON.stringify(commentList));
   }, [commentList])
+
   return(
     <>
       <div className="comment-add">
@@ -55,7 +71,7 @@ export default function AddComment() {
                 <Option key={province}>{province}</Option>
               ))}
             </Select>
-            <Select className="comment-select-beverage" defaultValue="請選擇飲料">
+            <Select className="comment-select-beverage" defaultValue="請選擇飲料" onChange={Setitem}>
               {menus.map(item => (
                 <Option key={item.name}>{item.name}</Option>
               ))}
@@ -63,7 +79,7 @@ export default function AddComment() {
             <img className="comment-icon-add-img" src="./img/icon_add_picture.png"/>
           </div>
           <div className="comment-input">
-            <Input placeholder="寫點評論..." className="comment-input"/>
+            <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
             <Button onClick={Publish} className="comment-bt-publish">發布</Button>
           </div> 
         </div>
