@@ -4,6 +4,7 @@ import kebuke from "../json/kebuke_1.json";
 import {menuContentSet,addComment} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
+
 export default function AddComment() {
   const {state:{commentList,  menus,userSignin: { userInfo}},dispatch}= useContext(StoreContext);
   // const { displayName, email } = userInfo;
@@ -13,6 +14,7 @@ export default function AddComment() {
   const [brand,setbrand]=useState("");
   const [item,setitem]=useState("");
   const [description,setdescription]=useState("");
+
   const Setdescription = e=>{
     setdescription(e.target.value);
    

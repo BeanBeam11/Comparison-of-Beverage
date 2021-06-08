@@ -26,7 +26,7 @@ if (!compareItems) compareItems = [];
 let count = 0;
 let commentList = Cookie.getJSON("commentList");
 if (!commentList) commentList = [];
-let menus=initialMenu();
+
 
 let userInfo;
 try {
