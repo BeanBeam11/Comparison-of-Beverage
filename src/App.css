@@ -289,6 +289,45 @@ header .hide{
   margin-top: 0.5rem;
 }
 
+/* Home intro */
+.intro{
+  position: relative;
+  width: 100vw;
+  height: calc(100vh - 5rem);
+  margin-top: 5rem;
+  /* background-color: #fff; */
+  /* border: 1px solid #000; */
+}
+#video-1{
+  position: absolute;
+  height: calc(100vh - 10rem);
+  right: 0;
+  bottom: 0;
+}
+#video-2{
+  position: absolute;
+  height: calc(100vh - 15rem);
+  left: 0;
+  bottom: 0;
+}
+#video-3{
+  position: absolute;
+  height: calc(100vh - 10rem);
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 0;
+}
+.intro-text-1{
+  position: absolute;
+}
+.intro-text-2{
+  position: absolute;
+}
+.intro-text-3{
+  position: absolute;
+}
+
 /*Home*/
 .swiper{
   width: 100vw;
@@ -334,6 +373,7 @@ header .hide{
   text-align: center;
   font-size: 2.25rem;
   font-weight: 500;
+  margin-top: 10rem;
 }
 .home-card{
   display: flex;
