@@ -24,16 +24,26 @@ export default function CommentList() {
         {check()}
             <AddComment/>
             <>
-                {comment.map(content =>(
-                    <div className="comment-list">
-                    <p  className="comment-list-txt">{content.username}</p>
-                    <p className="comment-list-txt">{content.useremail}</p>
-                    <p className="comment-list-txt">{content.brand}</p>
-                    <p className="comment-list-txt">{content.item}</p>
-                    <p className="comment-list-txt">{content.content}</p>
+                <div className="comment-list-wrapper">
+                    {comment.map(content =>(
+                        <div className="comment-list">
+                            <div className="comment-avatar-box">
+                                <img className="comment-avatar" src="./img/user_note.png"/>
+                            </div>
+                            <div className="comment-info">
+                                <div className="comment-user-info">
+                                    <span className="comment-user-name">{content.username}</span>
+                                    <span className="comment-user-email">{content.useremail}</span>
+                                </div>
+                                <div className="comment-beverage">
+                                    <span className="">{content.brand}</span>
+                                    <span className=""> -- {content.item}</span>
+                                </div>
+                                <div className="comment-list-txt">{content.content}</div>
+                            </div>
+                        </div>
+                    ))}
                 </div>
-                ))}
-                
             </>
         </>
     );
