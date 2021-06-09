@@ -712,6 +712,9 @@ header .hide{
 .ant-form-item-label > label{
   color: #573D2D;
 }
+.register-title{
+  margin-top: 5vw;
+}
 .register-form-wrapper .ant-input{
   width: 25vw;
 } 
