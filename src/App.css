@@ -294,7 +294,6 @@ header .hide{
   position: relative;
   width: 100vw;
   height: calc(100vh + 10rem);
-  /* margin-top: 5rem; */
 }
 #video-1{
   position: absolute;
@@ -361,7 +360,6 @@ header .hide{
   position: relative;
   width: 3rem;
   margin-left: calc(50% - 1.5rem);
-  border-color: #573D2D; 
 }
 .intro-bt-box-2{
   position: relative;
@@ -391,21 +389,6 @@ header .hide{
 .swiper-img{
   width: 100vw;
 } 
-.home-start-bt-box{
-  position: relative;
-  width: 6rem;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-.home-start-bt{
-  width: 6rem;
-  height: 2.5rem;
-  font-size: 1.2rem;
-  color: #573D2D;
-  margin: 3rem 0 5rem;
-  border-radius: 5px;
-}
 .home-title-box{
   position: relative;
   width: 80vw;
@@ -420,11 +403,14 @@ header .hide{
   font-weight: 500;
   margin-top: 8rem;
 }
+.home-card-wrapper{
+  margin-bottom: 8rem;
+}
 .home-card{
   display: flex;
   flex-direction: row;
   width: 50rem;
-  height: 20rem;
+  min-height: 10rem;
   border: solid 1px #573D2D;
   border-radius: 10px;
   right: 0;
@@ -432,6 +418,7 @@ header .hide{
   margin: auto;
   margin-bottom: 2rem;
   padding: 2rem 5rem;
+  box-sizing: border-box;
   background-color: #fff;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.25);
 }
@@ -450,7 +437,11 @@ header .hide{
   height: 16rem;
 }
 .home-card-title{
+  font-size: 1.2rem;
+}
+.home-card-product{
   font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 .home-card-description{
   font-size: 1rem;
@@ -898,18 +889,88 @@ header .hide{
   /* HOME */
   .swiper{
     width: 100vw;
-    height: auto;
+    height: 55vh;
   }
   .swiper-box{
     width: 100vw;
-    height: auto;
+    height: 55vh;
   }
   .swiper-img{
-    width: 100vw;
+    height: 55vh;
+    object-fit: cover;
   } 
+  .home-title{
+    margin-top: 5rem;
+    font-size: 3rem;
+  }
   /* COMPARE */
   .compare-items-box{
     height: 50vh;
+  }
+  /* intro */
+  .intro{
+    height: calc(100vh + 5rem);
+  }
+  #video-1{
+    width: 100vw;
+    object-fit: cover;
+    object-position: 30% center;
+  }
+  #video-2{
+    width: 100vw;
+    object-fit: cover;
+    object-position: 60% center;
+  }
+  #video-3{
+    width: 100vw;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .intro-space{
+    display: none;
+  }
+  .intro-text-1{
+    font-size: 3.5rem;
+    width: 100vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    top: 50vh;
+  }
+  .intro-text-2{
+    font-size: 3.5rem;
+    width: 100vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    top: 50vh;
+  }
+  .intro-text-3{
+    font-size: 3.5rem;
+    width: 100vw;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    top: 50vh;
+  }
+  .intro .ant-btn{
+    font-size: 2rem;
+    height: 4rem;
+  }
+  .intro-bt-box-1{
+    width: 6rem;
+    margin-left: calc(50% - 3rem);
+  }
+  .intro-bt-box-2{
+    width: 10rem;
+    margin-left: calc(50% - 5rem);
+  }
+  .intro-bt-box-3{
+    width: 10rem;
+    margin-left: calc(50% - 5rem);
   }
 }
 /* mobile */
@@ -963,40 +1024,95 @@ header .hide{
   /* HOME */
   .swiper{
     width: 100vw;
-    height: auto;
+    height: 40vh;
     margin-top: 5rem;
   }
   .swiper-box{
     width: 100vw;
-    height: auto;
+    height: 40vh;
   }
   .swiper-img{
-    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
   } 
+  .home-title{
+    font-size: 2.25rem;
+    margin-top: 5rem;
+  }
   .home-card{
     width: 90vw;
-    height: 40vh;
-    padding: 2rem;
+    padding: 2rem 1.2rem;
   }
   .home-card-img-box{
     width: 35vw;
-    height: 40vh;
   }
   .home-card-img{
     width: 30vw;
-    max-height: 40vh;
   }
   .home-card-text{
     width: 55vw;
-    height: 40vh;
     padding: 0 0 0 1.5rem;
   }
   .home-card-title{
-    font-size: 1.3rem;
+    font-size: 1rem;
+  }
+  .home-card-product{
+    margin-bottom: 1rem;
   }
   .home-card-description{
     font-size: 0.8rem;
   }
+
+  /* intro */
+  .intro{
+    height: calc(100vh + 5rem);
+  }
+  #intro-1{
+    height: 100vh;
+  }
+  #video-1{
+    width: 100vw;
+    object-fit: cover;
+    object-position: 30% center;
+  }
+  #video-2{
+    width: 100vw;
+    object-fit: cover;
+    object-position: 60% center;
+  }
+  #video-3{
+    width: 100vw;
+    object-fit: cover;
+    object-position: center center;
+  }
+  .intro-space{
+    display: none;
+  }
+  .intro-text-1{
+    font-size: 2.5rem;
+  }
+  .intro-text-2{
+    font-size: 2.5rem;
+    width: calc(2.6rem * 6);
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .intro-text-3{
+    font-size: 2.5rem;
+    width: calc(2.6rem * 6);
+    text-align: center;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: 60vh;
+  }
+  .intro .ant-btn{
+    font-size: 1rem;
+    height: 2rem;
+  }
+
   /* MENU */
   .menu{
     width: 90vw;
