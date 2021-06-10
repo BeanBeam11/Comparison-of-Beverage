@@ -293,22 +293,20 @@ header .hide{
 .intro{
   position: relative;
   width: 100vw;
-  height: calc(100vh - 5rem);
-  margin-top: 5rem;
-  /* background-color: #fff; */
-  /* border: 1px solid #000; */
+  height: calc(100vh + 10rem);
+  /* margin-top: 5rem; */
 }
 #video-1{
   position: absolute;
   height: calc(100vh - 10rem);
   right: 0;
-  bottom: 0;
+  bottom: 5rem;
 }
 #video-2{
   position: absolute;
   height: calc(100vh - 15rem);
   left: 0;
-  bottom: 0;
+  bottom: 5rem;
 }
 #video-3{
   position: absolute;
@@ -316,16 +314,64 @@ header .hide{
   right: 0;
   left: 0;
   margin: auto;
-  bottom: 0;
+  bottom: 5rem;
 }
 .intro-text-1{
   position: absolute;
+  color: #fff;
+  font-size: 2.5rem;
+  left: 20vw;
+  top: 60vh;
 }
 .intro-text-2{
   position: absolute;
+  color: #fff;
+  font-size: 2.5rem;
+  right: 15vw;
+  top: 60vh;
 }
 .intro-text-3{
   position: absolute;
+  color: #fff;
+  font-size: 2.5rem;
+  width: 100vw;
+  text-align: center;
+  top: 70vh;
+}
+.intro-mask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg,#573D2D 0,transparent);
+}
+.intro-space{
+  position: relative;
+  width: 100vw;
+  height: 3rem;
+  background-color: #573D2D;
+}
+.intro .ant-btn{
+  color: white;
+}
+.intro .ant-btn:hover{
+  color: #BF9C4F;
+  border-color: #BF9C4F;
+}
+.intro-bt-box-1{
+  position: relative;
+  width: 3rem;
+  margin-left: calc(50% - 1.5rem);
+  border-color: #573D2D; 
+}
+.intro-bt-box-2{
+  position: relative;
+  width: 5rem;
+  margin-left: calc(50% - 2.5rem);
+}
+.intro-bt-box-3{
+  position: relative;
+  width: 5rem;
+  margin-left: calc(50% - 2.5rem);
 }
 
 /*Home*/
@@ -358,7 +404,6 @@ header .hide{
   font-size: 1.2rem;
   color: #573D2D;
   margin: 3rem 0 5rem;
-  border-color: #573D2D;
   border-radius: 5px;
 }
 .home-title-box{
@@ -373,7 +418,7 @@ header .hide{
   text-align: center;
   font-size: 2.25rem;
   font-weight: 500;
-  margin-top: 10rem;
+  margin-top: 8rem;
 }
 .home-card{
   display: flex;

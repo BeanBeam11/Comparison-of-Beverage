@@ -20,30 +20,57 @@ export default function HomeContent(){
     return(
       <> 
       <Swiper style={contentStyle}/>
-      <div className="home-start-bt-box">
-        <Link to='/menu'>
-          <Button className="home-start-bt">喝啥？</Button>
-        </Link>
+      
+      <div className="home-title-box">
+        <p className="home-title">功能介紹</p>
       </div>
 
       <div className="intro" id="intro-1">
         <video loop autoPlay muted id="video-1">
           <source src={Video1} type="video/mp4" />
         </video>
-        <div className="intro-text-1"></div>
+        <div className="intro-mask"></div>
+        <div className="intro-text-1">
+          瀏覽各家菜單
+          <div className="intro-bt-box-1">
+            <Link to='/menu'>
+              <Button ghost className="intro-bt-1">菜單</Button>
+            </Link>
+          </div>
+        </div>
+        
       </div>
+      <div className="intro-space"></div>
       <div className="intro" id="intro-2">
         <video loop autoPlay muted id="video-2">
           <source src={Video2} type="video/mp4" />
         </video>
-        <div className="intro-text-2"></div>
+        <div className="intro-mask"></div>
+        <div className="intro-text-2">
+          將想喝的飲料加入比較
+          <div className="intro-bt-box-2">
+            <Link to='/menu'>
+              <Button ghost className="intro-bt-1">加入比較</Button>
+            </Link>
+          </div>
+        </div>
       </div>
+      <div className="intro-space"></div>
       <div className="intro" id="intro-3">
         <video loop autoPlay muted id="video-3">
           <source src={Video3} type="video/mp4" />
         </video>
-        <div className="intro-text-3"></div>
+        <div className="intro-mask"></div>
+        <div className="intro-text-3">
+          開始比較想喝的飲料
+          <div className="intro-bt-box-3">
+            <Link to='/compare'>
+              <Button ghost className="intro-bt-1">飲料比較</Button>
+            </Link>
+          </div>
+        </div>
       </div>
+      <div className="intro-space"></div>
 
       <div className="home-title-box">
         <p className="home-title">各家主打商品</p>
