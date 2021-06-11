@@ -172,7 +172,9 @@ export const addComment = async (dispatch,user) => {
       username:user.username,
       brand:user.brand,
       item:user.item,
-      content:user.content
+      content:user.content,
+      // rating:user.score,
+      // date:dateString,
     };
     const userInfo=await PublishComment(Content);
     dispatch({ 

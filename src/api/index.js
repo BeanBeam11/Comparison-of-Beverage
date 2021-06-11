@@ -140,11 +140,14 @@ export const registerWithEmailPassword = async (email, password, displayName) =>
 export const PublishComment =async (userComment) => {
   const commentRef = await allComments.doc();
   const id = commentRef.id;
+  const date=commentRef.createdAt.toDate();
+  console.log(date);
   await commentRef.set({ 
     ...userComment,
-    id
+    id,
+    date
   });
-  return(userComment,id);
+  return(userComment,id,date);
 }
 
 export const getComment=async ()=>{

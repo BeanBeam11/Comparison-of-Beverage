@@ -53,7 +53,7 @@ export default function AddComment() {
       }
     };
   const Publish=()=> {
-    const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,content:description};
+    const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,content:description/*,rating:5,date:dateString*/};
     addComment(dispatch,resource);
   }
   useEffect(()=>{
