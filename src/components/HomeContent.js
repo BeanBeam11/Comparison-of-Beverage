@@ -26,7 +26,7 @@ export default function HomeContent(){
       </div>
 
       <div className="intro" id="intro-1">
-        <video loop autoPlay muted id="video-1">
+        <video loop autoPlay muted playsinline id="video-1">
           <source src={Video1} type="video/mp4" />
         </video>
         <div className="intro-mask"></div>
@@ -42,7 +42,7 @@ export default function HomeContent(){
       </div>
       <div className="intro-space"></div>
       <div className="intro" id="intro-2">
-        <video loop autoPlay muted id="video-2">
+        <video loop autoPlay muted playsinline id="video-2">
           <source src={Video2} type="video/mp4" />
         </video>
         <div className="intro-mask"></div>
@@ -57,7 +57,7 @@ export default function HomeContent(){
       </div>
       <div className="intro-space"></div>
       <div className="intro" id="intro-3">
-        <video loop autoPlay muted id="video-3">
+        <video loop autoPlay muted playsinline id="video-3">
           <source src={Video3} type="video/mp4" />
         </video>
         <div className="intro-mask"></div>
