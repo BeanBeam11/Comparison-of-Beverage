@@ -15,6 +15,10 @@ export default function HomeContent(){
   };
     return(
       <> 
+      <div className="intro-bg-1"></div>
+      <div className="intro-bg-2"></div>
+      <div className="intro-bg-3"></div>
+      <div className="intro" id="intro-0"></div>
       <div className="intro" id="intro-1">
         <div className="intro-text-1">
           瀏覽各家菜單
@@ -25,7 +29,6 @@ export default function HomeContent(){
           </div>
         </div>
       </div>
-      <div className="intro-space"></div>
       <div className="intro" id="intro-2">
         <div className="intro-text-2">
           將想喝的飲料加入比較
@@ -36,7 +39,6 @@ export default function HomeContent(){
           </div>
         </div>
       </div>
-      <div className="intro-space"></div>
       <div className="intro" id="intro-3">
         <div className="intro-text-3">
           開始比較想喝的飲料
@@ -47,10 +49,8 @@ export default function HomeContent(){
           </div>
         </div>
       </div>
-      <div className="intro-space"></div>
-
       <div className="home-title-box">
-        <p className="home-title">各家主打商品</p>
+        <div className="home-title">各家主打商品</div>
       </div>
       <div className="home-card-wrapper">
         <div className="home-card">

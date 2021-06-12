@@ -91,7 +91,7 @@ body {
 .layout-header{
   padding: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 999;
   height: auto;
   background-color: transparent;
 }
@@ -292,28 +292,64 @@ header .hide{
 }
 
 /* Home intro */
+.intro-bg-1{
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: calc(100vh + 5rem) solid transparent;
+  border-bottom: calc(100vh + 5rem) solid transparent; 
+  border-right: 100vw solid #FDF5E3; 
+  top: calc(-100vh - 5rem);
+}
+.intro-bg-2{
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: calc(100vh + 5rem) solid transparent;
+  border-bottom: calc(100vh + 5rem) solid transparent; 
+  border-left: 100vw solid #FDF5E3; 
+  top: calc(100vh + 5rem);
+}
+.intro-bg-3{
+  position: absolute;
+  width: 0; 
+  height: 0; 
+  border-top: calc(100vh + 5rem) solid transparent;
+  border-bottom: calc(100vh + 5rem) solid transparent; 
+  border-right: 100vw solid #FDF5E3; 
+  top: calc((100vh + 5rem) * 3);
+}
+.intro-bg-4{
+  position: absolute;
+  width: 100vw; 
+  height: calc(100vh + 5rem); 
+  background-color: #fff;
+  top: calc((100vh + 5rem) * 4);
+}
 .intro{
   position: relative;
   width: 100vw;
-  height: calc(100vh + 10rem);
+  height: 100vh;
+  margin-bottom: 5rem;
+  /* border: 1px solid #573D2D; */
 }
 .intro-text-1{
   position: absolute;
-  color: #fff;
+  color: #573D2D;
   font-size: 2.5rem;
   left: 20vw;
   top: 60vh;
 }
 .intro-text-2{
   position: absolute;
-  color: #fff;
+  color: #573D2D;
   font-size: 2.5rem;
   right: 15vw;
   top: 60vh;
 }
 .intro-text-3{
   position: absolute;
-  color: #fff;
+  color: #573D2D;
   font-size: 2.5rem;
   width: 100vw;
   text-align: center;
@@ -326,7 +362,8 @@ header .hide{
   background-color: #573D2D;
 }
 .intro .ant-btn{
-  color: white;
+  color: #573D2D;
+  border: 1px solid #573D2D;
 }
 .intro .ant-btn:hover{
   color: #EBC47A;
@@ -367,20 +404,27 @@ header .hide{
 } 
 .home-title-box{
   position: relative;
+  width: 100vw;
+  height: 15rem;
+  background-color: #fff;
+}
+.home-title{
+  position: relative;
   width: 80vw;
   left: 0;
   right: 0;
   margin: auto;
-}
-.home-title{
-  width: 80vw;
   text-align: center;
   font-size: 2.25rem;
   font-weight: 500;
-  margin-top: 8rem;
+  top: calc(7.5rem - 2.5rem);
 }
 .home-card-wrapper{
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
   margin-bottom: 8rem;
+  background-color: #fff;
 }
 .home-card{
   display: flex;
