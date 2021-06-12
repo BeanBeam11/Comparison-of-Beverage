@@ -4,6 +4,7 @@ import kebuke from "../json/kebuke_1.json";
 import {menuContentSet,addComment} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
+import { Link } from "react-router-dom";
 
 export default function AddComment() {
   const {state:{commentList,  menus,userSignin: { userInfo}},dispatch}= useContext(StoreContext);
@@ -62,13 +63,13 @@ export default function AddComment() {
 
   return(
     <>
-      <div className="comment-add">
+      <div className="comment-add" id="comment-login">
         <div className="comment-area-right">
           <img className="comment-img-user" src="./img/user_note.png"/>
         </div>
         <div className="comment-area-left">
           <div className="comment-select">
-            <Select className="comment-select-company" defaultValue={provinceData[0]} onChange={handleProvinceChange}>
+            <Select className="comment-select-company" defaultValue="請選擇店家" onChange={handleProvinceChange}>
               {provinceData.map(province => (
                 <Option key={province}>{province}</Option>
               ))}
@@ -78,12 +79,19 @@ export default function AddComment() {
                 <Option key={item.name}>{item.name}</Option>
               ))}
             </Select>
-            <img className="comment-icon-add-img" src="./img/icon_add_picture.png"/>
           </div>
           <div className="comment-input">
             <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
             <Button onClick={Publish} className="comment-bt-publish">發布</Button>
           </div> 
+        </div>
+      </div>
+      {/* 以下為尚未登入會顯示的區塊，css的class相同，有另外設不同的id以供判斷，然後目前為了不顯示所以有設style */}
+      <div className="comment-add" id="comment-not-login" style={{display: 'none'}}>
+        <div className="comment-login-box">
+          <Link to='/login'>
+            <Button ghost className="comment-login">馬上登入並發表評論</Button>
+          </Link>
         </div>
       </div>
     </>

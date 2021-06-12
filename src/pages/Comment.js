@@ -11,7 +11,7 @@ function Comment() {
         <Header className="layout-header bg-color">
           <AppHeader  />
         </Header>
-        <Content className="layout-content comment-bg">
+        <Content className="layout-content">
           <CommentList/>
         </Content>
         <Footer className="layout-footer">

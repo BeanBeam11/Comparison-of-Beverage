@@ -40,7 +40,7 @@ const ProfileCard = () => {
           個人資料
         </Link>
         <Link to='/' className="profile-nav-item" >
-          設定
+          收藏清單
         </Link>
       </div>
     </div>

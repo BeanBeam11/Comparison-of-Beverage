@@ -1,10 +1,6 @@
 import React from 'react';
 import {Button,BackTop,Carousel} from 'antd'
 import { Link } from "react-router-dom";
-import Swiper from './Swiper.js';
-import Video1 from "./video/video1.mp4";
-import Video2 from "./video/video2.mp4";
-import Video3 from "./video/video3.mp4";
 
 
 export default function HomeContent(){
@@ -19,17 +15,7 @@ export default function HomeContent(){
   };
     return(
       <> 
-      <Swiper style={contentStyle}/>
-      
-      <div className="home-title-box">
-        <p className="home-title">功能介紹</p>
-      </div>
-
       <div className="intro" id="intro-1">
-        <video loop autoPlay muted playsinline id="video-1">
-          <source src={Video1} type="video/mp4" />
-        </video>
-        <div className="intro-mask"></div>
         <div className="intro-text-1">
           瀏覽各家菜單
           <div className="intro-bt-box-1">
@@ -38,14 +24,9 @@ export default function HomeContent(){
             </Link>
           </div>
         </div>
-        
       </div>
       <div className="intro-space"></div>
       <div className="intro" id="intro-2">
-        <video loop autoPlay muted playsinline id="video-2">
-          <source src={Video2} type="video/mp4" />
-        </video>
-        <div className="intro-mask"></div>
         <div className="intro-text-2">
           將想喝的飲料加入比較
           <div className="intro-bt-box-2">
@@ -57,10 +38,6 @@ export default function HomeContent(){
       </div>
       <div className="intro-space"></div>
       <div className="intro" id="intro-3">
-        <video loop autoPlay muted playsinline id="video-3">
-          <source src={Video3} type="video/mp4" />
-        </video>
-        <div className="intro-mask"></div>
         <div className="intro-text-3">
           開始比較想喝的飲料
           <div className="intro-bt-box-3">
