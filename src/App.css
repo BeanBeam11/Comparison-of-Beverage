@@ -66,7 +66,7 @@ body {
 
 ::selection {
   color: #fff;
-  background: #BF9C4F;
+  background: #EBC47A;
 }
 .ant-pagination-item-active a{
   color: #573D2D;
@@ -85,8 +85,8 @@ body {
   padding: 0;
   width: 100vw;
   height: 8rem;
-  background-color: rgba(87, 61, 45, 0.95);
-  color: #F9F6F2;
+  background-color: rgba(253, 245, 227, 0.95);
+  color: #573D2D;
 }
 .layout-header{
   padding: 0;
@@ -109,7 +109,7 @@ body {
   min-height: 100vh;
 }
 a:hover{
-  color: #BF9C4F;
+  color: #EBC47A;
 }
 
 .header-mt{
@@ -118,15 +118,15 @@ a:hover{
 
 /* btn setting*/
 .ant-btn:hover, .ant-btn:focus{
-  color: #BF9C4F;
-  border-color: #BF9C4F;
+  color: #EBC47A;
+  border-color: #EBC47A;
 }
 .ant-btn:active {
-  color: #BF9C4F;
-  border-color: #BF9C4F;
+  color: #EBC47A;
+  border-color: #EBC47A;
 }
 .ant-select:hover{
-  border-color: #BF9C4F;
+  border-color: #EBC47A;
 }
 .ant-btn{
   color: #573D2D;
@@ -142,7 +142,7 @@ a:hover{
   position: relative;
   width: 100vw;
   height: 5rem;
-  color: #F9F6F2;
+  color: #573D2D;
   position: relative;
   display: flex;
   flex-direction: row;
@@ -152,7 +152,7 @@ a:hover{
   box-sizing: border-box;
 }
 header .active{
-  background-color: rgba(87, 61, 45, 1);
+  background-color: rgba(253, 245, 227, 1);
   height: 4rem;
   line-height: 4rem;
   padding: 0 8rem;
@@ -161,7 +161,7 @@ header .hide{
   display: none;
 }
 .bg-color{
-  background-color: rgba(87, 61, 45, 0.95);
+  background-color: rgba(253, 245, 227, 0.95);
 }
 .header-box-left {
   position: relative;
@@ -181,7 +181,7 @@ header .hide{
 .header-item-center{
   width: 100px;
   height: 5rem;
-  color: #F9F6F2;
+  color: #573D2D;
   font-size: 1.2rem;
   margin-left: 1rem;
 }
@@ -232,7 +232,7 @@ header .hide{
   text-align: center;
 }
 .drawer-item:hover{
-  color: #BF9C4F;
+  color: #EBC47A;
 }
 
 /* Footer */
@@ -240,7 +240,7 @@ header .hide{
   position: relative;
   width: 100vw;
   text-align: center;
-  background-color: #F9F6F2;
+  background-color: #FDF5E3;
 }
 .footer-content{
   position: absolute;
@@ -260,7 +260,7 @@ header .hide{
   display: flex;
   flex-direction: row;
   margin-top: 3rem;
-  color: #F9F6F2;
+  color: #573D2D;
 }
 .footer-item-center{
   width: 240px;
@@ -353,8 +353,8 @@ header .hide{
   color: white;
 }
 .intro .ant-btn:hover{
-  color: #BF9C4F;
-  border-color: #BF9C4F;
+  color: #EBC47A;
+  border-color: #EBC47A;
 }
 .intro-bt-box-1{
   position: relative;
@@ -692,7 +692,7 @@ header .hide{
   opacity: 0.6;
 }
 .comment-beverage{
-  color: #BF9C4F;
+  color: #EBC47A;
 }
 .comment-list-txt{
   margin: 0.5rem 0 1.5rem;
@@ -703,11 +703,11 @@ header .hide{
   color: #573D2D;
 }
 .login-form-wrapper a:hover{
-  color: #BF9C4F;
+  color: #EBC47A;
 }
 .ant-checkbox-checked .ant-checkbox-inner{
-  background-color: #BF9C4F;
-  border-color: #BF9C4F;
+  background-color: #EBC47A;
+  border-color: #EBC47A;
 }
 .login-quote-wrapper{
   position: absolute;
