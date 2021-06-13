@@ -28,6 +28,7 @@ export default function HomeContent(){
         <img className="intro-0-img" src="./img/intro_logo.png" />
       </div>
       <div className="intro" id="intro-1">
+        <img className="intro-img-1" src="./img/intro_1.png" />
         <div className="intro-text-1">
           瀏覽各家菜單
           <div className="intro-bt-box-1">
@@ -38,6 +39,7 @@ export default function HomeContent(){
         </div>
       </div>
       <div className="intro" id="intro-2">
+        <img className="intro-img-2" src="./img/intro_2.png" />
         <div className="intro-text-2">
           將想喝的飲料加入比較
           <div className="intro-bt-box-2">
@@ -48,6 +50,7 @@ export default function HomeContent(){
         </div>
       </div>
       <div className="intro" id="intro-3">
+        <img className="intro-img-3" src="./img/intro_3.png" />
         <div className="intro-text-3">
           開始比較已選的飲料
           <div className="intro-bt-box-3">

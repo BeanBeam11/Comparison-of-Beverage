@@ -356,13 +356,33 @@ header .hide{
   font-size: 2.5rem;
   width: 100vw;
   text-align: center;
-  top: 50vh;
+  top: 70vh;
 }
 .intro-img-0{
   position: absolute;
   width: 40vw;
-  bottom: 0rem;
+  bottom: 0;
   left: 10vw;
+}
+.intro-img-1{
+  position: absolute;
+  width: 40vw;
+  bottom: 10vh;
+  right: 10vw;
+}
+.intro-img-2{
+  position: absolute;
+  width: 40vw;
+  bottom: 0;
+  left: 10vw;
+}
+.intro-img-3{
+  position: absolute;
+  width: 40vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 20vh;
 }
 .intro-0-img{
   position: absolute;
