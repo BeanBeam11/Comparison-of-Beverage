@@ -442,7 +442,7 @@ header .hide{
   margin-bottom: 2rem;
   padding: 2rem 5rem;
   box-sizing: border-box;
-  background-color: #FFFEE8;
+  background-color: #FFFBF3;
   box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.25);
 }
 .home-card-img-box{
@@ -592,9 +592,11 @@ header .hide{
   border: 1px solid rgb(87, 61, 45, 0.1);
   border-radius: 2px;
   width: 25vw;
-  height: 50vw;
+  min-height: 50vw;
   font-size: 1rem;
   margin: 0 calc(5vw / 6) 0;
+  padding-bottom: 2rem;
+  box-sizing: border-box;
 }
 .compare-delete{
   width: 2rem;
@@ -604,14 +606,20 @@ header .hide{
 }
 .compare-img{
   width: 18vw;
-  margin: 0.5rem 3vw;
+  height: 25vw;
+  margin: 0.5rem 3.5vw;
+  object-fit: cover;
+  object-position: center center;
+  margin-bottom: 2rem;
 }
 .compare-items{
   width: auto;
+  height: auto;
   margin: 0.5rem 3vw;
 }
-.compare-add-to-fav-btn{
+.compare-fav-btn{
   color: #573D2D;
+  margin-top: 1rem;
 }
 
 /*Comment*/
@@ -947,10 +955,6 @@ header .hide{
   .home-card-wrapper{
     margin-bottom: 0;
   }
-  /* COMPARE */
-  .compare-items-box{
-    height: 50vh;
-  }
   /* intro */
   .intro-text-0{
     position: absolute;
@@ -1138,9 +1142,21 @@ header .hide{
   }
   .compare-items-box{
     width: 28vw;
-    height: 50vh;
     font-size: 0.8rem;
-    margin: 0 calc(6vw / 6) 0;
+    margin: 0 calc(6vw / 6);
+  }
+  .compare-items{
+    width: auto;
+    height: auto;
+    margin: 0.5rem 2vw;
+  }
+  .compare-fav-btn{
+    font-size: 0.5rem;
+  }
+  .compare-img{
+    width: 18vw;
+    height: 25vw;
+    margin: 0.5rem 5vw;
   }
   .compare-delete{
     margin-left: calc(28vw - 2rem);
