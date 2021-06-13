@@ -8,6 +8,7 @@ import Compare from './pages/Compare'
 import Login from './pages/LoginPage'
 import Register from './pages/Register'
 import Profile from './pages/Profile'
+import Favorite from './pages/Favorite'
 import { StoreProvider } from "./store";
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/profile" component={Profile} />
+          <Route path="/favorite" component={Favorite}/>
           <Route exact path="/:menuListName" component={MenuPage} /> 
         </Switch>
       </BrowserRouter>

@@ -1,21 +1,29 @@
 import { Select,Input,Button } from 'antd';
 import {useState,useEffect, useContext} from "react";
 import kebuke from "../json/kebuke_1.json";
-import {menuContentSet,addComment} from "../actions/";
+import {menuContentSet,addComment,checkLogin} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
 import { Link } from "react-router-dom";
 
 export default function AddComment() {
   const {state:{commentList,  menus,userSignin: { userInfo}},dispatch}= useContext(StoreContext);
-  // const { displayName, email } = userInfo;
   const { Option } = Select;
   const { TextArea } = Input;
   const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷客夏","清心福全"];
   const [brand,setbrand]=useState("");
   const [item,setitem]=useState("");
   const [description,setdescription]=useState("");
-
+  const check=()=>{
+    if((userInfo==null)){
+        console.log("no login");
+        return false;
+     }
+    else{
+      console.log("login");
+        return true;
+     }
+}
   const Setdescription = e=>{
     setdescription(e.target.value);
    
@@ -63,6 +71,7 @@ export default function AddComment() {
 
   return(
     <>
+    {check()?(
       <div className="comment-add" id="comment-login">
         <div className="comment-area-right">
           <img className="comment-img-user" src="./img/user_note.png"/>
@@ -80,20 +89,19 @@ export default function AddComment() {
               ))}
             </Select>
           </div>
-          <div className="comment-input">
-            <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
-            <Button onClick={Publish} className="comment-bt-publish">發布</Button>
-          </div> 
-        </div>
-      </div>
-      {/* 以下為尚未登入會顯示的區塊，css的class相同，有另外設不同的id以供判斷，然後目前為了不顯示所以有設style */}
-      <div className="comment-add" id="comment-not-login" style={{display: 'none'}}>
-        <div className="comment-login-box">
-          <Link to='/login'>
-            <Button ghost className="comment-login">馬上登入並發表評論</Button>
-          </Link>
-        </div>
-      </div>
+              <div className="comment-input">
+               <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
+               <Button onClick={Publish} className="comment-bt-publish">發布</Button>
+              </div> 
+          </div>
+      </div> ):(
+      <div className="comment-add" id="comment-not-login">    
+            <div className="comment-login-box">
+                <Link to='/login'>
+                <Button ghost className="comment-login">馬上登入並發表評論</Button>
+                </Link>
+            </div>
+      </div>)}
     </>
   );
 }

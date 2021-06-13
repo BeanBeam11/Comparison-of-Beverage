@@ -21,7 +21,7 @@ export default function CommentList() {
     useEffect(()=>{getCommentAct(dispatch)},[commentList]);
     return(
         <>
-        {check()}
+        {/* {check()}  */}
             <AddComment/>
             <>
                 <div className="comment-list-wrapper">
@@ -34,6 +34,8 @@ export default function CommentList() {
                                 <div className="comment-user-info">
                                     <span className="comment-user-name">{content.username}</span>
                                     <span className="comment-user-email">{content.useremail}</span>
+                                    {/*記得改time的css 下面一行*/}
+                                    <span className="comment-user-email">{content.time}</span> 
                                 </div>
                                 <div className="comment-beverage">
                                     <span className="">{content.brand}</span>

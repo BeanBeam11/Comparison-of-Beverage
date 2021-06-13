@@ -50,7 +50,7 @@ export default function Header({ }) {
         <div className="header-item">
           <Search placeholder="想喝什麼？" className='header-search' allowClear onSearch={onSearch} />
         </div>
-        <Link to='/login' >
+        <Link to='/favorite' >
           <img className='header-item header-icon' src="./img/icon_heart_brown.png"/>
         </Link>
         {/* <Link to='/login' >

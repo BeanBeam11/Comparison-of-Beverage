@@ -177,6 +177,7 @@ export const addComment = async (dispatch,user) => {
       // date:dateString,
     };
     const userInfo=await PublishComment(Content);
+    console.log(userInfo);
     dispatch({ 
       type:ADD_COMMENT,
       payload: userInfo
