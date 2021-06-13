@@ -18,7 +18,14 @@ export default function HomeContent(){
       <div className="intro-bg-1"></div>
       <div className="intro-bg-2"></div>
       <div className="intro-bg-3"></div>
-      <div className="intro" id="intro-0"></div>
+      <div className="intro" id="intro-0">
+        <div className="intro-text-0">
+          <div className="">每次都為了買飲料</div>
+          <div className="">而「選擇困難」發作嗎？</div>
+          <div className="">那就快來試試...</div>
+        </div>
+        <img className="intro-0-img" src="./img/intro_logo.png" />
+      </div>
       <div className="intro" id="intro-1">
         <div className="intro-text-1">
           瀏覽各家菜單
@@ -41,10 +48,10 @@ export default function HomeContent(){
       </div>
       <div className="intro" id="intro-3">
         <div className="intro-text-3">
-          開始比較想喝的飲料
+          開始比較已選的飲料
           <div className="intro-bt-box-3">
             <Link to='/compare'>
-              <Button ghost className="intro-bt-1">飲料比較</Button>
+              <Button ghost className="intro-bt-1">開始比較</Button>
             </Link>
           </div>
         </div>

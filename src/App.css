@@ -156,7 +156,6 @@ header .active{
   background-color: rgba(253, 245, 227, 1);
   height: 4rem;
   line-height: 4rem;
-  padding: 0 8rem;
   transition: 0.5s;
 }
 header .hide{
@@ -222,7 +221,7 @@ header .hide{
   width: 2rem;
 }
 .ant-drawer-body{
-  background-color: #F9F6F2;
+  background-color: #FDF5E3;
 }
 .drawer-item-top{
   margin-top: 30vh;
@@ -331,35 +330,39 @@ header .hide{
   width: 100vw;
   height: 100vh;
   margin-bottom: 5rem;
+  color: #573D2D;
   /* border: 1px solid #573D2D; */
+}
+.intro-text-0{
+  position: absolute;
+  font-size: 1.5rem;
+  left: 55vw;
+  top: 25vh;
 }
 .intro-text-1{
   position: absolute;
-  color: #573D2D;
   font-size: 2.5rem;
   left: 20vw;
-  top: 60vh;
+  top: 50vh;
 }
 .intro-text-2{
   position: absolute;
-  color: #573D2D;
   font-size: 2.5rem;
   right: 15vw;
-  top: 60vh;
+  top: 50vh;
 }
 .intro-text-3{
   position: absolute;
-  color: #573D2D;
   font-size: 2.5rem;
   width: 100vw;
   text-align: center;
-  top: 70vh;
+  top: 50vh;
 }
-.intro-space{
-  position: relative;
-  width: 100vw;
-  height: 3rem;
-  background-color: #573D2D;
+.intro-0-img{
+  position: absolute;
+  width: 10rem;
+  right: 25vw;
+  top: 45vh;
 }
 .intro .ant-btn{
   color: #573D2D;
@@ -915,6 +918,15 @@ header .hide{
 /* --- RWD Setting --- */
 /* iPad Pro */
 @media (max-width: 1024px) { 
+  .header{
+    padding: 0 4rem;
+    height: 5rem;
+  }
+  header .active{
+    padding: 0 4rem;
+    height: 5rem;
+    line-height: 5rem;
+  }
   /* HOME */
   .swiper{
     width: 100vw;
@@ -932,43 +944,38 @@ header .hide{
     margin-top: 5rem;
     font-size: 3rem;
   }
+  .home-card-wrapper{
+    margin-bottom: 0;
+  }
   /* COMPARE */
   .compare-items-box{
     height: 50vh;
   }
   /* intro */
-  .intro{
-    height: calc(100vh + 5rem);
-  }
-  .intro-space{
-    display: none;
+  .intro-text-0{
+    position: absolute;
+    font-size: 1.5rem;
+    left: 55vw;
+    top: 25vh;
   }
   .intro-text-1{
     font-size: 3.5rem;
-    width: 100vw;
-    right: 0;
-    left: 0;
-    margin: auto;
     text-align: center;
-    top: 50vh;
   }
   .intro-text-2{
     font-size: 3.5rem;
-    width: 100vw;
-    right: 0;
-    left: 0;
-    margin: auto;
+    width: calc(3.5rem * 6);
     text-align: center;
-    top: 50vh;
   }
   .intro-text-3{
     font-size: 3.5rem;
-    width: 100vw;
-    right: 0;
-    left: 0;
-    margin: auto;
     text-align: center;
-    top: 50vh;
+  }
+  .intro-0-img{
+    position: absolute;
+    width: 10rem;
+    right: 25vw;
+    top: 45vh;
   }
   .intro .ant-btn{
     font-size: 2rem;
@@ -995,7 +1002,6 @@ header .hide{
   }
   .header {
     padding: 0 2rem;
-    background-color: rgba(253, 245, 227, 0.95);
   }
   header .active{
     height: 5rem;
@@ -1053,6 +1059,9 @@ header .hide{
     font-size: 2.25rem;
     margin-top: 5rem;
   }
+  .home-card-wrapper{
+    margin-bottom: 8rem;
+  }
   .home-card{
     width: 90vw;
     padding: 2rem 1.2rem;
@@ -1078,14 +1087,11 @@ header .hide{
   }
 
   /* intro */
-  .intro{
-    height: calc(100vh + 5rem);
-  }
-  #intro-1{
-    height: 100vh;
-  }
-  .intro-space{
-    display: none;
+  .intro-text-0{
+    position: absolute;
+    font-size: 1rem;
+    left: 40vw;
+    top: 25vh;
   }
   .intro-text-1{
     font-size: 2.5rem;
@@ -1105,13 +1111,17 @@ header .hide{
     right: 0;
     left: 0;
     margin: auto;
-    top: 60vh;
   }
+  .intro-0-img{
+    position: absolute;
+    width: 8rem;
+    right: 15vw;
+    top: 40vh;
+  } 
   .intro .ant-btn{
     font-size: 1rem;
     height: 2rem;
   }
-
   /* MENU */
   .menu{
     width: 90vw;
