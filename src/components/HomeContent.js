@@ -19,6 +19,7 @@ export default function HomeContent(){
       <div className="intro-bg-2"></div>
       <div className="intro-bg-3"></div>
       <div className="intro" id="intro-0">
+        <img className="intro-img-0" src="./img/intro_0.png" />
         <div className="intro-text-0">
           <div className="">每次都為了買飲料</div>
           <div className="">而「選擇困難」發作嗎？</div>

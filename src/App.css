@@ -358,6 +358,12 @@ header .hide{
   text-align: center;
   top: 50vh;
 }
+.intro-img-0{
+  position: absolute;
+  width: 40vw;
+  bottom: 0rem;
+  left: 10vw;
+}
 .intro-0-img{
   position: absolute;
   width: 10rem;
