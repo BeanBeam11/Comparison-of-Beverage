@@ -40,10 +40,12 @@ export default function MenuItem() {
       <div className="menu-content">
        
           {menus.length===0 ?(
-            <div className="menu-init">
-              <div className="menu-init-text">決定好要喝什麼了嗎？</div>
-              <div className="menu-init-text">請點選上方選單選擇飲料菜單...</div>
-              <img className="menu-init-img"src="./img/menu_ques.png"/>
+            <div className="menu-init-wrapper">
+              <div className="menu-init">
+                <div className="menu-init-text">決定好要喝什麼了嗎？</div>
+                <div className="menu-init-text">請點選上方選單選擇飲料菜單...</div>
+                {/* <img className="menu-init-img"src="./img/menu_ques.png"/> */}
+              </div>
             </div>
           ):(
               <Table value={menus} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />
