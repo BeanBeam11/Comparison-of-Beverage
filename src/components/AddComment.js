@@ -1,6 +1,5 @@
-import { Select,Input,Button } from 'antd';
+import { Select,Input,Button,Rate } from 'antd';
 import {useState,useEffect, useContext} from "react";
-import kebuke from "../json/kebuke_1.json";
 import {menuContentSet,addComment,checkLogin} from "../actions/";
 import Cookie from "js-cookie";
 import {StoreContext} from "../store"
@@ -88,6 +87,7 @@ export default function AddComment() {
                 <Option key={item.name}>{item.name}</Option>
               ))}
             </Select>
+            <Rate allowHalf defaultValue={2.5} />
           </div>
               <div className="comment-input">
                <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
