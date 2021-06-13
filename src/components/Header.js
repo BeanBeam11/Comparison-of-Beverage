@@ -32,7 +32,7 @@ export default function Header({ }) {
       <NavBar />
       <div className="header-box-left">
         <Link to='/'>
-          <img className="header-logo" src="./img/logo_drink_what.png"/>
+          <img className="header-logo" src="./img/logo_drink_what_brown.png"/>
         </Link>
       </div>
       <div className="header-box-center">
@@ -51,10 +51,10 @@ export default function Header({ }) {
           <Search placeholder="想喝什麼？" className='header-search' allowClear onSearch={onSearch} />
         </div>
         <Link to='/login' >
-          <img className='header-item header-icon' src="./img/icon_heart.png"/>
+          <img className='header-item header-icon' src="./img/icon_heart_brown.png"/>
         </Link>
         {/* <Link to='/login' >
-          <img className='header-item header-icon' src="./img/icon_user.png"/>
+          <img className='header-item header-icon' src="./img/icon_user_brown.png"/>
         </Link> */}
         <div className='header-item header-icon'>
         <UserInfo className='header-item header-icon' style={{}} />

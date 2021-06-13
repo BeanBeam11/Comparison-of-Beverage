@@ -16,7 +16,7 @@ export default function NavBar(){
   return (
     <>
       <Button className="drawer-btn" onClick={showDrawer}>
-        <img className="drawer-icon" src="./img/icon_ham_menu.png"/>
+        <img className="drawer-icon" src="./img/icon_ham_menu_brown.png"/>
       </Button>
       <Drawer
         title=""
