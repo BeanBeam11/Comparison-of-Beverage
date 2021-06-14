@@ -1,6 +1,6 @@
 import AddComment from "./AddComment";
+import {Rate } from 'antd';
 import {useEffect, useContext} from "react";
-import Cookie from "js-cookie";
 import {getCommentAct,checkLogin} from "../actions";
 import { useHistory } from 'react-router-dom';
 import {StoreContext} from "../store"
@@ -40,6 +40,7 @@ export default function CommentList() {
                                 <div className="comment-beverage">
                                     <span className="">{content.brand}</span>
                                     <span className=""> -- {content.item}</span>
+                                    <Rate allowHalf defaultValue={content.rating} disabled={true}/>
                                 </div>
                                 <div className="comment-list-txt">{content.content}</div>
                             </div>

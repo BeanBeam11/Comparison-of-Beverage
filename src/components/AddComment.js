@@ -13,6 +13,7 @@ export default function AddComment() {
   const [brand,setbrand]=useState("");
   const [item,setitem]=useState("");
   const [description,setdescription]=useState("");
+  const [rate,setrate]=useState(2.5);
   const check=()=>{
     if((userInfo==null)){
         console.log("no login");
@@ -31,6 +32,10 @@ export default function AddComment() {
     console.log(value);
     setitem(value);
     console.log(item);
+  }
+  const Setstart = value=>{
+    console.log(value);
+    setrate(value);
   }
   const handleProvinceChange = value => {
     console.log(value);
@@ -61,7 +66,7 @@ export default function AddComment() {
       }
     };
   const Publish=()=> {
-    const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,content:description/*,rating:5,date:dateString*/};
+    const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,content:description,rating:rate};
     addComment(dispatch,resource);
   }
   useEffect(()=>{
@@ -87,7 +92,7 @@ export default function AddComment() {
                 <Option key={item.name}>{item.name}</Option>
               ))}
             </Select>
-            <Rate allowHalf defaultValue={2.5} />
+            <Rate allowHalf defaultValue={2.5} onChange={Setstart}/>
           </div>
               <div className="comment-input">
                <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
