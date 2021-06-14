@@ -36,10 +36,10 @@ const ProfileCard = () => {
       </div>
       <div className="profile-name">{displayName}</div>
       <div className="profile-nav">
-        <Link to='/' className="profile-nav-item" >
+        <Link to='/profile' className="profile-nav-item" >
           個人資料
         </Link>
-        <Link to='/' className="profile-nav-item" >
+        <Link to='/favorite' className="profile-nav-item" >
           收藏清單
         </Link>
       </div>

@@ -29,7 +29,7 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
   return (
     <>
     {check()}
-    <div className="profile-nav-wrapper header-mt">
+    <div className="fav-nav-wrapper header-mt">
       <div className="profile-img-box">
         <img className="profile-img" src="./img/user_note.png"/>
       </div>
@@ -44,12 +44,14 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
       </div>
     </div>
     {/*以下為加入最愛要排版的部分*/}
-    <div className="profile-form-wrapper header-mt">
+    <div className="fav-wrapper header-mt">
       {favorite.map(content =>(
-        <div>
-          <span className="profile-img">{content.image}</span>
-          <span className="profile-nav-item">{content.brand}</span>
-          <img className="profile-img" src={content.image}/>
+        <div className="fav-box">
+          <div className="fav-img-box">
+            <img className="fav-img" src={content.image}/>
+          </div>
+          <div className="fav-text">{content.item}</div>
+          <div className="fav-text fav-text-brand">{content.brand}</div>
         </div>
       ))}
     </div>

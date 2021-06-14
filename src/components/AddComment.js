@@ -92,12 +92,12 @@ export default function AddComment() {
                 <Option key={item.name}>{item.name}</Option>
               ))}
             </Select>
-            <Rate allowHalf defaultValue={2.5} onChange={Setstart}/>
+            <div className="comment-rating"><Rate allowHalf defaultValue={2.5} onChange={Setstart}/></div>
           </div>
-              <div className="comment-input">
-               <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
-               <Button onClick={Publish} className="comment-bt-publish">發布</Button>
-              </div> 
+          <div className="comment-input">
+            <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
+            <Button onClick={Publish} className="comment-bt-publish">發布</Button>
+          </div> 
           </div>
       </div> ):(
       <div className="comment-add" id="comment-not-login">    
