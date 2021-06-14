@@ -79,7 +79,8 @@ enableFireStoreDataPersistance();
 /*Lisen takefile */
 const beverage = firebase.firestore().collection("beverage");
 const beverageJson=beverage.doc("json");
-const allComments=firebase.firestore().collection("allcomment")
+const allComments=firebase.firestore().collection("allcomment");
+const favorite = firebase.firestore().collection("favorite");
 export const getFireJSON= async (menuId)=>{
   let jsonMenu=[];
   const querySnapshot=await beverageJson.collection(menuId).get();
@@ -160,4 +161,27 @@ export const getComment=async ()=>{
   })
   console.log(allcomment);
   return allcomment;
+}
+
+export const addFavorite=async (userFavorite)=>{
+  const favoriteRef = await favorite.doc();
+  await favoriteRef.set({ 
+    ...userFavorite,
+  });
+  return(userFavorite);
+}
+
+export const getFavorite=async (email)=>{
+  let allfavorite =[];
+  const favorites =await favorite.get();
+
+  favorites.forEach((doc)=>{
+    console.log(doc.data().username)
+    console.log(auth.currentUser.email);
+    console.log(auth.currentUser.name);
+    if(doc.data().useremail==auth.currentUser.email)
+      allfavorite.push(doc.data());
+  })
+  console.log(allfavorite);
+  return allfavorite;
 }

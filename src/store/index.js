@@ -17,7 +17,9 @@ import {
   BEGIN_REGISTER_REQUEST,
   SUCCESS_REGISTER_REQUEST,
   FAIL_REGISTER_REQUEST,
-  GET_COMMENT
+  GET_COMMENT,
+  ADD_FAVORITE,
+  GET_FAVORITE
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -26,7 +28,7 @@ if (!compareItems) compareItems = [];
 let count = 0;
 let commentList = Cookie.getJSON("commentList");
 if (!commentList) commentList = [];
-
+let favoriteList=[];
 
 let userInfo;
 try {
@@ -50,6 +52,7 @@ const initialState = {
 
   menus:[],
   comment:[],
+  favorite:[],
   compareItems,
   count,
   commentList: {
@@ -70,6 +73,13 @@ const initialState = {
     userInfo: null,
     error: "",
   },
+  favoriteList:{
+    useremail,
+    username,
+    image:"",
+    brand:"",
+    item:"",
+  }
 };
 
 function reducer(state, action) {
@@ -179,6 +189,15 @@ function reducer(state, action) {
       return {
         ...state,
         comment: action.payload
+      }
+    case ADD_FAVORITE:
+      const favorite = action.payload;
+      favoriteList = favorite;
+      return { ...state, favoriteList};
+    case GET_FAVORITE:
+      return {
+        ...state,
+       favorite:action.payload
       }
     default:
       return state;

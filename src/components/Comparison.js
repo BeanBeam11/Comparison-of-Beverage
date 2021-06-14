@@ -2,12 +2,16 @@ import {useEffect, useContext} from "react";
 import {StoreContext} from "../store";
 import { Button} from "antd";
 import Cookie from "js-cookie";
-import {removeComparisonItem,removeall} from "../actions";
+import {removeComparisonItem,removeall,addFavoriteAct} from "../actions";
 export default function Comparison(){
 
-    const {state:{compareItems,count},dispatch} =useContext(StoreContext);
+    const {state:{compareItems,count,userSignin: { userInfo}},dispatch} =useContext(StoreContext);
     // console.log(compareItems);
-    
+    const addToFavorite =(brand,item,image)=> {
+        console.log("useremail:"+userInfo.email+","+"username:"+userInfo.displayName+"brand:"+brand+"item:"+item+"image:"+image);
+        const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,image:image};
+        addFavoriteAct(dispatch,resource);
+      }
     useEffect(()=>{
         Cookie.set("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
@@ -38,7 +42,7 @@ export default function Comparison(){
                             <div className="compare-items">評分：{item.grade}</div>
                             <div className="compare-items">介紹：...</div>
                             <div className="compare-items">熱量：...</div>
-                            <Button className="compare-items compare-fav-btn">加入收藏</Button>
+                            <Button className="compare-items compare-fav-btn" onClick={()=>addToFavorite(item.company,item.name,item.image)}>加入收藏</Button>
                         </div>
                    
                 ))}

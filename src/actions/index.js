@@ -16,7 +16,9 @@ import {
   SUCCESS_UPDATE_USERINFO,
   FAIL_UPDATE_USERINFO,
   ADD_COMMENT,
-  GET_COMMENT
+  GET_COMMENT,
+  ADD_FAVORITE,
+  GET_FAVORITE
 } from "../utils/constants";
 import {getFireJSON,
   signInWithEmailPassword,
@@ -25,7 +27,9 @@ import {getFireJSON,
   updateUserInfoApi,
   checkLoginApi,
   PublishComment,
-  getComment
+  getComment,
+  addFavorite,
+  getFavorite
 } from "../api";
 
 export const menuContentSet = async(dispatch,menusId) => {
@@ -174,7 +178,6 @@ export const addComment = async (dispatch,user) => {
       item:user.item,
       content:user.content,
       rating:user.rating,
-
     };
     const userInfo=await PublishComment(Content);
     console.log(userInfo);
@@ -188,6 +191,29 @@ export const getCommentAct = async (dispatch) => {
   const content=await getComment();
   dispatch({
     type:GET_COMMENT,
+    payload: content
+  })
+}
+/*Favorite*/
+export const addFavoriteAct = async (dispatch,resource) => {
+  const Content={
+    useremail:resource.useremail,
+    username:resource.username,
+    brand:resource.brand,
+    item:resource.item,
+    image:resource.image,
+  };
+  const userInfo=await addFavorite(Content);
+  console.log(userInfo);
+  dispatch({ 
+    type:ADD_FAVORITE,
+    payload: userInfo
+  })
+}
+export const getFavoritetAct = async (dispatch) => {
+  const content=await getFavorite();
+  dispatch({
+    type:GET_FAVORITE,
     payload: content
   })
 }
