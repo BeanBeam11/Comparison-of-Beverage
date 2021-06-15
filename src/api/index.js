@@ -41,6 +41,7 @@ const auth = firebase.auth();
 
 /* PWA */
 const store = firebase.firestore();
+//const db = firebase.database();
 /* promise: */
 // store.enablePersistence()
 // .catch(function(err) {
@@ -165,23 +166,38 @@ export const getComment=async ()=>{
 
 export const addFavorite=async (userFavorite)=>{
   const favoriteRef = await favorite.doc();
+  const id = favoriteRef.id;
   await favoriteRef.set({ 
     ...userFavorite,
+    id
   });
   return(userFavorite);
 }
 
-export const getFavorite=async (email)=>{
+export const getFavorite=async ()=>{
   let allfavorite =[];
   const favorites =await favorite.get();
 
   favorites.forEach((doc)=>{
-    console.log(doc.data().username)
-    console.log(auth.currentUser.email);
-    console.log(auth.currentUser.name);
     if(doc.data().useremail==auth.currentUser.email)
       allfavorite.push(doc.data());
   })
-  console.log(allfavorite);
   return allfavorite;
+}
+
+export const removeFavorite=async (resource)=>{
+  let allfavorite =[];
+  const favorites =await favorite.get();
+  const favoriteRef = await favorite.doc();
+  favorites.forEach((doc)=>{
+    if(doc.data().item==resource.item){
+      //firebase.database().ref("./favorite/"+doc.data().id).remove();
+      store.collection("favorite").doc(doc.data().id).delete();
+    }
+  })
+  favorites.forEach((doc)=>{
+    if(doc.data().useremail==auth.currentUser.email)
+      allfavorite.push(doc.data());
+  })
+  return allfavorite
 }

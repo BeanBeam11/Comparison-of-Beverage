@@ -19,7 +19,8 @@ import {
   FAIL_REGISTER_REQUEST,
   GET_COMMENT,
   ADD_FAVORITE,
-  GET_FAVORITE
+  GET_FAVORITE,
+  REMOVE_FAVORITE
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -198,6 +199,11 @@ function reducer(state, action) {
       return {
         ...state,
        favorite:action.payload
+      }
+    case REMOVE_FAVORITE:
+      return {
+        ...state,
+        favoriteList:action.payload
       }
     default:
       return state;

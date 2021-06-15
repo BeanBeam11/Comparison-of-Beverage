@@ -1,7 +1,8 @@
 import React, { useContext,useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { checkLogin, loginToFirebase, rememberLoginUser,getFavoritetAct} from '../actions';
+import { checkLogin,getFavoritetAct,removeFavoriteAct} from '../actions';
 import { StoreContext } from "../store";
+import { Button} from "antd";
 import { Link } from "react-router-dom";
 
 const FavoriteCard= () => {
@@ -18,10 +19,18 @@ const FavoriteCard= () => {
   
   const check=()=>{
     if(!checkLogin(dispatch) && !(userInfo!=null)){
-        alert("請先登入");
-        history.push("/login");
-     }
-}
+      alert("請先登入");
+      history.push("/login");
+    }
+  } 
+  const remove=(item,id,email)=>{
+    const removeres={
+      item: item,
+      id:id,
+      email:email
+    };
+    removeFavoriteAct(dispatch, removeres);
+  }
 useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
   // useEffect(() => {    
   //   if( userInfo && checkLogin(dispatch) ) history.push("/favorite");
@@ -47,6 +56,7 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
     <div className="fav-wrapper header-mt">
       {favorite.map(content =>(
         <div className="fav-box">
+          <Button className="" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
           <div className="fav-img-box">
             <img className="fav-img" src={content.image}/>
           </div>

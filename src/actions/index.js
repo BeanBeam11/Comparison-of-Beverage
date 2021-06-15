@@ -18,7 +18,8 @@ import {
   ADD_COMMENT,
   GET_COMMENT,
   ADD_FAVORITE,
-  GET_FAVORITE
+  GET_FAVORITE,
+  REMOVE_FAVORITE,
 } from "../utils/constants";
 import {getFireJSON,
   signInWithEmailPassword,
@@ -29,7 +30,8 @@ import {getFireJSON,
   PublishComment,
   getComment,
   addFavorite,
-  getFavorite
+  getFavorite,
+  removeFavorite
 } from "../api";
 
 export const menuContentSet = async(dispatch,menusId) => {
@@ -216,4 +218,16 @@ export const getFavoritetAct = async (dispatch) => {
     type:GET_FAVORITE,
     payload: content
   })
+}
+
+export const removeFavoriteAct =async (dispatch,resource) => {
+    const removeres={
+      item:resource.item,
+      id:resource.id
+    };
+    const newfavorite=await removeFavorite(removeres);
+    dispatch({
+      type:REMOVE_FAVORITE,
+      payload:newfavorite
+    })
 }

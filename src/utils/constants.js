@@ -27,3 +27,4 @@ export const GET_COMMENT = "GET_COMMENT";
 //FAVORITE
 export const ADD_FAVORITE = "ADD_FAVORITE";
 export const GET_FAVORITE = "GET_FAVORITE";
+export const REMOVE_FAVORITE = "REMOVE_FAVORITE";
