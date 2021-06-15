@@ -460,7 +460,7 @@ header .hide{
   flex-direction: row;
   width: 50rem;
   min-height: 10rem;
-  border: solid 1px #573D2D;
+  /* border: solid 1px #573D2D; */
   border-radius: 10px;
   right: 0;
   left: 0;
@@ -469,7 +469,7 @@ header .hide{
   padding: 2rem 5rem;
   box-sizing: border-box;
   background-color: #FFFBF3;
-  box-shadow: 12px 12px 7px rgba(0, 0, 0, 0.25);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
 }
 .home-card-img-box{
   width: 15rem;
@@ -983,11 +983,16 @@ header .hide{
   position: relative;
   width: 15rem;
   min-height: 20rem;
-  border: 1px solid rgba(87, 61, 45, 0.3);
-  border-radius: 10px;
+  background-color: #FFFBF3;
+  border: 1px solid rgba(87, 61, 45, 0.1);
+  border-radius: 2px;
   margin: 1rem 1rem;
-  padding: 2.5rem;
+  padding: 0 0 2rem;
   box-sizing: border-box;
+}
+.fav-box-remove{
+  position: absolute;
+  right: 0;
 }
 .fav-img-box{
   position: relative;
@@ -996,6 +1001,7 @@ header .hide{
   right: 0;
   left: 0;
   margin: auto;
+  margin-top: 2.8rem;
 }
 .fav-img{
   position: absolute;
@@ -1014,7 +1020,7 @@ header .hide{
   position: relative;
   font-size: 1rem;
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 0.3rem;
   opacity: 0.5;
 }
 
@@ -1362,7 +1368,7 @@ header .hide{
     width: 30vw;
     min-height: 15rem;
     margin: 1rem 1vw;
-    padding: 1rem;
+    padding: 0 0 1rem;
   }
   .fav-img-box{
     width: 20vw;

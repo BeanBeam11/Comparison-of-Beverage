@@ -56,7 +56,7 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
       {favorite.map(content =>(
         <div className="fav-box">
           {/*打叉要排位置*/}
-          <Button className="" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
+          <Button className="fav-box-remove" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
           <div className="fav-img-box">
             <img className="fav-img" src={content.image}/>
           </div>
