@@ -7,7 +7,7 @@ import {StoreContext} from "../store"
 import {addToComparisonItem} from "../actions/";
   
   export default function AddToComparison(item){
-    const {state:{compareItems,count}, dispatch} =useContext(StoreContext);
+    const {state:{compareItems,count,booladd}, dispatch} =useContext(StoreContext);
     //   console.log(item.item.id);
 
       const openNotification = () => {
@@ -35,9 +35,13 @@ import {addToComparisonItem} from "../actions/";
           
           // console.log(item);
         if(count<3){
-          openNotification();
+          
           // console.log(item.item);
-          addToComparisonItem(dispatch,item.item,count);
+         addToComparisonItem(dispatch,item.item,count);
+          console.log(booladd);
+          if(!booladd){
+            openNotification();
+          }
         }
         else{
           openNotification_Full();

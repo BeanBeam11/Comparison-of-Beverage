@@ -49,6 +49,7 @@ try {
 } catch(e) {
   username = null;
 }
+let booladd=false;
 const initialState = {
 
   menus:[],
@@ -56,6 +57,7 @@ const initialState = {
   favorite:[],
   compareItems,
   count,
+  booladd,
   commentList: {
     useremail,
     username,
@@ -100,16 +102,17 @@ function reducer(state, action) {
       console.log(action.payload);
       const beverge = state.compareItems.find((x) => x.id === item.id);
       if (beverge) {
-        count++;
         compareItems = state.compareItems.map((x) =>
-          x.id === beverge.id ? item : x
+          x.id == beverge.id ? item : x
         );
         // console.log(count);
-        return { ...state, compareItems, count };
+        booladd=true;
+        return { ...state, compareItems, count,booladd};
       }
+      booladd=false;
       compareItems = [...state.compareItems, item];
       count += 1;
-      return { ...state, compareItems, count };
+      return { ...state, compareItems, count,booladd };
 
     case REMOVE_COMPARISON_ITEM:
       if (count > 0) {

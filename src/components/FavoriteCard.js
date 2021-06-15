@@ -52,10 +52,10 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
         </Link>
       </div>
     </div>
-    {/*以下為加入最愛要排版的部分*/}
     <div className="fav-wrapper header-mt">
       {favorite.map(content =>(
         <div className="fav-box">
+          {/*打叉要排位置*/}
           <Button className="" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
           <div className="fav-img-box">
             <img className="fav-img" src={content.image}/>
