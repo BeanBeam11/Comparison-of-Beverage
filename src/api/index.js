@@ -177,9 +177,11 @@ export const getComment=async ()=>{
 export const addFavorite=async (userFavorite)=>{
   const favoriteRef = await favorite.doc();
   const id = favoriteRef.id;
+  const date=new Date().getTime();
   await favoriteRef.set({ 
     ...userFavorite,
-    id
+    id,
+    date
   });
   return(userFavorite);
 }
@@ -192,6 +194,16 @@ export const getFavorite=async ()=>{
     if(doc.data().useremail==auth.currentUser.email)
       allfavorite.push(doc.data());
   })
+  const length = allfavorite.length;
+  for (let i = 0; i < length-1; i++) {
+      for (let j = 0; j < length-1; j++) {
+          if(allfavorite[j].date < allfavorite[j+1].date) {
+              let temp =allfavorite[j]
+              allfavorite[j] = allfavorite[j+1];
+              allfavorite[j+1] = temp;
+          }
+      }
+  }
   return allfavorite;
 }
 
