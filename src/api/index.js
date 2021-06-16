@@ -148,6 +148,7 @@ export const PublishComment =async (userComment) => {
   await commentRef.set({ 
     ...userComment,
     id,
+    date,
     time
   });
   return(userComment,id,date);
@@ -156,11 +157,20 @@ export const PublishComment =async (userComment) => {
 export const getComment=async ()=>{
   let allcomment =[];
   const comment =await allComments.get();
-  console.log(comment);
   comment.forEach((doc)=>{
     allcomment.push(doc.data());
   })
-  console.log(allcomment);
+  const length = allcomment.length;
+  for (let i = 0; i < length-1; i++) {
+      for (let j = 0; j < length-1; j++) {
+          if(allcomment[j].date < allcomment[j+1].date) {
+              let temp = allcomment[j]
+              allcomment[j] = allcomment[j+1];
+              allcomment[j+1] = temp;
+          }
+      }
+  }
+  
   return allcomment;
 }
 

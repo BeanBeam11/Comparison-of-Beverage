@@ -18,9 +18,13 @@ const FavoriteCard= () => {
   const history = useHistory();
   
   const check=()=>{
-    if(!checkLogin(dispatch) && !(userInfo!=null)){
+    if(/*!checkLogin(dispatch) && !*/(userInfo==null)){
       alert("請先登入");
       history.push("/login");
+      console.log("nologin")
+    }
+    else{
+      console.log("login")
     }
   } 
   const remove=(item,id,email)=>{
