@@ -69,12 +69,18 @@ useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
         <Link to='/favorite' className="profile-nav-item" >
           收藏清單
         </Link>
-        <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-              <img  className="fav-img" src={singlefavorite.image}/>
-              <p>{singlefavorite.item}</p>
-              <p>{singlefavorite.brand}</p>
-              <p>{singlefavorite.rate}</p>
-              <p>{singlefavorite.price}</p>
+        <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+          <div className="fav-img-box">
+            <img  className="fav-img" src={singlefavorite.image}/>
+          </div>
+          <div className="fav-modal-info">
+            <div>名稱：{singlefavorite.item}</div>
+            <div>店家：{singlefavorite.brand}</div>
+            <div>價格：{singlefavorite.price}</div>
+            <div>評分：{singlefavorite.rate}</div>
+            <div>介紹：...</div>
+            <div>熱量：...</div>
+          </div>
         </Modal>
       </div>
     </div>

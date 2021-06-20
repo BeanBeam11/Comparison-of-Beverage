@@ -1023,6 +1023,26 @@ header .hide{
   margin-top: 0.3rem;
   opacity: 0.5;
 }
+/* Modal */
+.ant-modal-header{
+  color: #573D2D;
+  font-family: 'Shippori Mincho', serif;
+}
+.ant-modal-body{
+  display: flex;
+  color: #573D2D;
+  font-family: 'Shippori Mincho', serif;
+}
+.fav-modal .fav-img-box{
+  position: relative;
+  width: 10rem;
+  height: 15rem;
+  margin: 1rem;
+}
+.fav-modal-info{
+  margin: 1rem;
+  font-size: 1rem;
+}
 
 /* --- RWD Setting --- */
 /* iPad Pro */
@@ -1435,5 +1455,12 @@ header .hide{
   .fav-img{
     width: 20vw;
     height: 25vw;
+  }
+  /* modal */
+  .fav-modal .fav-img-box{
+    position: relative;
+    width: 20vw;
+    height: 25vw;
+    margin: 1rem;
   }
 } 
