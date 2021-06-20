@@ -1,5 +1,5 @@
 import AddComment from "./AddComment";
-import {Rate,Spin } from 'antd';
+import {Rate,Spin,BackTop} from 'antd';
 import {useEffect, useContext} from "react";
 import {getCommentAct,checkLogin} from "../actions";
 import { useHistory } from 'react-router-dom';
@@ -56,6 +56,7 @@ export default function CommentList() {
             }
                 
             </>
+            <BackTop/>
         </>
     );
 }
