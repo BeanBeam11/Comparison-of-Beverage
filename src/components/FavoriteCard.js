@@ -1,8 +1,8 @@
-import React, { useContext,useEffect } from "react";
+import React, { useContext,useEffect,useState } from "react";
 import { useHistory } from "react-router-dom";
 import { checkLogin,getFavoritetAct,removeFavoriteAct} from '../actions';
 import { StoreContext } from "../store";
-import { Button} from "antd";
+import { Button,Modal} from "antd";
 import { Link } from "react-router-dom";
 
 const FavoriteCard= () => {
@@ -16,7 +16,7 @@ const FavoriteCard= () => {
     dispatch,
   } = useContext(StoreContext);
   const history = useHistory();
-  
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const check=()=>{
     if(/*!checkLogin(dispatch) && !*/(userInfo==null)){
       alert("請先登入");
@@ -36,9 +36,21 @@ const FavoriteCard= () => {
     removeFavoriteAct(dispatch, removeres);
   }
 useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
-  // useEffect(() => {    
-  //   if( userInfo && checkLogin(dispatch) ) history.push("/favorite");
-  // }, [ userInfo ]);// eslint-disable-line react-hooks/exhaustive-deps
+
+const showModal = () => {
+    setIsModalVisible(true);
+  };
+
+const handleOk = () => {
+    setIsModalVisible(false);
+    console.log("change"+isModalVisible)
+  };
+
+const handleCancel = () => {
+    setIsModalVisible(false);
+    console.log("change"+isModalVisible)
+  };
+useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
   return (
     <>
     {check()}
@@ -59,13 +71,21 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
     <div className="fav-wrapper header-mt">
       {favorite.map(content =>(
         <div className="fav-box">
-          {/*打叉要排位置*/}
           <Button className="fav-box-remove" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
-          <div className="fav-img-box">
-            <img className="fav-img" src={content.image}/>
+          <div onClick={showModal}> 
+          <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+              <img  className="fav-img" src={content.image}/>
+              <p>{content.item}</p>
+              <p>{content.brand}</p>
+              <p>{content.price}</p>
+              <p>{content.grade}</p>
+            </Modal>
+            <div className="fav-img-box">
+              <img  className="fav-img" src={content.image}/>
+            </div>
+            <div className="fav-text">{content.item}</div>
+            <div className="fav-text fav-text-brand">{content.brand}</div>
           </div>
-          <div className="fav-text">{content.item}</div>
-          <div className="fav-text fav-text-brand">{content.brand}</div>
         </div>
       ))}
     </div>

@@ -204,6 +204,8 @@ export const addFavoriteAct = async (dispatch,resource) => {
     brand:resource.brand,
     item:resource.item,
     image:resource.image,
+    price:resource.price,
+    rate:resource.grade,
   };
   const userInfo=await addFavorite(Content);
   console.log(userInfo);

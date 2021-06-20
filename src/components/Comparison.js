@@ -7,9 +7,9 @@ export default function Comparison(){
 
     const {state:{compareItems,count,userSignin: { userInfo}},dispatch} =useContext(StoreContext);
     // console.log(compareItems);
-    const addToFavorite =(brand,item,image)=> {
+    const addToFavorite =(brand,item,image,price,grade)=> {
         console.log("useremail:"+userInfo.email+","+"username:"+userInfo.displayName+"brand:"+brand+"item:"+item+"image:"+image);
-        const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,image:image};
+        const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,image:image,price:price,grade:grade};
         addFavoriteAct(dispatch,resource);
       }
     useEffect(()=>{
@@ -42,7 +42,7 @@ export default function Comparison(){
                             <div className="compare-items">評分：{item.grade}</div>
                             <div className="compare-items">介紹：...</div>
                             <div className="compare-items">熱量：...</div>
-                            <Button className="compare-items compare-fav-btn" onClick={()=>addToFavorite(item.company,item.name,item.image)}>加入收藏</Button>
+                            <Button className="compare-items compare-fav-btn" onClick={()=>addToFavorite(item.company,item.name,item.image,item.price,item.grade)}>加入收藏</Button>
                         </div>
                    
                 ))}
