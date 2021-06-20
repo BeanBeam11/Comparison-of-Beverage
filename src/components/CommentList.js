@@ -26,8 +26,8 @@ export default function CommentList() {
             <>
             {loading
                 ? (
-                    <div className="spinner-wrap">
-                        <Spin indicator={antIcon} />
+                    <div className="comment-spinner-wrap">
+                        <Spin className="comment-spinner" indicator={antIcon} />
                     </div>
                 ):(
                     <div className="comment-list-wrapper">

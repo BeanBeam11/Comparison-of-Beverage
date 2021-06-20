@@ -780,6 +780,17 @@ header .hide{
   margin: auto;
   background-color: #fff;
 }
+.comment-spinner-wrap{
+  position: absolute;
+  width: 100vw;
+}
+.comment-spinner{
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 2rem;
+}
 
 /*Login*/
 .login-form-wrapper a{
