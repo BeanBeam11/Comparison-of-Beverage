@@ -4,6 +4,10 @@ import {
   REMOVE_COMPARISON_ITEM,
   REMOVE_ALL,
   ADD_TO_COMMENT,
+  BEGIN_COMMENT,
+  SUCCESS_COMMENT,
+  SUCCESS_ADD_COMMENT,
+  BEGIN_ADD_COMMENT,
   BEGIN_LOGIN_REQUEST,
   SUCCESS_LOGIN_REQUEST,
   FAIL_LOGIN_REQUEST,
@@ -20,6 +24,11 @@ import {
   ADD_FAVORITE,
   GET_FAVORITE,
   REMOVE_FAVORITE,
+  GET_SINGLE_FAVORITE,
+  BEGIN_SET_MENU,
+  SUCCESS_SET_MENU,
+  BEGIN_ADD_FAVORITE,
+  SUCCESS_ADD_FAVORITE
 } from "../utils/constants";
 import {getFireJSON,
   signInWithEmailPassword,
@@ -31,11 +40,12 @@ import {getFireJSON,
   getComment,
   addFavorite,
   getFavorite,
+  getSingleFavorite,
   removeFavorite
 } from "../api";
 
 export const menuContentSet = async(dispatch,menusId) => {
- 
+ dispatch({type:BEGIN_SET_MENU});
   try{
     const menucontent = await getFireJSON(menusId);
     console.log(menucontent);
@@ -43,6 +53,7 @@ export const menuContentSet = async(dispatch,menusId) => {
       type:SET_MENU,
       payload:menucontent
     });
+    dispatch({type:SUCCESS_SET_MENU});
     return menucontent;
   }catch (error) {
    
@@ -82,6 +93,7 @@ export const removeall=(dispatch,count,beverage)=>{
   });
 };
 export const  addToComment=(dispatch,contents)=>{
+  
   console.log(contents);
   const content={
     users:contents.users,
@@ -93,6 +105,7 @@ export const  addToComment=(dispatch,contents)=>{
     type: ADD_TO_COMMENT,
     payload: content
   })
+  
 }
 export const loginToFirebase = async (dispatch, userInfo) => {
   dispatch({ type: BEGIN_LOGIN_REQUEST });
@@ -173,6 +186,7 @@ export const logoutFromFirebase = async (dispatch) => {
 
 /*Comment*/
 export const addComment = async (dispatch,user) => {
+  dispatch({type:BEGIN_ADD_COMMENT});
     const Content={
       useremail:user.useremail,
       username:user.username,
@@ -187,17 +201,21 @@ export const addComment = async (dispatch,user) => {
       type:ADD_COMMENT,
       payload: userInfo
     })
+    dispatch({type:SUCCESS_ADD_COMMENT});
 }
 
 export const getCommentAct = async (dispatch) => {
+  dispatch({type:BEGIN_COMMENT});
   const content=await getComment();
   dispatch({
     type:GET_COMMENT,
     payload: content
   })
+  dispatch({type:SUCCESS_COMMENT});
 }
 /*Favorite*/
 export const addFavoriteAct = async (dispatch,resource) => {
+  dispatch({type:BEGIN_ADD_FAVORITE});
   const Content={
     useremail:resource.useremail,
     username:resource.username,
@@ -213,6 +231,7 @@ export const addFavoriteAct = async (dispatch,resource) => {
     type:ADD_FAVORITE,
     payload: userInfo
   })
+  dispatch({type:SUCCESS_ADD_FAVORITE});
 }
 export const getFavoritetAct = async (dispatch) => {
   const content=await getFavorite();
@@ -232,4 +251,12 @@ export const removeFavoriteAct =async (dispatch,resource) => {
       type:REMOVE_FAVORITE,
       payload:newfavorite
     })
+}
+
+export const getSingleFavoriteAct = async (dispatch,item)=>{
+  const singleitem=await getSingleFavorite(item);
+  dispatch({
+    type:GET_SINGLE_FAVORITE,
+    payload:singleitem
+  })
 }

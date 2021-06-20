@@ -5,10 +5,16 @@ import useReducerWithThunk from "use-reducer-thunk";
 import {initialMenu,getFireJSON} from "../api";
 import {
   SET_MENU,
+  BEGIN_SET_MENU,
+  SUCCESS_SET_MENU,
   ADD_TO_COMPARISON,
   REMOVE_COMPARISON_ITEM,
   REMOVE_ALL,
   ADD_COMMENT,
+  SUCCESS_COMMENT,
+  BEGIN_COMMENT,
+  SUCCESS_ADD_COMMENT,
+  BEGIN_ADD_COMMENT,
   BEGIN_LOGIN_REQUEST,
   SUCCESS_LOGIN_REQUEST,
   FAIL_LOGIN_REQUEST,
@@ -20,7 +26,10 @@ import {
   GET_COMMENT,
   ADD_FAVORITE,
   GET_FAVORITE,
-  REMOVE_FAVORITE
+  REMOVE_FAVORITE,
+  GET_SINGLE_FAVORITE,
+  SUCCESS_ADD_FAVORITE,
+  BEGIN_ADD_FAVORITE
 } from "../utils/constants";
 
 export const StoreContext = createContext();
@@ -30,7 +39,8 @@ let count = 0;
 let commentList = Cookie.getJSON("commentList");
 if (!commentList) commentList = [];
 let favoriteList=[];
-
+let singleinit={image:"",brand:"",item:"",price:"",rate:""}
+let singlefavorite=singleinit;
 let userInfo;
 try {
   userInfo =  JSON.parse(Cookie.getJSON("userInfo"));//getItem("userInfo"));
@@ -58,6 +68,7 @@ const initialState = {
   compareItems,
   count,
   booladd,
+  singlefavorite,
   commentList: {
     useremail,
     username,
@@ -82,6 +93,22 @@ const initialState = {
     image:"",
     brand:"",
     item:"",
+  },
+  menurequest:{
+    loading: false,
+    error:null,
+  },
+  commentrequest:{
+    loading: false,
+    error:null,
+  },
+  addcommentrequest:{
+    loading: false,
+    error:null,
+  },
+  addfavoriterequest:{
+    loading: false,
+    error:null,
   }
 };
 
@@ -208,6 +235,27 @@ function reducer(state, action) {
         ...state,
         favoriteList:action.payload
       }
+    case GET_SINGLE_FAVORITE:
+      return {
+        ...state,
+        singlefavorite:action.payload
+      }
+    case BEGIN_SET_MENU:
+      return { ...state,menurequest:{...state.menurequest,loading:true}}
+    case SUCCESS_SET_MENU:
+      return { ...state,menurequest:{...state.menurequest,loading:false}}
+    case BEGIN_COMMENT:
+      return { ...state,commentrequest:{...state.commentrequest,loading:true}}
+    case SUCCESS_COMMENT:
+      return { ...state,commentequest:{...state.commentrequest,loading:false}}
+    case BEGIN_ADD_COMMENT:
+      return { ...state,addcommentrequest:{...state.addcommentrequest,loading:true}}
+    case SUCCESS_ADD_COMMENT:
+      return { ...state,addcommentrequest:{...state.addcommentrequest,loading:false}}
+    case BEGIN_ADD_FAVORITE:
+      return { ...state,addfavoriterequest:{...state.addfavoriterequest,loading:true}}
+    case SUCCESS_ADD_FAVORITE:
+      return { ...state,addfavoriterequest:{...state.addfavoriteequest,loading:false}}
     default:
       return state;
   }

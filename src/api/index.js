@@ -206,6 +206,15 @@ export const getFavorite=async ()=>{
   }
   return allfavorite;
 }
+export const getSingleFavorite=async (item)=>{
+  let singlefavorite;
+  const favorites =await favorite.get();
+  favorites.forEach((doc)=>{
+    if(item==doc.data().item)
+    singlefavorite=doc.data();
+  })
+  return singlefavorite;
+}
 
 export const removeFavorite=async (resource)=>{
   let allfavorite =[];

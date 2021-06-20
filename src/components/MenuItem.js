@@ -1,13 +1,14 @@
-import {Table } from 'antd';
+import {Table,Spin } from 'antd';
 import { StoreContext } from "../store"
 import { useContext,useEffect } from "react";
 import AddToComparison from "./AddToComparison";
+import { LoadingOutlined } from '@ant-design/icons';
 export default function MenuItem() {
 
 
-  const { state: { menus } } = useContext(StoreContext);
+  const { state: { menus,menurequest:{loading} } } = useContext(StoreContext);
 
-  
+  const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
   console.log(menus.length);
   
  
@@ -39,7 +40,7 @@ export default function MenuItem() {
       
       <div className="menu-content">
        
-          {menus.length===0 ?(
+          {menus.length==0 ?(
             <div className="menu-init-wrapper">
               <div className="menu-init">
                 <div className="menu-init-text">決定好要喝什麼了嗎？</div>
@@ -48,11 +49,20 @@ export default function MenuItem() {
               </div>
             </div>
           ):(
-              <Table value={menus} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />
+            <>
+          {loading
+            ? (
+              <div className="spinner-wrap">
+                <Spin indicator={antIcon} />
+              </div>
+          ):(
+          <Table value={menus} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />
+            )}
+              </>
+         
             
           )}
           
-         
        
       </div>
 

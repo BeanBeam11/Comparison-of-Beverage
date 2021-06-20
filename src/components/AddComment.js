@@ -6,7 +6,7 @@ import {StoreContext} from "../store"
 import { Link } from "react-router-dom";
 
 export default function AddComment() {
-  const {state:{commentList,  menus,userSignin: { userInfo}},dispatch}= useContext(StoreContext);
+  const {state:{commentList,  menus,userSignin: { userInfo},addcommentrequest:{loading}},dispatch}= useContext(StoreContext);
   const { Option } = Select;
   const { TextArea } = Input;
   const provinceData = ['可不可熟成紅茶', '五十嵐',"麻古茶坊","迷客夏","清心福全"];
@@ -96,7 +96,10 @@ export default function AddComment() {
           </div>
           <div className="comment-input">
             <TextArea rows={4} placeholder="寫點評論..." className="comment-input" onChange={Setdescription}/>
-            <Button onClick={Publish} className="comment-bt-publish">發布</Button>
+            {loading?(
+              <Button onClick={Publish} loading className="comment-bt-publish">發布</Button>
+            ):(<Button onClick={Publish} className="comment-bt-publish">發布</Button>)}
+            
           </div> 
           </div>
       </div> ):(

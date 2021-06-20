@@ -1,6 +1,6 @@
 import React, { useContext,useEffect,useState } from "react";
 import { useHistory } from "react-router-dom";
-import { checkLogin,getFavoritetAct,removeFavoriteAct} from '../actions';
+import { checkLogin,getFavoritetAct,removeFavoriteAct,getSingleFavoriteAct} from '../actions';
 import { StoreContext } from "../store";
 import { Button,Modal} from "antd";
 import { Link } from "react-router-dom";
@@ -11,7 +11,8 @@ const FavoriteCard= () => {
     state: {
       userSignin: { userInfo },
       favorite,
-      favoriteList
+      favoriteList,
+      singlefavorite
     },
     dispatch,
   } = useContext(StoreContext);
@@ -37,7 +38,9 @@ const FavoriteCard= () => {
   }
 useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
 
-const showModal = () => {
+const showModal = (item) => {
+    getSingleFavoriteAct(dispatch,item);
+    console.log(singlefavorite);
     setIsModalVisible(true);
   };
 
@@ -66,30 +69,31 @@ useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
         <Link to='/favorite' className="profile-nav-item" >
           收藏清單
         </Link>
+        <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+              <img  className="fav-img" src={singlefavorite.image}/>
+              <p>{singlefavorite.item}</p>
+              <p>{singlefavorite.brand}</p>
+              <p>{singlefavorite.rate}</p>
+              <p>{singlefavorite.price}</p>
+        </Modal>
       </div>
     </div>
     <div className="fav-wrapper header-mt">
       {favorite.map(content =>(
         <div className="fav-box">
           <Button className="fav-box-remove" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
-          <div onClick={showModal}> 
-          <Modal title="Basic Modal" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-              <img  className="fav-img" src={content.image}/>
-              <p>{content.item}</p>
-              <p>{content.brand}</p>
-              <p>{content.price}</p>
-              <p>{content.grade}</p>
-            </Modal>
+          <div  onClick={()=>showModal(content.item)}>
             <div className="fav-img-box">
               <img  className="fav-img" src={content.image}/>
             </div>
             <div className="fav-text">{content.item}</div>
             <div className="fav-text fav-text-brand">{content.brand}</div>
+            </div>
           </div>
-        </div>
       ))}
+       
     </div>
-   
+    
     </>
   );
 };
