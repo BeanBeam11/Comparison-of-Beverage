@@ -53,7 +53,7 @@ export default function MenuItem() {
           {loading
             ? (
               <div className="spinner-wrap">
-                <Spin indicator={antIcon} />
+                <Spin className="spinner" indicator={antIcon} />
               </div>
           ):(
           <Table value={menus} columns={columns} dataSource={menus} pagination={{ pageSize: 25 }} scroll={{ y: 500 }} />

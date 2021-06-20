@@ -514,6 +514,21 @@ header .hide{
   margin: auto;
   margin-top: 5rem;
 }
+.spinner-wrap{
+  position: absolute;
+  width: 42.5rem;
+  height: 43.0625rem;
+}
+.spinner{
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  margin-top: 5rem;
+}
+.ant-spin{
+  color: #EBC47A;
+}
 /*Menu*/
 .menu{
   width: 42.5rem;
@@ -542,8 +557,8 @@ header .hide{
 .menu-content{
   display: flex;
   flex-direction: row;
-  width: auto;
-  height: 1.75rem;
+  width: 42.5rem;
+  height: 43.0625rem;
 }
 .menu-compare-bt-box{
   position: relative;
@@ -1305,8 +1320,24 @@ header .hide{
     font-size: 1rem;
     height: 2rem;
   }
+
+  /* menu init */
+  .spinner-wrap{
+    position: absolute;
+    width: 90vw;
+  }
+  .spinner{
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 5rem;
+  }
   /* MENU */
   .menu{
+    width: 90vw;
+  }
+  .menu-content{
     width: 90vw;
   }
   .menu-init-text{
