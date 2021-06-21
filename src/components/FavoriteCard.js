@@ -76,7 +76,7 @@ return(
       <Link to='/favorite' className="profile-nav-item" >
         收藏清單
       </Link>
-      <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+      <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null}>
         <div className="fav-img-box">
           <img  className="fav-img" src={singlefavorite.image}/>
         </div>
