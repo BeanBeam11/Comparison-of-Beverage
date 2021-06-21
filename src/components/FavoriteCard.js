@@ -17,17 +17,24 @@ const FavoriteCard= () => {
     dispatch,
   } = useContext(StoreContext);
   const history = useHistory();
-  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [blogin,setblogin] = useState(false);
   const check=()=>{
     if(/*!checkLogin(dispatch) && !*/(userInfo==null)){
       alert("請先登入");
       history.push("/login");
       console.log("nologin")
+      setblogin(true);
+      return(true);
     }
     else{
-      console.log("login")
+      setblogin(false);
+      return(false);
     }
   } 
+  const pushtologin=()=>{
+    history.push("/login");
+  }
   const remove=(item,id,email)=>{
     const removeres={
       item: item,
@@ -57,7 +64,13 @@ useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
   return (
     <>
     {check()}
-    <div className="fav-nav-wrapper header-mt">
+    {blogin?(
+      <>
+      {pushtologin}
+      </>
+    ):(
+      <>
+      <div className="fav-nav-wrapper header-mt">
       <div className="profile-img-box">
         <img className="profile-img" src="./img/user_note.png"/>
       </div>
@@ -96,9 +109,13 @@ useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
             <div className="fav-text fav-text-brand">{content.brand}</div>
             </div>
           </div>
+          
       ))}
        
     </div>
+    </>
+    )}
+    
     
     </>
   );
