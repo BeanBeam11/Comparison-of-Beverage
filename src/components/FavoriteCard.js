@@ -18,21 +18,20 @@ const FavoriteCard= () => {
   } = useContext(StoreContext);
   const history = useHistory();
   const [isModalVisible, setIsModalVisible] = useState(true);
-  const [blogin,setblogin] = useState(false);
+  const [blogin,setblogin] = useState(true);
   const check=()=>{
-    if(/*!checkLogin(dispatch) && !*/(userInfo==null)){
-      alert("請先登入");
-      history.push("/login");
-      console.log("nologin")
-      setblogin(true);
-      return(true);
-    }
+    if((userInfo==null)){
+        console.log("no login");
+        return false;
+     }
     else{
-      setblogin(false);
-      return(false);
-    }
-  } 
+      console.log("login");
+        return true;
+     }
+}
   const pushtologin=()=>{
+    console.log(blogin);
+    console.log("to login")
     history.push("/login");
   }
   const remove=(item,id,email)=>{
@@ -61,63 +60,58 @@ const handleCancel = () => {
     console.log("change"+isModalVisible)
   };
 useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
-  return (
+return(
+  <>
+  {check()?(
     <>
-    {check()}
-    {blogin?(
-      <>
-      {pushtologin}
-      </>
-    ):(
-      <>
-      <div className="fav-nav-wrapper header-mt">
-      <div className="profile-img-box">
-        <img className="profile-img" src="./img/user_note.png"/>
-      </div>
-      <div className="profile-name">{userInfo.displayName}</div>
-      <div className="profile-nav">
-        <Link to='/profile' className="profile-nav-item" >
-          個人資料
-        </Link>
-        <Link to='/favorite' className="profile-nav-item" >
-          收藏清單
-        </Link>
-        <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+    <div className="fav-nav-wrapper header-mt">
+    <div className="profile-img-box">
+      <img className="profile-img" src="./img/user_note.png"/>
+    </div>
+    <div className="profile-name">{userInfo.displayName}</div>
+    <div className="profile-nav">
+      <Link to='/profile' className="profile-nav-item" >
+        個人資料
+      </Link>
+      <Link to='/favorite' className="profile-nav-item" >
+        收藏清單
+      </Link>
+      <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
+        <div className="fav-img-box">
+          <img  className="fav-img" src={singlefavorite.image}/>
+        </div>
+        <div className="fav-modal-info">
+          <div>名稱：{singlefavorite.item}</div>
+          <div>店家：{singlefavorite.brand}</div>
+          <div>價格：{singlefavorite.price}</div>
+          <div>評分：{singlefavorite.rate}</div>
+          <div>介紹：...</div>
+          <div>熱量：...</div>
+        </div>
+      </Modal>
+    </div>
+  </div>
+  <div className="fav-wrapper header-mt">
+    {favorite.map(content =>(
+      <div className="fav-box">
+        <Button className="fav-box-remove" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
+        <div  onClick={()=>showModal(content.item)}>
           <div className="fav-img-box">
-            <img  className="fav-img" src={singlefavorite.image}/>
+            <img  className="fav-img" src={content.image}/>
           </div>
-          <div className="fav-modal-info">
-            <div>名稱：{singlefavorite.item}</div>
-            <div>店家：{singlefavorite.brand}</div>
-            <div>價格：{singlefavorite.price}</div>
-            <div>評分：{singlefavorite.rate}</div>
-            <div>介紹：...</div>
-            <div>熱量：...</div>
+          <div className="fav-text">{content.item}</div>
+          <div className="fav-text fav-text-brand">{content.brand}</div>
           </div>
-        </Modal>
-      </div>
-    </div>
-    <div className="fav-wrapper header-mt">
-      {favorite.map(content =>(
-        <div className="fav-box">
-          <Button className="fav-box-remove" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
-          <div  onClick={()=>showModal(content.item)}>
-            <div className="fav-img-box">
-              <img  className="fav-img" src={content.image}/>
-            </div>
-            <div className="fav-text">{content.item}</div>
-            <div className="fav-text fav-text-brand">{content.brand}</div>
-            </div>
-          </div>
-          
-      ))}
-       
-    </div>
+        </div> 
+    ))}
+  </div>
+  </>):(
+    <>
+    {pushtologin()}
     </>
-    )}
-    
-    
-    </>
-  );
-};
+   )}
+  </>
+);
+}
+
 export default FavoriteCard;
