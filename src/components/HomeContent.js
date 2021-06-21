@@ -1,35 +1,30 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button,BackTop,Carousel} from 'antd'
 import { Link } from "react-router-dom";
-
+import Aos from "aos";
 
 export default function HomeContent(){
   
-  const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    width:'100px',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-  };
+  useEffect(() => {
+    Aos.init({duration: 1000});
+  }, [])
     return(
       <> 
       <div className="intro-bg-1"></div>
       <div className="intro-bg-2"></div>
       <div className="intro-bg-3"></div>
       <div className="intro" id="intro-0">
-        <img className="intro-img-0" src="./img/intro_0_new.png" />
+        <img data-aos="fade-up" className="intro-img-0" src="./img/intro_0_new.png" />
         <div className="intro-text-0">
           <div className="">每次都為了買飲料</div>
           <div className="">而「選擇困難」發作嗎？</div>
           <div className="">那就快來試試...</div>
         </div>
-        <img className="intro-0-img" src="./img/intro_logo.png" />
+        <img data-aos="" className="intro-0-img" src="./img/intro_logo.png" />
       </div>
       <div className="intro" id="intro-1">
-        <img className="intro-img-1" src="./img/intro_1_new.png" />
-        <div className="intro-text-1">
+        <img data-aos="fade-up" className="intro-img-1" src="./img/intro_1_new.png" />
+        <div data-aos="slide-right" className="intro-text-1">
           瀏覽各家菜單
           <div className="intro-bt-box-1">
             <Link to='/menu'>
@@ -39,8 +34,8 @@ export default function HomeContent(){
         </div>
       </div>
       <div className="intro" id="intro-2">
-        <img className="intro-img-2" src="./img/intro_2_new.png" />
-        <div className="intro-text-2">
+        <img data-aos="fade-up" className="intro-img-2" src="./img/intro_2_new.png" />
+        <div data-aos="slide-left" className="intro-text-2">
           將想喝的飲料加入比較
           <div className="intro-bt-box-2">
             <Link to='/menu'>
@@ -50,8 +45,8 @@ export default function HomeContent(){
         </div>
       </div>
       <div className="intro" id="intro-3">
-        <img className="intro-img-3" src="./img/intro_3_new.png" />
-        <div className="intro-text-3">
+        <img data-aos="fade-up" className="intro-img-3" src="./img/intro_3_new.png" />
+        <div data-aos="" className="intro-text-3">
           開始比較已選的飲料
           <div className="intro-bt-box-3">
             <Link to='/compare'>
@@ -64,7 +59,7 @@ export default function HomeContent(){
         <div className="home-title">各家主打商品</div>
       </div>
       <div className="home-card-wrapper">
-        <div className="home-card">
+        <div data-aos="fade-up" data-aos-duration="1500" className="home-card">
           <div className="home-card-img-box">
             <img className="home-card-img" src="./img/kebuke_apple_black_tea.jpeg"/>
           </div>
@@ -75,7 +70,7 @@ export default function HomeContent(){
             </div>
           </div>
         </div>
-        <div className="home-card">
+        <div data-aos="fade-up" data-aos-duration="1000" className="home-card">
           <div className="home-card-img-box">
             <img className="home-card-img" src="./img/macu_pineapple.jpeg"/>
           </div>
@@ -87,7 +82,7 @@ export default function HomeContent(){
             </div>
           </div>
         </div>
-        <div className="home-card">
+        <div data-aos="fade-up" data-aos-duration="1000" className="home-card">
           <div className="home-card-img-box">
             <img className="home-card-img" src="./img/milkshop_strawberry.jpeg"/>
           </div>

@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css';
+import "aos/dist/aos.css";
 import Home from './pages/Home'
 
 import MenuPage from './pages/MenuPage'
