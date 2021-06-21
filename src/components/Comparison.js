@@ -1,5 +1,6 @@
 import {useEffect, useContext} from "react";
 import {StoreContext} from "../store";
+import { useHistory } from "react-router-dom";
 import { Button} from "antd";
 import Cookie from "js-cookie";
 import {removeComparisonItem,removeall,addFavoriteAct} from "../actions";
@@ -7,11 +8,27 @@ export default function Comparison(){
 
     const {state:{compareItems,count,userSignin: { userInfo},addfavoriterequest:{loading}},dispatch} =useContext(StoreContext);
     // console.log(compareItems);
+    const history = useHistory();
     const addToFavorite =(brand,item,image,price,grade)=> {
-        console.log("useremail:"+userInfo.email+","+"username:"+userInfo.displayName+"brand:"+brand+"item:"+item+"image:"+image+"price:"+price+"grade:"+grade);
-        const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,image:image,price:price,grade:grade};
-        addFavoriteAct(dispatch,resource);
+        if(!check()){
+            history.push("/login");
+        }
+        else{
+            console.log("useremail:"+userInfo.email+","+"username:"+userInfo.displayName+"brand:"+brand+"item:"+item+"image:"+image+"price:"+price+"grade:"+grade);
+            const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,image:image,price:price,grade:grade};
+            addFavoriteAct(dispatch,resource);
+        }
       }
+      const check=()=>{
+        if((userInfo==null)){
+            console.log("no login");
+            return false;
+         }
+        else{
+          console.log("login");
+            return true;
+         }
+    }
     useEffect(()=>{
         Cookie.set("compareItems", JSON.stringify(compareItems));
       }, [compareItems])
