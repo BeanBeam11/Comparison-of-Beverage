@@ -7,6 +7,8 @@ import { Form, Input, Button, Checkbox } from 'antd';
 import { WarningOutlined, MailOutlined, LockOutlined } from '@ant-design/icons';
 import { checkLogin, loginToFirebase, rememberLoginUser } from '../actions';
 import { StoreContext } from "../store";
+import Aos from "aos";
+
 export default function Login(redirect) {
   const { state:{ userSignin: { userInfo, loading, error, remember } }, dispatch } = useContext(StoreContext);
   const [form] = Form.useForm();
@@ -25,12 +27,16 @@ export default function Login(redirect) {
     if( userInfo && checkLogin(dispatch) ) history.push("/profile");
   }, [ userInfo ]);// eslint-disable-line react-hooks/exhaustive-deps
 
+  useEffect(() => {
+    Aos.init({duration: 1000});
+  }, [])
+
   return (
     <>
     <div className="login-quote-wrapper header-mt">
       <div className="login-quote-1">天氣好熱 ...</div>
       <div className="login-quote-2">喝杯飲料吧 !</div>
-      {/* <img className="img_login_illus" src="./img/login_illus_brown.png"/> */}
+      <img data-aos="slide-right" className="img_login_illus" src="./img/quote_pink.png"/>
     </div>
     <div className="login-form-wrapper header-mt">
       <div className="login-title">Log in</div>

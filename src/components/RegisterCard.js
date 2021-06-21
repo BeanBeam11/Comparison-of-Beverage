@@ -4,6 +4,7 @@ import { Form, Input, Checkbox, Button } from 'antd';
 import { WarningOutlined } from '@ant-design/icons';
 import { registerToFirebase } from '../actions'
 import { StoreContext } from "../store"
+import Aos from "aos";
 
 const formItemLayout = {
   labelCol: {
@@ -50,12 +51,16 @@ const RegisterCard = ({ redirect }) => {
     if (userInfo) history.push("./login");
   }, [userInfo]);// eslint-disable-line react-hooks/exhaustive-deps
 
+  useEffect(() => {
+    Aos.init({duration: 1000});
+  }, [])
+
   return (
     <>
     <div className="register-quote-wrapper header-mt">
       <div className="login-quote-1">天氣好熱 ...</div>
       <div className="login-quote-2">喝杯飲料吧 !</div>
-      {/* <img className="img_login_illus" src="./img/login_illus_brown.png"/> */}
+      <img data-aos="slide-right" className="img_login_illus" src="./img/quote_yellow.png"/>
     </div>
     <div className="login-form-wrapper register-form-wrapper header-mt">
       <div className="login-title register-title">Register</div>

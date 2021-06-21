@@ -824,8 +824,10 @@ header .hide{
 .img_login_illus{
   position: absolute;
   height: 45vh;
-  bottom: 5rem;
-  right: 8vw;
+  right: 0;
+  left: 0;
+  margin: auto;
+  bottom: 8rem;
 }
 .login-form{
   color: #573D2D;
@@ -1174,6 +1176,15 @@ header .hide{
   .intro-bt-box-3{
     width: 10rem;
     margin-left: calc(50% - 5rem);
+  }
+  /* login */
+  .img_login_illus{
+    position: absolute;
+    height: 15rem;
+    right: 0;
+    left: 0;
+    margin: auto;
+    top: -30rem;
   }
 }
 /* mobile */
