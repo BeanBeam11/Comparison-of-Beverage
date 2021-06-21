@@ -925,7 +925,7 @@ header .hide{
   position: absolute;
   width: 30vw;
   height: 100vh;
-  background-color: #FAFAFA;
+  background-color: #F7DDCE;
 }
 .profile-img-box{
   position: relative;
@@ -992,7 +992,7 @@ header .hide{
   position: absolute;
   width: 30vw;
   height: 100vh;
-  background-color: #FAFAFA;
+  background-color: #FFE0B1;
 }
 .fav-wrapper{
   position: absolute;
@@ -1478,6 +1478,12 @@ header .hide{
     margin: 3rem 0 1rem;
   }
   /*Profile*/
+  .profile-nav-wrapper{
+    display: none;
+  }
+  .profile-form-wrapper{
+    width: 100vw;
+  }
   .profile-img-box{
     position: relative;
     width: 20vw;
@@ -1492,9 +1498,15 @@ header .hide{
     width: 20vw;
   }
   .profile-form{
-    width: 50vw;
+    width: 70vw;
   }
   /* Favorite */
+  .fav-nav-wrapper{
+    display: none;
+  }
+  .fav-wrapper{
+    width: 100vw;
+  }
   .fav-box{
     width: 30vw;
     min-height: 15rem;
