@@ -2,6 +2,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import './App.css';
 import "aos/dist/aos.css";
 import Home from './pages/Home'
+import './App.less';
 
 import MenuPage from './pages/MenuPage'
 import Comment from './pages/Comment'

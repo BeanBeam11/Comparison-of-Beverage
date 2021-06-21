@@ -1,0 +1,25 @@
+@import '~antd/lib/style/themes/default.less';
+@import '~antd/dist/antd.less'; // Import Ant Design styles by less entry
+@import 'your-theme-file.less'; // variables to override above
+
+html {
+    --antd-wave-shadow-color: #EBC47A;
+    --scroll-bar: 0;
+}
+
+::selection {
+    color: #fff;
+    background: #EBC47A;
+}
+
+.ant-select-focused:not(.ant-select-disabled).ant-select:not(.ant-select-customize-input) .ant-select-selector{
+    border-color: #EBC47A;
+}
+
+.ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled):hover{
+    border-color: #EBC47A;
+}
+
+.ant-input-affix-wrapper:focus, .ant-input-affix-wrapper-focused{
+    border-color: #EBC47A;
+}

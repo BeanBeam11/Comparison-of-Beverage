@@ -10,6 +10,7 @@
     "@types/react-native-snap-carousel": "^3.8.2",
     "antd": "^4.13.1",
     "aos": "^3.0.0-beta.6",
+    "craco-less": "^1.17.1",
     "firebase": "^8.5.0",
     "framework7": "^6.0.15",
     "framework7-react": "^6.0.15",
