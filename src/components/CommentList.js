@@ -8,9 +8,10 @@ import {StoreContext} from "../store"
 
 export default function CommentList() {
     const history = useHistory();
-    const {state:{commentList,comment,userInfo,commentrequest:{loading}},dispatch}= useContext(StoreContext);
+    const {state:{commentList,comment,userInfo,addfavoriterequest:{loading}},dispatch}= useContext(StoreContext);
     const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
     console.log(comment);
+    console.log(loading);
     const check=()=>{
         if(!checkLogin(dispatch) && !(userInfo!=null)){
             alert("請先登入");

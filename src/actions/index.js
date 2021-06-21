@@ -205,13 +205,13 @@ export const addComment = async (dispatch,user) => {
 }
 
 export const getCommentAct = async (dispatch) => {
-  dispatch({type:BEGIN_COMMENT});
+  dispatch({type:BEGIN_ADD_FAVORITE});
   const content=await getComment();
   dispatch({
     type:GET_COMMENT,
     payload: content
   })
-  dispatch({type:SUCCESS_COMMENT});
+  dispatch({type:SUCCESS_ADD_FAVORITE});
 }
 /*Favorite*/
 export const addFavoriteAct = async (dispatch,resource) => {

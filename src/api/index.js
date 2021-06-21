@@ -176,14 +176,32 @@ export const getComment=async ()=>{
 
 export const addFavorite=async (userFavorite)=>{
   const favoriteRef = await favorite.doc();
+  const favorites =await favorite.get();
   const id = favoriteRef.id;
   const date=new Date().getTime();
-  await favoriteRef.set({ 
-    ...userFavorite,
-    id,
-    date
-  });
+  let have=false;
+  const same=(ref)=>{
+    let bhave=false;
+    favorites.forEach((doc)=>{
+      if(doc.data().item==userFavorite.item)
+      {
+        console.log("has");
+        bhave=true;
+      }
+    })
+    return bhave;
+  }
+  have=same(userFavorite);
+  if(have==false){
+    await favoriteRef.set({ 
+      ...userFavorite,
+      id,
+      date
+    });
+  }
+  have=false;
   return(userFavorite);
+
 }
 
 export const getFavorite=async ()=>{

@@ -17,7 +17,7 @@ const FavoriteCard= () => {
     dispatch,
   } = useContext(StoreContext);
   const history = useHistory();
-  const [isModalVisible, setIsModalVisible] = useState(true);
+  const [isModalVisible, setIsModalVisible] = useState(false);
   const [blogin,setblogin] = useState(true);
   const check=()=>{
     if((userInfo==null)){
