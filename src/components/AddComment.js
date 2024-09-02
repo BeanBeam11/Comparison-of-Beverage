@@ -16,11 +16,9 @@ export default function AddComment() {
   const [rate,setrate]=useState(2.5);
   const check=()=>{
     if((userInfo==null)){
-        console.log("no login");
         return false;
      }
     else{
-      console.log("login");
         return true;
      }
 }
@@ -29,37 +27,29 @@ export default function AddComment() {
    
   }
   const Setitem = value=>{
-    console.log(value);
     setitem(value);
-    console.log(item);
+    
   }
   const Setstart = value=>{
-    console.log(value);
     setrate(value);
   }
   const handleProvinceChange = value => {
-    console.log(value);
     setbrand(value);
-    console.log(brand);
+    
       switch (value){
         case "可不可熟成紅茶":
-          console.log("kbk");
           menuContentSet(dispatch,"kebuke");
           break;
         case "五十嵐":
-          console.log("50");
           menuContentSet(dispatch,"50lan");
           break;
         case "麻古茶坊":
-          console.log("macu");
           menuContentSet(dispatch,"macu");
           break;
         case "迷客夏":
-          console.log("milk");
           menuContentSet(dispatch,"milkshop");
           break;
         case "清心福全":
-          console.log("ching");
           menuContentSet(dispatch,"chingshin");
           break;
         

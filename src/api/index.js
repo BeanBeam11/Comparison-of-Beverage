@@ -112,7 +112,6 @@ export const signOut = () => {
 }
 export const checkLoginApi = () => {
   const user = auth.currentUser;
-  console.log(user);
   if(user==null){
     return(false);
   }
@@ -144,7 +143,6 @@ export const PublishComment =async (userComment) => {
   const id = commentRef.id;
   const date=new Date().getTime();
   const time= new Intl.DateTimeFormat('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' }).format(date);
-  console.log(time);
   await commentRef.set({ 
     ...userComment,
     id,
@@ -185,7 +183,6 @@ export const addFavorite=async (userFavorite)=>{
     favorites.forEach((doc)=>{
       if(doc.data().item==userFavorite.item)
       {
-        console.log("has");
         bhave=true;
       }
     })

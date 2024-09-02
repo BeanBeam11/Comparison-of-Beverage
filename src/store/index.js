@@ -124,15 +124,11 @@ function reducer(state, action) {
       
     case ADD_TO_COMPARISON:
       const item = action.payload;
-      console.log(state.compareItems);
-      console.log(compareItems);
-      console.log(action.payload);
       const beverge = state.compareItems.find((x) => x.id === item.id);
       if (beverge) {
         compareItems = state.compareItems.map((x) =>
           x.id == beverge.id ? item : x
         );
-        // console.log(count);
         booladd=true;
         return { ...state, compareItems, count,booladd};
       }
