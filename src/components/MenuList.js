@@ -10,7 +10,6 @@ export default function MenuList() {
 const {dispatch} = useContext(StoreContext);
 const onClickMenu=(value)=>{ 
     menuContentSet(dispatch,value.key);
-    console.log(value.key);
 }
   return (
     <>

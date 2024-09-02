@@ -7,25 +7,21 @@ import {removeComparisonItem,removeall,addFavoriteAct} from "../actions";
 export default function Comparison(){
 
     const {state:{compareItems,count,userSignin: { userInfo},addfavoriterequest:{loading}},dispatch} =useContext(StoreContext);
-    // console.log(compareItems);
     const history = useHistory();
     const addToFavorite =(brand,item,image,price,grade)=> {
         if(!check()){
             history.push("/login");
         }
         else{
-            console.log("useremail:"+userInfo.email+","+"username:"+userInfo.displayName+"brand:"+brand+"item:"+item+"image:"+image+"price:"+price+"grade:"+grade);
             const resource={useremail:userInfo.email,username:userInfo.displayName,brand:brand,item:item,image:image,price:price,grade:grade};
             addFavoriteAct(dispatch,resource);
         }
       }
       const check=()=>{
         if((userInfo==null)){
-            console.log("no login");
             return false;
          }
         else{
-          console.log("login");
             return true;
          }
     }
@@ -35,8 +31,6 @@ export default function Comparison(){
     useEffect(()=>{
         Cookie.get("count",JSON.stringify(count));
     },[count])
-    
-    console.log(count);
     return(
         <>
             <div className="compare header-mt">
@@ -50,7 +44,7 @@ export default function Comparison(){
                 <div className="compare-area">
                 
                 {compareItems.map(item=>(
-                        <div className="compare-items-box">
+                        <div key={item.id} className="compare-items-box">
                             <Button className="compare-delete" onClick={()=>removeComparisonItem(dispatch,item.id)}>x</Button>
                             <img className="compare-img" src={item.image}/>
                             <div className="compare-items">名稱：{item.name}</div>

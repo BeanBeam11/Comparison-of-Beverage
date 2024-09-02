@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 export default function NavBar(){
   const [visible, setVisible] = useState(false);
-  const onSearch = value => console.log(value);
   const showDrawer = () => {
     setVisible(true);
   };

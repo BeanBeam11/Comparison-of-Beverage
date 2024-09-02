@@ -21,17 +21,13 @@ const FavoriteCard= () => {
   const [blogin,setblogin] = useState(true);
   const check=()=>{
     if((userInfo==null)){
-        console.log("no login");
         return false;
      }
     else{
-      console.log("login");
         return true;
      }
 }
   const pushtologin=()=>{
-    console.log(blogin);
-    console.log("to login")
     history.push("/login");
   }
   const remove=(item,id,email)=>{
@@ -46,18 +42,11 @@ useEffect(()=>{getFavoritetAct(dispatch)},[favoriteList]);
 
 const showModal = (item) => {
     getSingleFavoriteAct(dispatch,item);
-    console.log(singlefavorite);
     setIsModalVisible(true);
-  };
-
-const handleOk = () => {
-    setIsModalVisible(false);
-    console.log("change"+isModalVisible)
   };
 
 const handleCancel = () => {
     setIsModalVisible(false);
-    console.log("change"+isModalVisible)
   };
 useEffect(()=>{console.log("effect"+isModalVisible)},[isModalVisible]);
 return(
@@ -76,7 +65,7 @@ return(
       <Link to='/favorite' className="profile-nav-item" >
         收藏清單
       </Link>
-      <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel} footer={null}>
+      <Modal className="fav-modal" title="詳細資訊" visible={isModalVisible} onCancel={handleCancel} footer={null}>
         <div className="fav-img-box">
           <img  className="fav-img" src={singlefavorite.image}/>
         </div>
@@ -93,7 +82,7 @@ return(
   </div>
   <div className="fav-wrapper header-mt">
     {favorite.map(content =>(
-      <div className="fav-box">
+      <div key={content.id} className="fav-box">
         <Button className="fav-box-remove" onClick={()=>remove(content.item,content.id,content.email)}>x</Button>
         <div  onClick={()=>showModal(content.item)}>
           <div className="fav-img-box">

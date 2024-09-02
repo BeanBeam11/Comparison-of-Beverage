@@ -43,7 +43,6 @@ const RegisterCard = ({ redirect }) => {
   const history = useHistory();
 
   const onFinish = async (values) => {
-    console.log('Received values of form: ', values);
     await registerToFirebase(dispatch, values);
   };
 

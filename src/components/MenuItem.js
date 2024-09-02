@@ -11,8 +11,6 @@ export default function MenuItem() {
   const { state: { menus,menurequest:{loading} } } = useContext(StoreContext);
 
   const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
-  console.log(menus.length);
-  
  
   const columns = [
     {

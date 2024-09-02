@@ -8,7 +8,6 @@ import {addToComparisonItem} from "../actions/";
   
   export default function AddToComparison(item){
     const {state:{compareItems,count,booladd}, dispatch} =useContext(StoreContext);
-    //   console.log(item.item.id);
 
       const openNotification = () => {
         notification.open({
@@ -16,7 +15,6 @@ import {addToComparisonItem} from "../actions/";
           description:
             `${item.item.name}已加入比較`,
           onClick: () => {
-            // console.log(compareItems.name);
           },
         }); 
       };
@@ -26,19 +24,15 @@ import {addToComparisonItem} from "../actions/";
           description:
             "已有三件商品",
           onClick: () => {
-            // console.log(compareItems.name);
           },
         }); 
       };
 
       const addToComparison = () => {
-          
-          // console.log(item);
+        
         if(count<3){
-          
-          // console.log(item.item);
          addToComparisonItem(dispatch,item.item,count);
-          console.log(booladd);
+          
           if(!booladd){
             openNotification();
           }

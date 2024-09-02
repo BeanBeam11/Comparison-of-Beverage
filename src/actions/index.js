@@ -48,7 +48,6 @@ export const menuContentSet = async(dispatch,menusId) => {
  dispatch({type:BEGIN_SET_MENU});
   try{
     const menucontent = await getFireJSON(menusId);
-    console.log(menucontent);
     dispatch({
       type:SET_MENU,
       payload:menucontent
@@ -59,7 +58,6 @@ export const menuContentSet = async(dispatch,menusId) => {
    
     console.error(error);
   }
-  // console.log(menusId);
   // dispatch({
   //   type:SET_MENU,
   //   payload:menusId
@@ -78,7 +76,6 @@ export const addToComparisonItem=(dispatch,beverage,count)=>{
     type: ADD_TO_COMPARISON,
     payload: item,count
   });
-  console.log(item);
 }
 export const removeComparisonItem = (dispatch,beverageId) => {
   dispatch({
@@ -94,7 +91,6 @@ export const removeall=(dispatch,count,beverage)=>{
 };
 export const  addToComment=(dispatch,contents)=>{
   
-  console.log(contents);
   const content={
     users:contents.users,
     shop:contents.shop,
@@ -121,7 +117,6 @@ export const loginToFirebase = async (dispatch, userInfo) => {
       type: FAIL_LOGIN_REQUEST,
       payload: e.message
     })
-    console.log(e)
     return null;
   }
 }
@@ -144,7 +139,6 @@ export const registerToFirebase = async (dispatch, userInfo) => {
   dispatch({ type: BEGIN_REGISTER_REQUEST });
   try {
     const user = await registerWithEmailPassword(userInfo.email, userInfo.password, userInfo.name);
-    console.log(user)
     dispatch({
       type: SUCCESS_REGISTER_REQUEST,
       payload: user.providerData[0],
@@ -155,7 +149,6 @@ export const registerToFirebase = async (dispatch, userInfo) => {
       type: FAIL_REGISTER_REQUEST,
       payload: e.message
     })
-    console.log(e)
     return null;
   }
 }
@@ -196,7 +189,6 @@ export const addComment = async (dispatch,user) => {
       rating:user.rating,
     };
     const userInfo=await PublishComment(Content);
-    console.log(userInfo);
     dispatch({ 
       type:ADD_COMMENT,
       payload: userInfo
@@ -226,7 +218,6 @@ export const addFavoriteAct = async (dispatch,resource) => {
     rate:resource.grade,
   };
   const userInfo=await addFavorite(Content);
-  console.log(userInfo);
   dispatch({ 
     type:ADD_FAVORITE,
     payload: userInfo

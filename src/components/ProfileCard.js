@@ -19,7 +19,6 @@ const ProfileCard = () => {
   const [form] = Form.useForm();
 
   const handleUpdate = (values) => {
-    console.log(values)
     updateUserInfo(dispatch, values);
   };
 
