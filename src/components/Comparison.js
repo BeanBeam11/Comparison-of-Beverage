@@ -31,7 +31,6 @@ export default function Comparison(){
     useEffect(()=>{
         Cookie.get("count",JSON.stringify(count));
     },[count])
-    useEffect(() => {}, [compareItems.length]);
     return(
         <>
             <div className="compare header-mt">
