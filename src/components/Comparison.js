@@ -31,10 +31,7 @@ export default function Comparison(){
     useEffect(()=>{
         Cookie.get("count",JSON.stringify(count));
     },[count])
-    useEffect(() => {
-        console.log("compareItems length changed:", compareItems.length);
-        // You can add any additional logic here that should run when compareItems changes
-    }, [compareItems.length]);
+    useEffect(() => {}, [compareItems.length]);
     return(
         <>
             <div className="compare header-mt">
