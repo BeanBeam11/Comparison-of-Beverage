@@ -29,24 +29,22 @@ import {addToComparisonItem} from "../actions/";
       };
 
       const addToComparison = () => {
-        
-        if(count<3){
-         addToComparisonItem(dispatch,item.item,count);
-          
+        if(compareItems.length < 3){
+          addToComparisonItem(dispatch, item.item, count);
+      
           if(!booladd){
             openNotification();
           }
-        }
-        else{
+        } else {
           openNotification_Full();
         }
-        
-        
       };
+
+      
       useEffect(()=>{
         Cookie.set("compareItems", JSON.stringify(compareItems));
-      }, [compareItems])
-       Cookie.set("count",JSON.stringify(count));
+        Cookie.set("count", JSON.stringify(compareItems.length));
+        }, [compareItems]);
       return (
         <Button onClick={addToComparison} className="add-to-compare-bt" type="default" icon={<PlusSquareOutlined />} />
       );

@@ -35,7 +35,7 @@ export default function Comparison(){
         <>
             <div className="compare header-mt">
                 <p className="compare-title">飲料比較</p>
-                <p className="compare-description">已選擇{count}種飲料，請挑選最多3件來比較。</p>
+                <p className="compare-description">已選擇{compareItems.length}種飲料，請挑選最多3件來比較。</p>
                 <Button className="compare-reset" onClick={()=>removeall(dispatch,count,compareItems)}>重設全部</Button>
             </div>
             {compareItems.length===0?(
@@ -53,15 +53,24 @@ export default function Comparison(){
                             <div className="compare-items">評分：{item.grade}</div>
                             <div className="compare-items">介紹：...</div>
                             <div className="compare-items">熱量：...</div>
-                            {loading?(
-                                <Button className="compare-items compare-fav-btn" loading onClick={()=>addToFavorite(item.company,item.name,item.image,item.price,item.grade)}>加入收藏</Button>
-                            ):(
-                                <Button className="compare-items compare-fav-btn" onClick={()=>addToFavorite(item.company,item.name,item.image,item.price,item.grade)}>加入收藏</Button>
+                            {loading ? (
+                                <Button
+                                    className="compare-items compare-fav-btn"
+                                    loading
+                                    onClick={() => addToFavorite(item.company, item.name, item.image, item.price, item.grade)}
+                                >
+                                    加入收藏
+                                </Button>
+                            ) : (
+                                <Button
+                                    className="compare-items compare-fav-btn"
+                                    onClick={() => addToFavorite(item.company, item.name, item.image, item.price, item.grade)}
+                                >
+                                    加入收藏
+                                </Button>
                             )}
-                            
                         </div>
-                   
-                ))}
+                    ))}
                 </div>)}
         </>
     );

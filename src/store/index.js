@@ -145,7 +145,7 @@ function reducer(state, action) {
       return { ...state, compareItems, count };
 
     case REMOVE_ALL:
-      compareItems = state.compareItems.map((x) => x.id !== action.payload);
+      compareItems = [];
       count = 0;
       return { ...state, compareItems, count };
 
